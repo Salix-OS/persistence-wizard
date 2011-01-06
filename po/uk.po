@@ -1,0 +1,101 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: persistence-wizard\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-05-11 18:37+0200\n"
+"PO-Revision-Date: 2010-05-11 18:39+0100\n"
+"Last-Translator: Yarema aka Knedlyk <yupadmin@gmail.com>\n"
+"Language-Team: Ukrainian <translation@linux.org.ua>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\\n\\n\\n\\n\n"
+
+#: src/persistence-wizard:33
+#, sh-format
+msgid "ERROR: You need to be root to run this"
+msgstr "Помилка: Ви повинні мати права суперкористувача щоб це запустити"
+
+#: src/persistence-wizard:38
+#, sh-format
+msgid "ERROR: zenity must be installed and in your PATH to run this"
+msgstr "ПОМИЛКА: zenity повинен бути встановлений і бути в PATH, щоб запустити це"
+
+#: src/persistence-wizard:43
+#, sh-format
+msgid "ERROR: xfsprogs must be installed to run this"
+msgstr "ПОМИЛКА: xfsprogs повинен бути встановлений щоб запустити це"
+
+#: src/persistence-wizard:52
+#, sh-format
+msgid "Persistent changes"
+msgstr "Постійні зміни"
+
+#: src/persistence-wizard:54
+#, sh-format
+msgid "If you wish, you can save any of your work or modification performed while in a LiveCD session.\\n\\nTo do this however, you must first create a special \"persistent file\" which will have a pre-decided fixed-size and will be formatted as a linux file system.\\n\\nOnce this file is created, simply reboot the LiveCD for your changes to become persistent from then on."
+msgstr "Якщо Ви бажаєте, то Ви можете зберегти будь-яку Вашу роботу або зміни під час LiveCD сесії.\\n\\nЩоб це зробити, спочатку треба створити спеціальний \"файл збереження\", який буде мати наперед визначений розмір і буде відформатований як файлова система linux.\\n\\nЯк тільки цей файл буде створений, перезавантажте LiveCD, щоб Ваші зміни стали постійними."
+
+#: src/persistence-wizard:57
+#, sh-format
+msgid "Mount point selection"
+msgstr "Вибір точки монтування"
+
+#: src/persistence-wizard:60
+#, sh-format
+msgid "Choose the mountpoint where to save the persistent file:"
+msgstr "Виберіть точку монтування, де зберігатиметься \"файл збереження\":"
+
+#: src/persistence-wizard:61
+#, sh-format
+msgid "Mount point"
+msgstr "Точка монтування"
+
+#: src/persistence-wizard:62
+#, sh-format
+msgid "Size (in MB)"
+msgstr "Розмір (в Мб)"
+
+#: src/persistence-wizard:77
+#, sh-format
+msgid "Size selection"
+msgstr "Вибір розміру"
+
+#: src/persistence-wizard:80
+#, sh-format
+msgid "Choose the size in megabytes (maximum $MAXSIZE) for persistent file on $MOUNTPOINT:"
+msgstr "Виберіть розмір в мегабайтах (максимум $MAXSIZE) для \"файлу збереження\" на $MOUNTPOINT:"
+
+#: src/persistence-wizard:89
+#: src/persistence-wizard:114
+#, sh-format
+msgid "Error"
+msgstr "Помилка"
+
+#: src/persistence-wizard:92
+#, sh-format
+msgid "The chosen size is too big ($SIZE > $MAXSIZE)"
+msgstr "Вибраний розмір завеликий ($SIZE > $MAXSIZE)"
+
+#: src/persistence-wizard:109
+#, sh-format
+msgid "slxsave.xfs ($SIZE MB) correctly created in $MOUNTPOINT"
+msgstr "slxsave.xfs ($SIZE Мб) коректно створений в $MOUNTPOINT"
+
+#: src/persistence-wizard:117
+#, sh-format
+msgid "slxsave.xfs ($SIZE MB) cannot be created in $MOUNTPOINT"
+msgstr "slxsave.xfs ($SIZE Мб) не може бути створений в $MOUNTPOINT"
+
+#: persistence-wizard.desktop.in.h:1 persistence-wizard-kde.desktop.in.h:1
+msgid "Create a slxsave.xfs file in order to persist changes in the live env."
+msgstr "Створіть файл slxsave.xfs щоб зберегти зміни в live оточенні."
+
+#: persistence-wizard.desktop.in.h:2 persistence-wizard-kde.desktop.in.h:2
+msgid "Persistence Wizard"
+msgstr "Майстер збереження змін"

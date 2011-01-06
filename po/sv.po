@@ -1,0 +1,115 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Ingemar Karlsson <po@ingk.se>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: persistence-wizard\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-03-25 00:10+0100\n"
+"PO-Revision-Date: 2010-09-26 10:55+0100\n"
+"Last-Translator: Ingemar Karlsson <ingemar@ingk.se>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Swedish\n"
+"X-Poedit-Country: SWEDEN\n"
+
+#: src/persistence-wizard:33
+#, sh-format
+msgid "ERROR: You need to be root to run this"
+msgstr "FEL: Du måste vara root för att kunna köra detta"
+
+#: src/persistence-wizard:38
+#, sh-format
+msgid "ERROR: zenity must be installed and in your PATH to run this"
+msgstr "FEL: zenity måste vara installerat och i din SÖKVÄG för att köra detta"
+
+#: src/persistence-wizard:43
+#, sh-format
+msgid "ERROR: xfsprogs must be installed to run this"
+msgstr "FEL: xfsprogs måste vara installerat för att köra detta"
+
+#: src/persistence-wizard:52
+#, sh-format
+msgid "Persistent changes"
+msgstr "Permanenta förändringar"
+
+#: src/persistence-wizard:54
+#, sh-format
+msgid ""
+"If you wish, you can save any of your work or modification performed while in a LiveCD session.\\n"
+"\\n"
+"To do this however, you must first create a special \"persistent file\" which will have a pre-decided fixed-size and will be formatted as a linux file system.\\n"
+"\\n"
+"Once this file is created, simply reboot the LiveCD for your changes to become persistent from then on."
+msgstr ""
+"Om du vill kan du spara arbeten eller ändringar som du utfört i en LiveCD session.\n"
+"\n"
+"För att kunna göra detta måste du först skapa en speciell \"permanent fil\" som kommer att ha en förutbestämd fast storlek och formaterad som ett linux filsystem.\n"
+"\n"
+"När filen är skapad starta om LiveCD'n för att ändringarna skall bli bestående framöver."
+
+#: src/persistence-wizard:57
+#, sh-format
+msgid "Mount point selection"
+msgstr "Val av monteringspunkt"
+
+#: src/persistence-wizard:60
+#, sh-format
+msgid "Choose the mountpoint where to save the persistent file:"
+msgstr "Välj monteringspunkten för att spara den permanenta filen."
+
+#: src/persistence-wizard:61
+#, sh-format
+msgid "Mount point"
+msgstr "Monteringspunkt"
+
+#: src/persistence-wizard:62
+#, sh-format
+msgid "Size (in MB)"
+msgstr "Storlek (MB)"
+
+#: src/persistence-wizard:77
+#, sh-format
+msgid "Size selection"
+msgstr "Storleks val"
+
+#: src/persistence-wizard:80
+#, sh-format
+msgid "Choose the size in megabytes (maximum $MAXSIZE) for persistent file on $MOUNTPOINT:"
+msgstr "Välj storleken i megabytes (maximalt $MAXSIZE) för den permanenta filen på $MOUNTPOINT:"
+
+#: src/persistence-wizard:89
+#: src/persistence-wizard:114
+#, sh-format
+msgid "Error"
+msgstr "Fel"
+
+#: src/persistence-wizard:92
+#, sh-format
+msgid "The chosen size is too big ($SIZE > $MAXSIZE)"
+msgstr "Den valda storleken är för stor ($SIZE > $MAXSIZE)"
+
+#: src/persistence-wizard:109
+#, sh-format
+msgid "slxsave.xfs ($SIZE MB) correctly created in $MOUNTPOINT"
+msgstr "slxsave.xfs ($SIZE) skapades i $MOUNTPOINT"
+
+#: src/persistence-wizard:117
+#, sh-format
+msgid "slxsave.xfs ($SIZE MB) cannot be created in $MOUNTPOINT"
+msgstr "slxsave.xfs ($SIZE MB) kunde inte skapas i $MOUNTPOINT"
+
+#: persistence-wizard.desktop.in.h:1
+#: persistence-wizard-kde.desktop.in.h:1
+msgid "Create a slxsave.xfs file in order to persist changes in the live env."
+msgstr "Skapa en slxsave.xfs fil för att permanent kunna spara ändringar i live mijön."
+
+#: persistence-wizard.desktop.in.h:2
+#: persistence-wizard-kde.desktop.in.h:2
+msgid "Persistence Wizard"
+msgstr "Permanent Guide"
+

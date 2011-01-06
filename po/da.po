@@ -1,0 +1,114 @@
+# Danish translation of persistence-wizard
+# Copyright (C) 2010
+# This file is distributed under the same license as the persistence-wizard package.
+# Kris Thomsen <lakristho@gmail.com>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: persistence-wizard\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-03-25 00:10+0100\n"
+"PO-Revision-Date: 2010-03-25 09:22+0100\n"
+"Last-Translator: Kris Thomsen <lakristho@gmail.com>\n"
+"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/persistence-wizard:33
+#, sh-format
+msgid "ERROR: You need to be root to run this"
+msgstr "FEJL: Du skal være root for at køre dette"
+
+#: src/persistence-wizard:38
+#, sh-format
+msgid "ERROR: zenity must be installed and in your PATH to run this"
+msgstr "FEJL: zenity skal være installeret og i din PATH for at køre dette"
+
+#: src/persistence-wizard:43
+#, sh-format
+msgid "ERROR: xfsprogs must be installed to run this"
+msgstr "FEJL: xfsprogs skal være installeret for at køre dette"
+
+#: src/persistence-wizard:52
+#, sh-format
+msgid "Persistent changes"
+msgstr "Vedholdende ændringer"
+
+#: src/persistence-wizard:54
+#, sh-format
+msgid ""
+"If you wish, you can save any of your work or modification performed while "
+"in a LiveCD session.\\n\\nTo do this however, you must first create a "
+"special \"persistent file\" which will have a pre-decided fixed-size and "
+"will be formatted as a linux file system.\\n\\nOnce this file is created, "
+"simply reboot the LiveCD for your changes to become persistent from then on."
+msgstr ""
+"Hvis du vil, kan du gemme alt dit arbejde eller ændringer udført under en "
+"live-cd-session.\\n\\nFor at gøre dette, skal man dog først oprette en "
+"specielt \"vedholdende fil\" som skal have en foruddefineret fast størrelse og "
+"vil blive formateret som et Linux-filsystem.\\n\\nNår filen er oprettet skal "
+"du blot genstarte live-cd'en for at dine ændringer bliver vedholdende derfra."
+
+#: src/persistence-wizard:57
+#, sh-format
+msgid "Mount point selection"
+msgstr "Valg af monteringspunkt"
+
+#: src/persistence-wizard:60
+#, sh-format
+msgid "Choose the mountpoint where to save the persistent file:"
+msgstr "Vælg monteringspunktet hvor den vedholdende fil skal gemmes:"
+
+#: src/persistence-wizard:61
+#, sh-format
+msgid "Mount point"
+msgstr "Monteringspunkt"
+
+#: src/persistence-wizard:62
+#, sh-format
+msgid "Size (in MB)"
+msgstr "Størrelse (i MB)"
+
+#: src/persistence-wizard:77
+#, sh-format
+msgid "Size selection"
+msgstr "Valg af størrelse"
+
+#: src/persistence-wizard:80
+#, sh-format
+msgid ""
+"Choose the size in megabytes (maximum $MAXSIZE) for persistent file on "
+"$MOUNTPOINT:"
+msgstr ""
+"Vælg størrelsen i megabytes (maksimum $MAXSIZE) til den vedholdende fil på "
+"$MOUNTPOINT:"
+
+#: src/persistence-wizard:89
+#: src/persistence-wizard:114
+#, sh-format
+msgid "Error"
+msgstr "Fejl"
+
+#: src/persistence-wizard:92
+#, sh-format
+msgid "The chosen size is too big ($SIZE > $MAXSIZE)"
+msgstr "Den valgte størrelse er for stor ($SIZE > $MAXSIZE)"
+
+#: src/persistence-wizard:109
+#, sh-format
+msgid "slxsave.xfs ($SIZE MB) correctly created in $MOUNTPOINT"
+msgstr "slxsave.xfs ($SIZE MB) oprettet uden problemer i $MOUNTPOINT"
+
+#: src/persistence-wizard:117
+#, sh-format
+msgid "slxsave.xfs ($SIZE MB) cannot be created in $MOUNTPOINT"
+msgstr "slxsave.xfs ($SIZE MB) kan ikke blive oprettet i $MOUNTPOINT"
+
+#: persistence-wizard.desktop.in.h:1 persistence-wizard-kde.desktop.in.h:1
+msgid "Create a slxsave.xfs file in order to persist changes in the live env."
+msgstr "Opret en slxsave.xfs-fil for at vedholde ændringer i live-miljøet."
+
+#: persistence-wizard.desktop.in.h:2 persistence-wizard-kde.desktop.in.h:2
+msgid "Persistence Wizard"
+msgstr "Vedholdende guide"
