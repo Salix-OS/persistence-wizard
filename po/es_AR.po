@@ -2,20 +2,20 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: persistence-wizard\n"
+"Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-25 00:10+0100\n"
-"PO-Revision-Date: 2010-03-24 21:59-0300\n"
-"Last-Translator: seacat <seacat.lang@gmail.com>\n"
-"Language-Team:  <seacat.lang@gmail.com>\n"
+"POT-Creation-Date: 2011-01-01 18:12+0100\n"
+"PO-Revision-Date: 2011-01-09 13:15+0000\n"
+"Last-Translator: gapan <vlahavas@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: Spanish\n"
-"X-Poedit-Country: ARGENTINA\n"
+"Language: es_AR\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: src/persistence-wizard:33
 #, sh-format
@@ -39,18 +39,8 @@ msgstr "Cambios persistentes"
 
 #: src/persistence-wizard:54
 #, sh-format
-msgid ""
-"If you wish, you can save any of your work or modification performed while in a LiveCD session.\\n"
-"\\n"
-"To do this however, you must first create a special \"persistent file\" which will have a pre-decided fixed-size and will be formatted as a linux file system.\\n"
-"\\n"
-"Once this file is created, simply reboot the LiveCD for your changes to become persistent from then on."
-msgstr ""
-"Si lo desea, puede guardar cualquier trabajo o modificación efectuada durante la sesión LiveCD.\\n"
-"\\n"
-"Sin embargo, para hacer esto, primero tiene que crear un \"archivo persistente\" especial que tendrá un tamaño fijo predeterminado y se formateará como un sistema de archivos Linux.\\n"
-"\\n"
-"Una vez que se crea el archivo, simplemente reinicie el LiveCD para que sus cambios se hagan persistentes desde ese momento."
+msgid "If you wish, you can save any of your work or modification performed while in a LiveCD session.\\n\\nTo do this however, you must first create a special \"persistent file\" which will have a pre-decided fixed-size and will be formatted as a linux file system.\\n\\nOnce this file is created, simply reboot the LiveCD for your changes to become persistent from then on."
+msgstr "Si lo desea, puede guardar cualquier trabajo o modificación efectuada durante la sesión LiveCD.\\n\\nSin embargo, para hacer esto, primero tiene que crear un \"archivo persistente\" especial que tendrá un tamaño fijo predeterminado y se formateará como un sistema de archivos Linux.\\n\\nUna vez que se crea el archivo, simplemente reinicie el LiveCD para que sus cambios se hagan persistentes desde ese momento."
 
 #: src/persistence-wizard:57
 #, sh-format
@@ -82,8 +72,7 @@ msgstr "Selección del tamaño"
 msgid "Choose the size in megabytes (maximum $MAXSIZE) for persistent file on $MOUNTPOINT:"
 msgstr "Elegir el tamaño en megabytes ($MAXSIZE máximo) para el archivo persistente en $MOUNTPOINT:"
 
-#: src/persistence-wizard:89
-#: src/persistence-wizard:114
+#: src/persistence-wizard:89 src/persistence-wizard:114
 #, sh-format
 msgid "Error"
 msgstr "Error"
@@ -103,13 +92,10 @@ msgstr "slxsave.xfs ($SIZE MB) se creó correctamente en $MOUNTPOINT"
 msgid "slxsave.xfs ($SIZE MB) cannot be created in $MOUNTPOINT"
 msgstr "No se pudo crear slxsave.xfs ($SIZE MB) en $MOUNTPOINT"
 
-#: persistence-wizard.desktop.in.h:1
-#: persistence-wizard-kde.desktop.in.h:1
+#: persistence-wizard.desktop.in.h:1 persistence-wizard-kde.desktop.in.h:1
 msgid "Create a slxsave.xfs file in order to persist changes in the live env."
 msgstr "Crear un archivo slxsave.xfs a fin de persistan los cambios en el ambiente Live."
 
-#: persistence-wizard.desktop.in.h:2
-#: persistence-wizard-kde.desktop.in.h:2
+#: persistence-wizard.desktop.in.h:2 persistence-wizard-kde.desktop.in.h:2
 msgid "Persistence Wizard"
 msgstr "Asistente de persistencia"
-

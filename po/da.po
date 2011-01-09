@@ -1,19 +1,21 @@
-# Danish translation of persistence-wizard
-# Copyright (C) 2010
-# This file is distributed under the same license as the persistence-wizard package.
-# Kris Thomsen <lakristho@gmail.com>, 2010.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: persistence-wizard\n"
+"Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-25 00:10+0100\n"
-"PO-Revision-Date: 2010-03-25 09:22+0100\n"
-"Last-Translator: Kris Thomsen <lakristho@gmail.com>\n"
-"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
+"POT-Creation-Date: 2011-01-01 18:12+0100\n"
+"PO-Revision-Date: 2011-01-09 13:15+0000\n"
+"Last-Translator: gapan <vlahavas@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: da\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: src/persistence-wizard:33
 #, sh-format
@@ -37,18 +39,8 @@ msgstr "Vedholdende ændringer"
 
 #: src/persistence-wizard:54
 #, sh-format
-msgid ""
-"If you wish, you can save any of your work or modification performed while "
-"in a LiveCD session.\\n\\nTo do this however, you must first create a "
-"special \"persistent file\" which will have a pre-decided fixed-size and "
-"will be formatted as a linux file system.\\n\\nOnce this file is created, "
-"simply reboot the LiveCD for your changes to become persistent from then on."
-msgstr ""
-"Hvis du vil, kan du gemme alt dit arbejde eller ændringer udført under en "
-"live-cd-session.\\n\\nFor at gøre dette, skal man dog først oprette en "
-"specielt \"vedholdende fil\" som skal have en foruddefineret fast størrelse og "
-"vil blive formateret som et Linux-filsystem.\\n\\nNår filen er oprettet skal "
-"du blot genstarte live-cd'en for at dine ændringer bliver vedholdende derfra."
+msgid "If you wish, you can save any of your work or modification performed while in a LiveCD session.\\n\\nTo do this however, you must first create a special \"persistent file\" which will have a pre-decided fixed-size and will be formatted as a linux file system.\\n\\nOnce this file is created, simply reboot the LiveCD for your changes to become persistent from then on."
+msgstr "Hvis du vil, kan du gemme alt dit arbejde eller ændringer udført under en live-cd-session.\\n\\nFor at gøre dette, skal man dog først oprette en specielt \"vedholdende fil\" som skal have en foruddefineret fast størrelse og vil blive formateret som et Linux-filsystem.\\n\\nNår filen er oprettet skal du blot genstarte live-cd'en for at dine ændringer bliver vedholdende derfra."
 
 #: src/persistence-wizard:57
 #, sh-format
@@ -77,15 +69,10 @@ msgstr "Valg af størrelse"
 
 #: src/persistence-wizard:80
 #, sh-format
-msgid ""
-"Choose the size in megabytes (maximum $MAXSIZE) for persistent file on "
-"$MOUNTPOINT:"
-msgstr ""
-"Vælg størrelsen i megabytes (maksimum $MAXSIZE) til den vedholdende fil på "
-"$MOUNTPOINT:"
+msgid "Choose the size in megabytes (maximum $MAXSIZE) for persistent file on $MOUNTPOINT:"
+msgstr "Vælg størrelsen i megabytes (maksimum $MAXSIZE) til den vedholdende fil på $MOUNTPOINT:"
 
-#: src/persistence-wizard:89
-#: src/persistence-wizard:114
+#: src/persistence-wizard:89 src/persistence-wizard:114
 #, sh-format
 msgid "Error"
 msgstr "Fejl"

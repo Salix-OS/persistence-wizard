@@ -1,19 +1,21 @@
-# Dutch .po file for persistence-wizard.
-# Copyright (C) 2010
-# This file is distributed under the same license as the persistence-wizard package.
-# Imar van Erven Dorens <gambit73@gmail.com>, 2010.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: persistence-wizard\n"
+"Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-25 00:10+0100\n"
-"PO-Revision-Date: 2010-05-04 09:03+0100\n"
-"Last-Translator: Imar van Erven Dorens <gambit73@gmail.com>\n"
-"Language-Team: Dutch <LL@li.org>\n"
+"POT-Creation-Date: 2011-01-01 18:12+0100\n"
+"PO-Revision-Date: 2011-01-09 13:15+0000\n"
+"Last-Translator: gapan <vlahavas@gmail.com>\n"
+"Language-Team: Dutch <>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: src/persistence-wizard:33
 #, sh-format
@@ -37,18 +39,8 @@ msgstr "Persistente wijzigingen"
 
 #: src/persistence-wizard:54
 #, sh-format
-msgid ""
-"If you wish, you can save any of your work or modification performed while in a LiveCD session.\\n"
-"\\n"
-"To do this however, you must first create a special \"persistent file\" which will have a pre-decided fixed-size and will be formatted as a linux file system.\\n"
-"\\n"
-"Once this file is created, simply reboot the LiveCD for your changes to become persistent from then on."
-msgstr ""
-"Indien gewenst, kan al uw werk of aanpassingen uitgevoerd in de LiveCD sessie worden opgeslagen.\\n"
-"\\n"
-"Om dit te doen, moet u een speciale \"persistent bestand\" aanmaken welke een vooraf gekozen grootte is en zal worden geformatteerd als een linux bestandssysteem.\\n"
-"\\n"
-"Zodra dit bestand is gecreërd, herstart de LiveCD om uw aanpassingen vanaf de herstart persistent te maken."
+msgid "If you wish, you can save any of your work or modification performed while in a LiveCD session.\\n\\nTo do this however, you must first create a special \"persistent file\" which will have a pre-decided fixed-size and will be formatted as a linux file system.\\n\\nOnce this file is created, simply reboot the LiveCD for your changes to become persistent from then on."
+msgstr "Indien gewenst, kan al uw werk of aanpassingen uitgevoerd in de LiveCD sessie worden opgeslagen.\\n\\nOm dit te doen, moet u een speciale \"persistent bestand\" aanmaken welke een vooraf gekozen grootte is en zal worden geformatteerd als een linux bestandssysteem.\\n\\nZodra dit bestand is gecreërd, herstart de LiveCD om uw aanpassingen vanaf de herstart persistent te maken."
 
 #: src/persistence-wizard:57
 #, sh-format
@@ -80,8 +72,7 @@ msgstr "Grootte selectie"
 msgid "Choose the size in megabytes (maximum $MAXSIZE) for persistent file on $MOUNTPOINT:"
 msgstr "Kies de grootte in megabytes (maximum $MAXSIZE) voor een persistent bestand op $MOUNTPOINT:"
 
-#: src/persistence-wizard:89
-#: src/persistence-wizard:114
+#: src/persistence-wizard:89 src/persistence-wizard:114
 #, sh-format
 msgid "Error"
 msgstr "Fout"
@@ -101,79 +92,10 @@ msgstr "slxsave.xfs ($SIZE MB) succesvol gecreërd in $MOUNTPOINT"
 msgid "slxsave.xfs ($SIZE MB) cannot be created in $MOUNTPOINT"
 msgstr "slxsave.xfs ($SIZE MB) kan niet worden gecreërd in $MOUNTPOINT"
 
-#: persistence-wizard.desktop.in.h:1
-#: persistence-wizard-kde.desktop.in.h:1
+#: persistence-wizard.desktop.in.h:1 persistence-wizard-kde.desktop.in.h:1
 msgid "Create a slxsave.xfs file in order to persist changes in the live env."
 msgstr "Creër een slxsave.xfs bestand om de aanpassingen persistent te maken in de live omgeving."
 
-#: persistence-wizard.desktop.in.h:2
-#: persistence-wizard-kde.desktop.in.h:2
+#: persistence-wizard.desktop.in.h:2 persistence-wizard-kde.desktop.in.h:2
 msgid "Persistence Wizard"
 msgstr "Persistentie Wizard"
-
-#~ msgid ""
-#~ "ERROR: salix-codecs-installer must be executed within a running X session."
-#~ "\\n"
-#~ msgstr ""
-#~ "FOUT: salix-codecs-installer moet worde gestart binnen een werkende X "
-#~ "sessie.\\n"
-#~ msgid "Error connecting to server"
-#~ msgstr "Fout bij connectie maken naar de server"
-#~ msgid ""
-#~ "There was an error connecting to at least one of the repositories.\\n"
-#~ "\\nPlease check that you have a working internet connection and that the "
-#~ "repository list in gslapt (or directly in /etc/slapt-get/slapt-getrc) is "
-#~ "correctly set up."
-#~ msgstr ""
-#~ "Er is een fout opgetreden bij een connectie naar een van de repositories."
-#~ "\\n\\nControleer alstublieft of u een werkende internet connectie heeft "
-#~ "en dat de repository lijst in gslapt (of direct in /etc/slapt-get/slapt-"
-#~ "getrc) correct is ingesteld."
-#~ msgid "Error downloading packages"
-#~ msgstr "Fout in het downloaden van pakketten"
-#~ msgid ""
-#~ "There was an error downloading the required packages. Please make sure "
-#~ "that your internet connection is working properly and try again"
-#~ msgstr ""
-#~ "Er is een fout opgetreden bij het downloaden van de vereiste pakketten. "
-#~ "Controleer alstublieft of u een werkende internet connectie heeft en "
-#~ "probeer opnieuw."
-#~ msgid "Install multimedia codecs?"
-#~ msgstr "Installeer multimedia codecs?"
-#~ msgid ""
-#~ "Some multimedia codecs are patent encumbered and pose distribution "
-#~ "problems in certain countries. Therefore, support for all codecs is not "
-#~ "included by default in Salix.\\n\\nYou will be able to play files encoded "
-#~ "with free codecs, but you will not be able to play commercial DVDs or "
-#~ "listen to mp3 files without these codecs.\\n\\nPlease check the "
-#~ "legislation in your country and select to install the codecs only if it "
-#~ "is legal for you to do so.\\n\\nWould you like to install these extra "
-#~ "multimedia codecs?"
-#~ msgstr ""
-#~ "Sommige multmedia codecs zijn beladen onder het octrooirecht en geven "
-#~ "distributieproblemen in bepaalde landen. Zodoende is ondersteuning voor "
-#~ "alle codecs niet standaard aanwezig in Salix.\\n\\nHet is mogelijk om "
-#~ "bestanden welke zijn ge-encodeerd met vrije codecs af te spelen, maar het "
-#~ "is niet mogelijk om commerciële DVDs of MP3 bestanden af te spelen zonder "
-#~ "gelicentieerde codecs.\\n\\nControleer "
-#~ msgid "Receiving package information..."
-#~ msgstr "Ontvangen van pakket informatie..."
-#~ msgid "System preparation"
-#~ msgstr "Systeem voorbereiding"
-#~ msgid "Downloading and installing packages..."
-#~ msgstr "Downloaden en installeren van pakketten..."
-#~ msgid "Package installation"
-#~ msgstr "Pakketinstallatie"
-#~ msgid "Done!"
-#~ msgstr "Gereed!"
-#~ msgid ""
-#~ "Codecs installation was succesfully completed.\\n\\nWould you like to "
-#~ "remove the codecs installer from your system?"
-#~ msgstr ""
-#~ "De installatie van de codecs is geslaagd.\\n\\nWilt u het codecs "
-#~ "installatieprogramma van uw systeem verwijderen?"
-#~ msgid "Install codecs required for playing restricted formats"
-#~ msgstr "Installeer de codecs nodig om gelicentieerde formaten af te spelen"
-#~ msgid "Install multimedia codecs"
-#~ msgstr "Installeer multimedia codecs"
-
