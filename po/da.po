@@ -2,19 +2,19 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-01 18:12+0100\n"
+"POT-Creation-Date: 2011-06-08 20:55+0200\n"
 "PO-Revision-Date: 2011-01-09 13:15+0000\n"
 "Last-Translator: gapan <vlahavas@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: da\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: src/persistence-wizard:33
@@ -39,8 +39,19 @@ msgstr "Vedholdende ændringer"
 
 #: src/persistence-wizard:54
 #, sh-format
-msgid "If you wish, you can save any of your work or modification performed while in a LiveCD session.\\n\\nTo do this however, you must first create a special \"persistent file\" which will have a pre-decided fixed-size and will be formatted as a linux file system.\\n\\nOnce this file is created, simply reboot the LiveCD for your changes to become persistent from then on."
-msgstr "Hvis du vil, kan du gemme alt dit arbejde eller ændringer udført under en live-cd-session.\\n\\nFor at gøre dette, skal man dog først oprette en specielt \"vedholdende fil\" som skal have en foruddefineret fast størrelse og vil blive formateret som et Linux-filsystem.\\n\\nNår filen er oprettet skal du blot genstarte live-cd'en for at dine ændringer bliver vedholdende derfra."
+msgid ""
+"If you wish, you can save any of your work or modification performed while "
+"in a LiveCD session.\\n\\nTo do this however, you must first create a "
+"special \"persistent file\" which will have a pre-decided fixed-size and "
+"will be formatted as a linux file system.\\n\\nOnce this file is created, "
+"simply reboot the LiveCD for your changes to become persistent from then on."
+msgstr ""
+"Hvis du vil, kan du gemme alt dit arbejde eller ændringer udført under en "
+"live-cd-session.\\n\\nFor at gøre dette, skal man dog først oprette en "
+"specielt \"vedholdende fil\" som skal have en foruddefineret fast størrelse "
+"og vil blive formateret som et Linux-filsystem.\\n\\nNår filen er oprettet "
+"skal du blot genstarte live-cd'en for at dine ændringer bliver vedholdende "
+"derfra."
 
 #: src/persistence-wizard:57
 #, sh-format
@@ -69,8 +80,12 @@ msgstr "Valg af størrelse"
 
 #: src/persistence-wizard:80
 #, sh-format
-msgid "Choose the size in megabytes (maximum $MAXSIZE) for persistent file on $MOUNTPOINT:"
-msgstr "Vælg størrelsen i megabytes (maksimum $MAXSIZE) til den vedholdende fil på $MOUNTPOINT:"
+msgid ""
+"Choose the size in megabytes (maximum $MAXSIZE) for persistent file on "
+"$MOUNTPOINT:"
+msgstr ""
+"Vælg størrelsen i megabytes (maksimum $MAXSIZE) til den vedholdende fil på "
+"$MOUNTPOINT:"
 
 #: src/persistence-wizard:89 src/persistence-wizard:114
 #, sh-format
@@ -92,10 +107,12 @@ msgstr "slxsave.xfs ($SIZE MB) oprettet uden problemer i $MOUNTPOINT"
 msgid "slxsave.xfs ($SIZE MB) cannot be created in $MOUNTPOINT"
 msgstr "slxsave.xfs ($SIZE MB) kan ikke blive oprettet i $MOUNTPOINT"
 
-#: persistence-wizard.desktop.in.h:1 persistence-wizard-kde.desktop.in.h:1
+#: src/persistence-wizard.desktop.in.h:1
+#: src/persistence-wizard-kde.desktop.in.h:1
 msgid "Create a slxsave.xfs file in order to persist changes in the live env."
 msgstr "Opret en slxsave.xfs-fil for at vedholde ændringer i live-miljøet."
 
-#: persistence-wizard.desktop.in.h:2 persistence-wizard-kde.desktop.in.h:2
+#: src/persistence-wizard.desktop.in.h:2
+#: src/persistence-wizard-kde.desktop.in.h:2
 msgid "Persistence Wizard"
 msgstr "Vedholdende guide"

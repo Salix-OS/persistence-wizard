@@ -2,19 +2,19 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-01 18:12+0100\n"
+"POT-Creation-Date: 2011-06-08 20:55+0200\n"
 "PO-Revision-Date: 2011-01-09 13:15+0000\n"
 "Last-Translator: gapan <vlahavas@gmail.com>\n"
 "Language-Team: French <>\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1)\n"
 
 #: src/persistence-wizard:33
@@ -25,7 +25,9 @@ msgstr "ERREUR : Vous devez être root afin d'exécuter ce programme"
 #: src/persistence-wizard:38
 #, sh-format
 msgid "ERROR: zenity must be installed and in your PATH to run this"
-msgstr "ERREUR : zenity doit être installé et dans votre PATH afin d'exécuter ce programme"
+msgstr ""
+"ERREUR : zenity doit être installé et dans votre PATH afin d'exécuter ce "
+"programme"
 
 #: src/persistence-wizard:43
 #, sh-format
@@ -39,8 +41,20 @@ msgstr "Changements persistants"
 
 #: src/persistence-wizard:54
 #, sh-format
-msgid "If you wish, you can save any of your work or modification performed while in a LiveCD session.\\n\\nTo do this however, you must first create a special \"persistent file\" which will have a pre-decided fixed-size and will be formatted as a linux file system.\\n\\nOnce this file is created, simply reboot the LiveCD for your changes to become persistent from then on."
-msgstr "Si vous le désirez, vous pouvez sauvegarder votre travail ou les modifications que vous avez apportées à l'environnement de votre session LiveCD.\\n\\nPour ceci, vous devez auparavant créer un \"fichier de persistance\" spécial qui aura une taille fixe pré-décidée et qui sera formaté avec un système de fichiers Linux.\\n\\nUne fois ce fichier créé, il suffira de redémarrer le LiveCD pour que tous vos changements ultérieurs soient sauvegardés."
+msgid ""
+"If you wish, you can save any of your work or modification performed while "
+"in a LiveCD session.\\n\\nTo do this however, you must first create a "
+"special \"persistent file\" which will have a pre-decided fixed-size and "
+"will be formatted as a linux file system.\\n\\nOnce this file is created, "
+"simply reboot the LiveCD for your changes to become persistent from then on."
+msgstr ""
+"Si vous le désirez, vous pouvez sauvegarder votre travail ou les "
+"modifications que vous avez apportées à l'environnement de votre session "
+"LiveCD.\\n\\nPour ceci, vous devez auparavant créer un \"fichier de "
+"persistance\" spécial qui aura une taille fixe pré-décidée et qui sera "
+"formaté avec un système de fichiers Linux.\\n\\nUne fois ce fichier créé, il "
+"suffira de redémarrer le LiveCD pour que tous vos changements ultérieurs "
+"soient sauvegardés."
 
 #: src/persistence-wizard:57
 #, sh-format
@@ -69,8 +83,12 @@ msgstr "Sélection de la taille"
 
 #: src/persistence-wizard:80
 #, sh-format
-msgid "Choose the size in megabytes (maximum $MAXSIZE) for persistent file on $MOUNTPOINT:"
-msgstr "Choisissez la taille en mégaoctets (maximum $MAXSIZE) pour le fichier persistent sur $MOUNTPOINT :"
+msgid ""
+"Choose the size in megabytes (maximum $MAXSIZE) for persistent file on "
+"$MOUNTPOINT:"
+msgstr ""
+"Choisissez la taille en mégaoctets (maximum $MAXSIZE) pour le fichier "
+"persistent sur $MOUNTPOINT :"
 
 #: src/persistence-wizard:89 src/persistence-wizard:114
 #, sh-format
@@ -85,17 +103,23 @@ msgstr "La taille choisie est trop grande ($SIZE > $MAXSIZE)"
 #: src/persistence-wizard:109
 #, sh-format
 msgid "slxsave.xfs ($SIZE MB) correctly created in $MOUNTPOINT"
-msgstr "Le fichier slxsave.xfs ($SIZE Mo) a correctement été créé dans $MOUNTPOINT"
+msgstr ""
+"Le fichier slxsave.xfs ($SIZE Mo) a correctement été créé dans $MOUNTPOINT"
 
 #: src/persistence-wizard:117
 #, sh-format
 msgid "slxsave.xfs ($SIZE MB) cannot be created in $MOUNTPOINT"
-msgstr "Le fichier slxsave.xfs ($SIZE Mo) n'a pas pu être créé dans $MOUNTPOINT"
+msgstr ""
+"Le fichier slxsave.xfs ($SIZE Mo) n'a pas pu être créé dans $MOUNTPOINT"
 
-#: persistence-wizard.desktop.in.h:1 persistence-wizard-kde.desktop.in.h:1
+#: src/persistence-wizard.desktop.in.h:1
+#: src/persistence-wizard-kde.desktop.in.h:1
 msgid "Create a slxsave.xfs file in order to persist changes in the live env."
-msgstr "Crée un fichier 'slxsave.xfs' pour persister les changements de l'environnement Live."
+msgstr ""
+"Crée un fichier 'slxsave.xfs' pour persister les changements de "
+"l'environnement Live."
 
-#: persistence-wizard.desktop.in.h:2 persistence-wizard-kde.desktop.in.h:2
+#: src/persistence-wizard.desktop.in.h:2
+#: src/persistence-wizard-kde.desktop.in.h:2
 msgid "Persistence Wizard"
 msgstr "Assistant Persistance"

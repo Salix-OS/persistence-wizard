@@ -2,19 +2,19 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-01 18:12+0100\n"
+"POT-Creation-Date: 2011-06-08 20:55+0200\n"
 "PO-Revision-Date: 2011-01-09 13:15+0000\n"
 "Last-Translator: gapan <vlahavas@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0\n"
 
 #: src/persistence-wizard:33
@@ -25,12 +25,16 @@ msgstr "エラー：ルートユーザである必要があります。"
 #: src/persistence-wizard:38
 #, sh-format
 msgid "ERROR: zenity must be installed and in your PATH to run this"
-msgstr "エラー：zenityが、インストされていてパス設定が正しくなされている必要があります。"
+msgstr ""
+"エラー：zenityが、インストされていてパス設定が正しくなされている必要がありま"
+"す。"
 
 #: src/persistence-wizard:43
 #, sh-format
 msgid "ERROR: xfsprogs must be installed to run this"
-msgstr "エラー：xfsprogが、インストされていてパス設定が正しくなされている必要があります。"
+msgstr ""
+"エラー：xfsprogが、インストされていてパス設定が正しくなされている必要がありま"
+"す。"
 
 #: src/persistence-wizard:52
 #, sh-format
@@ -39,8 +43,19 @@ msgstr "Persistence　（パーシスタンス）"
 
 #: src/persistence-wizard:54
 #, sh-format
-msgid "If you wish, you can save any of your work or modification performed while in a LiveCD session.\\n\\nTo do this however, you must first create a special \"persistent file\" which will have a pre-decided fixed-size and will be formatted as a linux file system.\\n\\nOnce this file is created, simply reboot the LiveCD for your changes to become persistent from then on."
-msgstr "ライブCDのセッション中に行った設定の変更、カスタム化、セイブしたファイルなどを\"persistent file\" を使って記録しておくことができます。\\n\\nただし\"persistent file\" は、あらかじめ決められたサイズのLinuxフォーマットのディスク・スペースでなければいけません。\\n\\nこのファイルを用意しライブCDを再起動したあとは、全てのライブセッションにおける変更は自動的にファイルに記録されます。"
+msgid ""
+"If you wish, you can save any of your work or modification performed while "
+"in a LiveCD session.\\n\\nTo do this however, you must first create a "
+"special \"persistent file\" which will have a pre-decided fixed-size and "
+"will be formatted as a linux file system.\\n\\nOnce this file is created, "
+"simply reboot the LiveCD for your changes to become persistent from then on."
+msgstr ""
+"ライブCDのセッション中に行った設定の変更、カスタム化、セイブしたファイルなど"
+"を\"persistent file\" を使って記録しておくことができます。\\n\\nただし"
+"\"persistent file\" は、あらかじめ決められたサイズのLinuxフォーマットのディス"
+"ク・スペースでなければいけません。\\n\\nこのファイルを用意しライブCDを再起動"
+"したあとは、全てのライブセッションにおける変更は自動的にファイルに記録されま"
+"す。"
 
 #: src/persistence-wizard:57
 #, sh-format
@@ -69,8 +84,12 @@ msgstr "サイズ設定"
 
 #: src/persistence-wizard:80
 #, sh-format
-msgid "Choose the size in megabytes (maximum $MAXSIZE) for persistent file on $MOUNTPOINT:"
-msgstr "$MOUNTPOINTにおけるPersistenceファイルのサイズを設定してください。(最高 $MAXSIZE):"
+msgid ""
+"Choose the size in megabytes (maximum $MAXSIZE) for persistent file on "
+"$MOUNTPOINT:"
+msgstr ""
+"$MOUNTPOINTにおけるPersistenceファイルのサイズを設定してください。(最高 "
+"$MAXSIZE):"
 
 #: src/persistence-wizard:89 src/persistence-wizard:114
 #, sh-format
@@ -92,10 +111,14 @@ msgstr "slxsave.xfs ($SIZE MB) を$MOUNTPOINTに作りました。"
 msgid "slxsave.xfs ($SIZE MB) cannot be created in $MOUNTPOINT"
 msgstr "slxsave.xfs ($SIZE MB) を $MOUNTPOINTに作ることに失敗しました。"
 
-#: persistence-wizard.desktop.in.h:1 persistence-wizard-kde.desktop.in.h:1
+#: src/persistence-wizard.desktop.in.h:1
+#: src/persistence-wizard-kde.desktop.in.h:1
 msgid "Create a slxsave.xfs file in order to persist changes in the live env."
-msgstr "slxsave.xfsファイルをライブ・セッションで行った環境などの変更記録のためにつくる"
+msgstr ""
+"slxsave.xfsファイルをライブ・セッションで行った環境などの変更記録のためにつく"
+"る"
 
-#: persistence-wizard.desktop.in.h:2 persistence-wizard-kde.desktop.in.h:2
+#: src/persistence-wizard.desktop.in.h:2
+#: src/persistence-wizard-kde.desktop.in.h:2
 msgid "Persistence Wizard"
 msgstr "Persistenceウィザード"

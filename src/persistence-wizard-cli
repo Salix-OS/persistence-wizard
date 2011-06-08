@@ -30,20 +30,30 @@ if [ -z "$1" ]; then
 	exit 1
 fi
 
-NAME=$1
-SIZE=$2
-FS=$3
+NAME="$1"
+SIZE="$2"
+FS="$3"
 
 FREE=$('df' -k .|tail -n1|awk '{print $4}')
 AFTER=$(( $FREE - 1024 * $SIZE ))
 if [ $AFTER -gt 0 ]; then
-	dd if=/dev/zero of=$NAME.save bs=1M count=$SIZE
-	if [ $3 == "xfs" ]; then  
-		mkfs.$FS -f $NAME.save && CHECK="OK"
-	elif [[ $3 =~ "ext" ]]; then
-		mkfs.$FS -F $NAME.save && CHECK="OK"
+	dd if=/dev/zero of="$NAME".save bs=1M count=$SIZE
+	if [ "$FS" = "xfs" ]; then  
+		mkfs.xfs -f -m 0 -L "SaLTsave" "$NAME".save && CHECK='OK'
+	elif [[ "$FS" = "ext2" ]]; then
+		mkfs.ext2 -F -m 0 -L "SaLTsave" "$NAME".save && CHECK='OK'
+	elif [[ "$FS" = "ext3" ]]; then
+		mkfs.ext3 -F -m 0 -L "SaLTsave" "$NAME".save && CHECK='OK'
+	elif [[ "$FS" = "ext4" ]]; then
+		mkfs.ext4 -F -m 0 -L "SaLTsave" "$NAME".save && CHECK='OK'
+	elif [[ "$FS" = "reiser" ]]; then
+		mkfs.reiserfs -f -f -l "SaLTsave" "$NAME".save && CHECK='OK'
+	elif [[ "$FS" = "fat" ]]; then
+		mkfs.vfat -F 32 -I -R 2 -n "SaLTsave" -m "This is a SaLT save file, cannot boot it." "$NAME".save && CHECK='OK'
+	elif [[ "$FS" = "ntfs" ]]; then
+		mkfs.ntfs -f -I -F -L "SaLTsave" "$NAME".save && CHECK='OK'
 	fi
-	if [ $CHECK == "OK" ]; then
+	if [ -n "$CHECK" ]; then
 		echo ""
 		echo "`eval_gettext 'The persistent file $NAME.save is ready.'`"
 	else
@@ -52,6 +62,6 @@ if [ $AFTER -gt 0 ]; then
 	fi
 else
   echo "`eval_gettext 'Sorry! There is not enough free space left on your device'`"
-  echo "`eval_gettext 'for creating the persistent file $NAME.save in the current directory.'`"
+  echo "`eval_gettext 'for creating the persistent file $NAME.save'`"
   exit 1
 fi
