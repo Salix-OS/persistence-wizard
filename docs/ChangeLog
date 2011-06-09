@@ -1,0 +1,6 @@
+version 1.0
+ * Ported from create-slxsave-save
+ * Extended localization to CLI tool
+ * Added extra error checks
+ * Added extra file system options
+ * Adapted to SaLT

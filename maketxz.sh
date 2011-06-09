@@ -16,7 +16,7 @@ $PKGNAME:
 $PKGNAME: It consists of two tools (one graphical, one CLI), to help create
 $PKGNAME: a persistent file in order to use it for SaLT LiveCD.
 $PKGNAME: This persistent file is used to save the changes made in the live
-$PKGNAME: environment uppon reboot.
+$PKGNAME: environment upon reboot.
 $PKGNAME:
 $PKGNAME:
 $PKGNAME:

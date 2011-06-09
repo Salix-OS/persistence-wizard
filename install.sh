@@ -4,6 +4,7 @@ VER=$(grep '^version=' src/persistence-wizard-cli | head -n 1 | sed "s/^version=
 
 cd $(dirname $0)
 PKGNAME=persistence-wizard
+
 install -d -m 755 $DESTDIR/usr/doc/$PKGNAME-$VER
 install -d -m 755 $DESTDIR/install
 install -d -m 755 $DESTDIR/usr/sbin

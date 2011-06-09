@@ -1,4 +1,13 @@
 #!/bin/sh
+#
+# CLI utility to create a persistence file easily.
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU  General Public License as published by
+# the Free Software Foundation; either version 3 of the License or (at
+# your option) any later version.
+# Please take a look at http://www.gnu.org/copyleft/gpl.htm
+#
 # Written by: Cyrille Pontvieux <jrd~at~enialis~dot~net>
 # Modified by: Pierrick Le Brun <akuna~at~free~dot~fr>
 
@@ -24,7 +33,7 @@ if [ -z "$3" ]; then
 	echo "`eval_gettext 'with a size (in MB) defined by SIZE_IN_MEGABYTES'`" 	
 	echo "`eval_gettext 'and with a file system defined by FS_TYPE.'`" 
 	echo "" 	
-	echo "`eval_gettext 'For example:'` $(basename $0) salixlive 512 ext2" 
+	echo "`eval_gettext 'For example:'` $(basename $0) salixlive 500 ext2" 
 	echo "" 	
 	echo "`eval_gettext 'Supported file system format are:'`" 
 	echo "xfs, ext2, ext3, ext4, reiserfs, vfat, ntfs." 	
