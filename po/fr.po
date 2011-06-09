@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-06-08 20:55+0200\n"
+"POT-Creation-Date: 2011-06-09 13:00+0200\n"
 "PO-Revision-Date: 2011-01-09 13:15+0000\n"
 "Last-Translator: gapan <vlahavas@gmail.com>\n"
 "Language-Team: French <>\n"
@@ -18,7 +18,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1)\n"
 
 #: src/persistence-wizard:33
-#, sh-format
 msgid "ERROR: You need to be root to run this"
 msgstr "ERREUR : Vous devez être root afin d'exécuter ce programme"
 
@@ -62,9 +61,8 @@ msgid "Mount point selection"
 msgstr "Sélection du point de montage"
 
 #: src/persistence-wizard:60
-#, sh-format
 msgid "Choose the mountpoint where to save the persistent file:"
-msgstr "Choisissez un point de montage où sauvegarder le fichier persistent :"
+msgstr "Sélectionner le point de montage où créer le fichier de persistence :"
 
 #: src/persistence-wizard:61
 #, sh-format
@@ -112,6 +110,103 @@ msgid "slxsave.xfs ($SIZE MB) cannot be created in $MOUNTPOINT"
 msgstr ""
 "Le fichier slxsave.xfs ($SIZE Mo) n'a pas pu être créé dans $MOUNTPOINT"
 
+#: src/persistence-wizard-cli:16
+msgid "ERROR: You need to be root to run"
+msgstr "ERREUR : Vous devez être root afin d'exécuter"
+
+#: src/persistence-wizard-cli:21
+#, sh-format
+msgid "NAME SIZE_IN_MEGABYTES FS_TYPE"
+msgstr "NOM TAILLE_EN_MEGAOCTET TYPE_DE_FORMAT"
+
+#: src/persistence-wizard-cli:23
+#, sh-format
+msgid "This will create a persistent file named NAME.save"
+msgstr "Ceci créera un fichier de persistance nommé NOM.save"
+
+#: src/persistence-wizard-cli:24
+#, sh-format
+msgid "with a size (in MB) defined by SIZE_IN_MEGABYTES"
+msgstr "avec une taille (en MO) définie par TAILLE_EN_MEGAOCTET"
+
+#: src/persistence-wizard-cli:25
+#, sh-format
+msgid "and with a file system defined by FS_TYPE."
+msgstr "et avec un système de fichier défini par TYPE_DE_FORMAT"
+
+#: src/persistence-wizard-cli:27
+#, sh-format
+msgid "For example:"
+msgstr "Par exemple :"
+
+#: src/persistence-wizard-cli:29
+#, sh-format
+msgid "Supported file system format are:"
+msgstr "Les types de formattage pris en charge sont :"
+
+#: src/persistence-wizard-cli:32
+#, sh-format
+msgid "You must then copy the generated persistent file to a directory"
+msgstr ""
+"Vous devez alors copier le fichier de persistance généré sur le répertoire"
+
+#: src/persistence-wizard-cli:33
+#, sh-format
+msgid "named /salixlive/persistence either on SaLT Live USB key or else on"
+msgstr ""
+"/salixlive/persistence soit sur votre clé USB Live SaLT ou bien sur"
+
+#: src/persistence-wizard-cli:34
+#, sh-format
+msgid "a hard disk drive if the persistence will be used with a SaLT LiveCD."
+msgstr ""
+"un disque dur si la persistance sera utilisé avec un Live CD SaLT."
+
+#: src/persistence-wizard-cli:37
+#, sh-format
+msgid "Released under GPL v3 or (at your option, any later version)"
+msgstr ""
+"Distribué sous license GPL v3 ou (à votre gré) toute version ultérieure)"
+
+#: src/persistence-wizard-cli:49
+#, sh-format
+msgid "ERROR: The file system you specified is not supported by"
+msgstr ""
+"ERREUR: Le formattage que vous avez spécifié n'est pas pris en charge par"
+
+#: src/persistence-wizard-cli:58
+#, sh-format
+msgid ""
+"ERROR: The size you specified is not correct, it should be a positive "
+"integer."
+msgstr ""
+"ERREUR: La taille que vous avez spécifié est incorrecte, ce doit être un "
+"nombre entier positif."
+
+#: src/persistence-wizard-cli:83
+#, sh-format
+msgid "The persistent file $NAME.save is ready."
+msgstr "Le fichier de persistance $NAME.save est prêt. "
+
+#: src/persistence-wizard-cli:85
+#, sh-format
+msgid "ERROR:"
+msgstr "ERREUR"
+
+#: src/persistence-wizard-cli:85
+msgid " was not able to create the persistent file $NAME.save"
+msgstr "n'a pas pu créer le fichier de persistence $NAME.save"
+
+#: src/persistence-wizard-cli:89
+#, sh-format
+msgid "ERROR: There is not enough free space left on your device"
+msgstr "ERREUR: Il n'y a pas assez de place disponible sur votre périphérique"
+
+#: src/persistence-wizard-cli:90
+#, sh-format
+msgid "for creating the persistent file $NAME.save"
+msgstr "pour pouvoir créer le fichier de persistence $NAME.save"
+
 #: src/persistence-wizard.desktop.in.h:1
 #: src/persistence-wizard-kde.desktop.in.h:1
 msgid "Create a slxsave.xfs file in order to persist changes in the live env."
@@ -123,3 +218,13 @@ msgstr ""
 #: src/persistence-wizard-kde.desktop.in.h:2
 msgid "Persistence Wizard"
 msgstr "Assistant Persistance"
+
+#, fuzzy
+#~ msgid "matching size (in MB) and the matching file system type  "
+#~ msgstr "(en MO) et le système de fichier correspondant"
+
+#~ msgid "Copy this file to a directory named /salixlive/persistence "
+#~ msgstr "Copier ce fichier sur un répertoire nommé /salixlive/persistence "
+
+#~ msgid "either on your USB key or else on a hard disk drive if it "
+#~ msgstr "soit sur votre clé USB ou bien sur un disque dur si il"

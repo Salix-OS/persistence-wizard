@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-06-08 20:55+0200\n"
+"POT-Creation-Date: 2011-06-09 13:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -97,6 +97,98 @@ msgstr ""
 #: src/persistence-wizard:117
 #, sh-format
 msgid "slxsave.xfs ($SIZE MB) cannot be created in $MOUNTPOINT"
+msgstr ""
+
+#: src/persistence-wizard-cli:16
+#, sh-format
+msgid "ERROR: You need to be root to run"
+msgstr ""
+
+#: src/persistence-wizard-cli:21
+#, sh-format
+msgid "NAME SIZE_IN_MEGABYTES FS_TYPE"
+msgstr ""
+
+#: src/persistence-wizard-cli:23
+#, sh-format
+msgid "This will create a persistent file named NAME.save"
+msgstr ""
+
+#: src/persistence-wizard-cli:24
+#, sh-format
+msgid "with a size (in MB) defined by SIZE_IN_MEGABYTES"
+msgstr ""
+
+#: src/persistence-wizard-cli:25
+#, sh-format
+msgid "and with a file system defined by FS_TYPE."
+msgstr ""
+
+#: src/persistence-wizard-cli:27
+#, sh-format
+msgid "For example:"
+msgstr ""
+
+#: src/persistence-wizard-cli:29
+#, sh-format
+msgid "Supported file system format are:"
+msgstr ""
+
+#: src/persistence-wizard-cli:32
+#, sh-format
+msgid "You must then copy the generated persistent file to a directory"
+msgstr ""
+
+#: src/persistence-wizard-cli:33
+#, sh-format
+msgid "named /salixlive/persistence either on SaLT Live USB key or else on"
+msgstr ""
+
+#: src/persistence-wizard-cli:34
+#, sh-format
+msgid "a hard disk drive if the persistence will be used with a SaLT LiveCD."
+msgstr ""
+
+#: src/persistence-wizard-cli:37
+#, sh-format
+msgid "Released under GPL v3 or (at your option, any later version)"
+msgstr ""
+
+#: src/persistence-wizard-cli:49
+#, sh-format
+msgid "ERROR: The file system you specified is not supported by"
+msgstr ""
+
+#: src/persistence-wizard-cli:58
+#, sh-format
+msgid ""
+"ERROR: The size you specified is not correct, it should be a positive "
+"integer."
+msgstr ""
+
+#: src/persistence-wizard-cli:83
+#, sh-format
+msgid "The persistent file $NAME.save is ready."
+msgstr ""
+
+#: src/persistence-wizard-cli:85
+#, sh-format
+msgid "ERROR:"
+msgstr ""
+
+#: src/persistence-wizard-cli:85
+#, sh-format
+msgid " was not able to create the persistent file $NAME.save"
+msgstr ""
+
+#: src/persistence-wizard-cli:89
+#, sh-format
+msgid "ERROR: There is not enough free space left on your device"
+msgstr ""
+
+#: src/persistence-wizard-cli:90
+#, sh-format
+msgid "for creating the persistent file $NAME.save"
 msgstr ""
 
 #: src/persistence-wizard.desktop.in.h:1
