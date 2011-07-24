@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-06-09 16:41+0200\n"
+"POT-Creation-Date: 2011-07-24 14:31+0200\n"
 "PO-Revision-Date: 2011-01-09 13:15+0000\n"
 "Last-Translator: akuna <akuna~at~salixos~dot~org>\n"
 "Language-Team: French <>\n"
@@ -39,13 +39,13 @@ msgstr ""
 msgid "ERROR: xfsprogs must be installed to run"
 msgstr "ERREUR : xfsprogs doit êtres installé afin d'exécuter"
 
-#: src/persistence-wizard:49 src/persistence-wizard.desktop.in.h:2
+#: src/persistence-wizard:82 src/persistence-wizard.desktop.in.h:2
 #: src/persistence-wizard-kde.desktop.in.h:2
 #, sh-format
 msgid "Persistence Wizard"
 msgstr "Assistant de Persistance"
 
-#: src/persistence-wizard:51
+#: src/persistence-wizard:84
 #, sh-format
 msgid ""
 "If you wish, you can save any of your work or modification performed while "
@@ -62,47 +62,47 @@ msgstr ""
 "suffira de redémarrer le LiveCD pour que tous vos changements ultérieurs "
 "soient sauvegardés."
 
-#: src/persistence-wizard:54
+#: src/persistence-wizard:87
 #, sh-format
 msgid "Mount point selection"
 msgstr "Sélection du point de montage"
 
-#: src/persistence-wizard:57
+#: src/persistence-wizard:90
 #, sh-format
 msgid "Choose the mountpoint where the persistent file must be created:"
 msgstr ""
 "Sélectionner le point de montage où devra être créé le fichier de "
 "persistence :"
 
-#: src/persistence-wizard:58
+#: src/persistence-wizard:91
 #, sh-format
 msgid "Mount point"
 msgstr "Point de montage"
 
-#: src/persistence-wizard:59
+#: src/persistence-wizard:92
 #, sh-format
 msgid "Size (in MB)"
 msgstr "Taille (en Mo)"
 
-#: src/persistence-wizard:65 src/persistence-wizard:90
-#: src/persistence-wizard:101 src/persistence-wizard:127
-#: src/persistence-wizard:159
+#: src/persistence-wizard:98 src/persistence-wizard:125
+#: src/persistence-wizard:138 src/persistence-wizard:166
+#: src/persistence-wizard:202
 #, sh-format
 msgid "Error"
 msgstr "Erreur"
 
-#: src/persistence-wizard:68
+#: src/persistence-wizard:101
 #, sh-format
 msgid "No partition was selected. The program will stop now!"
 msgstr ""
 "Aucune partition n'a été sélectionnée. Le programme va maintenant s'arréter!"
 
-#: src/persistence-wizard:81
+#: src/persistence-wizard:116
 #, sh-format
 msgid "Size selection"
 msgstr "Sélection de la taille"
 
-#: src/persistence-wizard:84
+#: src/persistence-wizard:119
 #, sh-format
 msgid ""
 "Set the size in megabytes (maximum $MAXSIZE) for persistent file on "
@@ -111,12 +111,12 @@ msgstr ""
 "Définir en mégaoctets (maximum $MAXSIZE) la taille du fichier depersistance "
 "sur $MOUNTPOINT :"
 
-#: src/persistence-wizard:93
+#: src/persistence-wizard:128
 #, sh-format
 msgid "No size was set. The program will stop now!"
 msgstr "Aucune taille n'a été définie. Le programme va maintenant s'arréter!"
 
-#: src/persistence-wizard:104
+#: src/persistence-wizard:141
 #, sh-format
 msgid ""
 "The chosen size exceeds the available place ($SIZE > $MAXSIZE). The program "
@@ -125,12 +125,12 @@ msgstr ""
 "La taille définie est supérieure à la place disponible ($SIZE > $MAXSIZE). "
 "Le programme va maintenant s'arréter!"
 
-#: src/persistence-wizard:110
+#: src/persistence-wizard:149
 #, sh-format
 msgid "File system selection"
 msgstr "Sélection du système de fichier"
 
-#: src/persistence-wizard:113
+#: src/persistence-wizard:152
 #, sh-format
 msgid ""
 "Select the file system that will be used to format your persistent file:"
@@ -138,21 +138,22 @@ msgstr ""
 "Sélectionner le système de fichier qui sera utilisé pour formater le fichier "
 "de persistence"
 
-#: src/persistence-wizard:130
+#: src/persistence-wizard:169
 #, sh-format
 msgid "No file system was selected. The program will stop now!"
 msgstr ""
 "Aucun système de fichier n'a été sélectionné. Le programme va maintenant "
 "s'arréter!"
 
-#: src/persistence-wizard:154
+#: src/persistence-wizard:195
+#, fuzzy, sh-format
 msgid ""
 "$NAME.save ($SIZE MB) correctly created in $SAVEDIR with $FORMAT file system."
 msgstr ""
 "Le fichier slxsave.xfs ($SIZE Mo) a correctement été créé dans $SAVEDIR avec "
 "un système de fichier $FORMAT."
 
-#: src/persistence-wizard:162
+#: src/persistence-wizard:205
 #, sh-format
 msgid ""
 "Something went wrong! $NAME.save ($SIZE MB) cannot be created in $SAVEDIR."
@@ -257,6 +258,6 @@ msgstr "pour pouvoir créer le fichier de persistence $NAME.save"
 msgid ""
 "Create the persistence file needed to activate the Persistence functionality "
 "in a Live environment."
-msgstr "Crée le fichier de persistance nécessaire à l'activation de la fonctionnalité de Persistance dans un environnement Live"
-
-
+msgstr ""
+"Crée le fichier de persistance nécessaire à l'activation de la "
+"fonctionnalité de Persistance dans un environnement Live"

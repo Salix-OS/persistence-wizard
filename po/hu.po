@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-06-09 16:41+0200\n"
+"POT-Creation-Date: 2011-07-24 14:31+0200\n"
 "PO-Revision-Date: 2011-01-09 13:15+0000\n"
 "Last-Translator: gapan <vlahavas@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,13 +39,13 @@ msgstr ""
 msgid "ERROR: xfsprogs must be installed to run"
 msgstr "Hiba: xfsprogs csomagot telepíteni kell a futtatáshoz"
 
-#: src/persistence-wizard:49 src/persistence-wizard.desktop.in.h:2
+#: src/persistence-wizard:82 src/persistence-wizard.desktop.in.h:2
 #: src/persistence-wizard-kde.desktop.in.h:2
 #, sh-format
 msgid "Persistence Wizard"
 msgstr "Változásmentés Varázsló"
 
-#: src/persistence-wizard:51
+#: src/persistence-wizard:84
 #, fuzzy, sh-format
 msgid ""
 "If you wish, you can save any of your work or modification performed while "
@@ -60,44 +60,44 @@ msgstr ""
 "létrehozta ezt a fájlt akkor a LiveCD újraindítása után is egyszerűen tudja "
 "használni és a módosításai érvényesülnek a következő indításkor."
 
-#: src/persistence-wizard:54
+#: src/persistence-wizard:87
 #, sh-format
 msgid "Mount point selection"
 msgstr "Csatolási pont választás"
 
-#: src/persistence-wizard:57
+#: src/persistence-wizard:90
 #, fuzzy, sh-format
 msgid "Choose the mountpoint where the persistent file must be created:"
 msgstr "Kérem válasszon csatolási pontot a változásmentés fájl részére"
 
-#: src/persistence-wizard:58
+#: src/persistence-wizard:91
 #, sh-format
 msgid "Mount point"
 msgstr "Csatolási pont"
 
-#: src/persistence-wizard:59
+#: src/persistence-wizard:92
 #, sh-format
 msgid "Size (in MB)"
 msgstr "Méret (MB-ban)"
 
-#: src/persistence-wizard:65 src/persistence-wizard:90
-#: src/persistence-wizard:101 src/persistence-wizard:127
-#: src/persistence-wizard:159
+#: src/persistence-wizard:98 src/persistence-wizard:125
+#: src/persistence-wizard:138 src/persistence-wizard:166
+#: src/persistence-wizard:202
 #, sh-format
 msgid "Error"
 msgstr "Hiba"
 
-#: src/persistence-wizard:68
+#: src/persistence-wizard:101
 #, sh-format
 msgid "No partition was selected. The program will stop now!"
 msgstr ""
 
-#: src/persistence-wizard:81
+#: src/persistence-wizard:116
 #, sh-format
 msgid "Size selection"
 msgstr "Méret választás"
 
-#: src/persistence-wizard:84
+#: src/persistence-wizard:119
 #, fuzzy, sh-format
 msgid ""
 "Set the size in megabytes (maximum $MAXSIZE) for persistent file on "
@@ -106,41 +106,41 @@ msgstr ""
 "Válasszon fálj méretet megabájtban  (maximum $MAXSIZE) a változásmentés fájl "
 "részére itt $MOUNTPOINT:"
 
-#: src/persistence-wizard:93
+#: src/persistence-wizard:128
 #, sh-format
 msgid "No size was set. The program will stop now!"
 msgstr ""
 
-#: src/persistence-wizard:104
+#: src/persistence-wizard:141
 #, sh-format
 msgid ""
 "The chosen size exceeds the available place ($SIZE > $MAXSIZE). The program "
 "will stop now!"
 msgstr ""
 
-#: src/persistence-wizard:110
+#: src/persistence-wizard:149
 #, fuzzy, sh-format
 msgid "File system selection"
 msgstr "Méret választás"
 
-#: src/persistence-wizard:113
+#: src/persistence-wizard:152
 #, sh-format
 msgid ""
 "Select the file system that will be used to format your persistent file:"
 msgstr ""
 
-#: src/persistence-wizard:130
+#: src/persistence-wizard:169
 #, sh-format
 msgid "No file system was selected. The program will stop now!"
 msgstr ""
 
-#: src/persistence-wizard:154
+#: src/persistence-wizard:195
 #, fuzzy, sh-format
 msgid ""
 "$NAME.save ($SIZE MB) correctly created in $SAVEDIR with $FORMAT file system."
 msgstr "slxsave.xfs ($SIZE MB) sikeresen létrehozva itt: $MOUNTPOINT"
 
-#: src/persistence-wizard:162
+#: src/persistence-wizard:205
 #, fuzzy, sh-format
 msgid ""
 "Something went wrong! $NAME.save ($SIZE MB) cannot be created in $SAVEDIR."
