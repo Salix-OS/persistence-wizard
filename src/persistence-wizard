@@ -48,8 +48,8 @@ IFS="
 "
 for l in $(/sbin/blkid -o list); do
   if [ "${l:0:1}" = "/" ]; then
-    device=$(echo "$l"|cut -c1-27|sed 's/ //g')
-    fs=$(echo "$l"|cut -c28-39|sed 's/ //g')
+    device=$(echo "$l"|awk '{print $1}')
+    fs=$(echo "$l"|awk '{print $2}')
     if [ -n "$(echo "$fs"|grep -q "^ext." && echo 'ok')" -o "$fs" = "reiserfs" -o "$fs" = "xfs" -o -n "$(echo "$fs"|grep -q "vfat" && echo 'ok')" -o -n "$(echo "$fs"|grep -q "ntfs" && echo 'ok')" ]; then
       mp=$(grep "^$device" /etc/mtab|cut -d' ' -f2)
       if [ -z "$mp" ]; then
