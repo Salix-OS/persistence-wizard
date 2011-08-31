@@ -1,4 +1,5 @@
 #!/bin/sh
+# vim: et sw=2 st=2 ts=2 tw=0:
 #
 # GUI front end for persistence-wizard-cli
 #
@@ -22,23 +23,23 @@ RWMP=/tmp/persistentwiz-rwmountpoints
 NAME="salixlive"
 
 if [ ! $DISPLAY ]; then
-	echo -e "`eval_gettext 'ERROR: $TEXTDOMAIN must be executed within a running X session.\n'`"
-	exit 1
+  echo -e "`eval_gettext 'ERROR: $TEXTDOMAIN must be executed within a running X session.\n'`"
+  exit 1
 fi
 
 if [ "$UID" != "0" ]; then
-	echo "`eval_gettext 'ERROR: You need to be root to run'` $(basename $0)"
-	exit 1
+  echo "`eval_gettext 'ERROR: You need to be root to run'` $(basename $0)"
+  exit 1
 fi
 
 if [ ! `which zenity` ]; then
-	echo "`eval_gettext 'ERROR: zenity must be installed and in your PATH to run'` $(basename $0)"
-	exit 1
+  echo "`eval_gettext 'ERROR: zenity must be installed and in your PATH to run'` $(basename $0)"
+  exit 1
 fi
 
 if [ ! `which mkfs.xfs` ]; then
-	echo "`eval_gettext 'ERROR: xfsprogs must be installed to run'` $(basename $0)"
-	exit 1
+  echo "`eval_gettext 'ERROR: xfsprogs must be installed to run'` $(basename $0)"
+  exit 1
 fi
 
 # find possible writable partitions and free size in megabytes
@@ -48,14 +49,21 @@ IFS="
 "
 for l in $(/sbin/blkid -o list); do
   if [ "${l:0:1}" = "/" ]; then
-    device=$(echo "$l"|awk '{print $1}')
-    fs=$(echo "$l"|awk '{print $2}')
-    if [ -n "$(echo "$fs"|grep -q "^ext." && echo 'ok')" -o "$fs" = "reiserfs" -o "$fs" = "xfs" -o -n "$(echo "$fs"|grep -q "vfat" && echo 'ok')" -o -n "$(echo "$fs"|grep -q "ntfs" && echo 'ok')" ]; then
+    device=$(echo "$l"|awk '{print $1;}')
+    fs=$(echo "$l"|awk '{print $2;}')
+    echo "$fs"|grep -q "^ext." && fs="ext"
+    echo "$fs"|grep -q "vfat" && fs="vfat"
+    echo "$fs"|grep -q "ntfs" && fs="ntfs"
+    if [ "$fs" = "ext" -o "$fs" = "reiserfs" -o "$fs" = "xfs" -o "$fs" = "vfat" -o "$fs" = "ntfs" ]; then
       mp=$(grep "^$device" /etc/mtab|cut -d' ' -f2)
       if [ -z "$mp" ]; then
-        mp="$tempd/$(echo "$device"|sed 's:/:_:g')"
+        mp="$tempd/$(echo "$device"|sed 's:/:_:g')-$fs"
         mkdir -p "$mp"
-        mount "$device" "$mp"
+        if [ "$fs" = "ntfs" ]; then
+          mount.ntfs-3g "$device" "$mp"
+        else
+          mount "$device" "$mp"
+        fi
         touch "$mp/_test_rw" 2> /dev/null
         if [ $? -ne 0 ]; then
           umount "$mp"
