@@ -128,13 +128,13 @@ msgstr ""
 #: src/persistence-wizard:195
 #, sh-format
 msgid ""
-"$NAME.save ($SIZE MB) correctly created in $SAVEDIR with $FORMAT file system."
+"$NAME ($SIZE MB) correctly created in $SAVEDIR with $FORMAT file system."
 msgstr ""
 
 #: src/persistence-wizard:205
 #, sh-format
 msgid ""
-"Something went wrong! $NAME.save ($SIZE MB) cannot be created in $SAVEDIR."
+"Something went wrong! $NAME ($SIZE MB) cannot be created in $SAVEDIR."
 msgstr ""
 
 #: src/persistence-wizard-cli:30
@@ -144,7 +144,7 @@ msgstr ""
 
 #: src/persistence-wizard-cli:32
 #, sh-format
-msgid "This will create a persistent file named NAME.save"
+msgid "This will create a persistent file named NAME"
 msgstr ""
 
 #: src/persistence-wizard-cli:33
@@ -201,7 +201,7 @@ msgstr ""
 
 #: src/persistence-wizard-cli:92
 #, sh-format
-msgid "The persistent file $NAME.save is ready."
+msgid "The persistent file $NAME is ready."
 msgstr ""
 
 #: src/persistence-wizard-cli:94
@@ -211,7 +211,7 @@ msgstr ""
 
 #: src/persistence-wizard-cli:94
 #, sh-format
-msgid " was not able to create the persistent file $NAME.save"
+msgid " was not able to create the persistent file $NAME"
 msgstr ""
 
 #: src/persistence-wizard-cli:98
@@ -221,7 +221,7 @@ msgstr ""
 
 #: src/persistence-wizard-cli:99
 #, sh-format
-msgid "for creating the persistent file $NAME.save"
+msgid "for creating the persistent file $NAME"
 msgstr ""
 
 #: src/persistence-wizard.desktop.in.h:1

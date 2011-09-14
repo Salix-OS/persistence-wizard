@@ -16,7 +16,7 @@ export TEXTDOMAIN="persistence-wizard"
 export TEXTDOMAINDIR="/usr/share/locale"
 . gettext.sh
 
-version=1.0
+version=1.1
 NAME="$1"
 SIZE="$2"
 FS="$3"
@@ -29,7 +29,7 @@ fi
 if [ -z "$3" ]; then
 	echo "Usage: $(basename $0) `eval_gettext 'NAME SIZE_IN_MEGABYTES FS_TYPE'`"
 	echo ""
-	echo "`eval_gettext 'This will create a persistent file named NAME.save'`"
+	echo "`eval_gettext 'This will create a persistent file named NAME'`"
 	echo "`eval_gettext 'with a size (in MB) defined by SIZE_IN_MEGABYTES'`" 	
 	echo "`eval_gettext 'and with a file system defined by FS_TYPE.'`" 
 	echo "" 	
@@ -71,32 +71,32 @@ fi
 FREE=$('df' -k .|tail -n1|awk '{print $4}')
 AFTER=$(( $FREE - 1024 * $SIZE ))
 if [ $AFTER -gt 0 ]; then
-	dd if=/dev/zero of="$NAME".save bs=1M count=$SIZE
+	dd if=/dev/zero of="$NAME" bs=1M count=$SIZE
 	if [ "$FS" = "xfs" ]; then  
-		mkfs.xfs -f -L "SaLTsave" "$NAME".save && CHECK='OK'
+		mkfs.xfs -f -L "SaLTsave" "$NAME" && CHECK='OK'
 	elif [[ "$FS" = "ext2" ]]; then
-		mkfs.ext2 -F -m 0 -L "SaLTsave" "$NAME".save && CHECK='OK'
+		mkfs.ext2 -F -m 0 -L "SaLTsave" "$NAME" && CHECK='OK'
 	elif [[ "$FS" = "ext3" ]]; then
-		mkfs.ext3 -F -m 0 -L "SaLTsave" "$NAME".save && CHECK='OK'
+		mkfs.ext3 -F -m 0 -L "SaLTsave" "$NAME" && CHECK='OK'
 	elif [[ "$FS" = "ext4" ]]; then
-		mkfs.ext4 -F -m 0 -L "SaLTsave" "$NAME".save && CHECK='OK'
+		mkfs.ext4 -F -m 0 -L "SaLTsave" "$NAME" && CHECK='OK'
 	elif [[ "$FS" = "reiserfs" ]]; then
-		mkfs.reiserfs -f -f -l "SaLTsave" "$NAME".save && CHECK='OK'
+		mkfs.reiserfs -f -f -l "SaLTsave" "$NAME" && CHECK='OK'
 	elif [[ "$FS" = "vfat" ]]; then
-		mkfs.vfat -F 32 -I -R 2 -n "SaLTsave" "$NAME".save && CHECK='OK'
+		mkfs.vfat -F 32 -I -R 2 -n "SaLTsave" "$NAME" && CHECK='OK'
 	elif [[ "$FS" = "ntfs" ]]; then
-		mkfs.ntfs -f -I -F -L "SaLTsave" "$NAME".save && CHECK='OK'
+		mkfs.ntfs -f -I -F -L "SaLTsave" "$NAME" && CHECK='OK'
 	fi
 	if [ -n "$CHECK" ]; then
 		echo ""
-		echo "`eval_gettext 'The persistent file $NAME.save is ready.'`"
+		echo "`eval_gettext 'The persistent file $NAME is ready.'`"
 	else
-		echo "`eval_gettext 'ERROR:'` $(basename $0) `eval_gettext ' was not able to create the persistent file $NAME.save'`"
+		echo "`eval_gettext 'ERROR:'` $(basename $0) `eval_gettext ' was not able to create the persistent file $NAME'`"
 		exit 1
 	fi
 else
   echo "`eval_gettext 'ERROR: There is not enough free space left on your device'`"
-  echo "`eval_gettext 'for creating the persistent file $NAME.save'`"
+  echo "`eval_gettext 'for creating the persistent file $NAME'`"
   exit 1
 fi
 

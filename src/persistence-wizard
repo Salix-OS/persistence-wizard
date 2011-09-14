@@ -20,7 +20,15 @@ export TEXTDOMAINDIR="/usr/share/locale"
 
 CLIPRGM=/usr/sbin/persistence-wizard-cli
 RWMP=/tmp/persistentwiz-rwmountpoints
-NAME="salixlive"
+if [ -f /mnt/salt/lib/libSaLT ]; then
+  . /mnt/salt/lib/libSaLT
+else
+  ROOT_DIR=salixlive
+fi
+NAME="$ROOT_DIR.save"
+savefilename=$(get_value_cmdline savefile)
+[ -n "$savefilename" ] && NAME="$savefilename"
+unset savefilename
 
 if [ ! $DISPLAY ]; then
   echo -e "`eval_gettext 'ERROR: $TEXTDOMAIN must be executed within a running X session.\n'`"
@@ -188,9 +196,13 @@ fi
 
 export FORMAT
 
-SAVEDIR="$MOUNTPOINT/salixlive/persistence"
+SAVEDIR="$MOUNTPOINT/$ROOT_DIR/persistence"
 if [ ! -d "$SAVEDIR" ]; then
 	mkdir -p "$SAVEDIR"
+fi
+if [ -d /mnt/salt ]; then
+  DEVICE=$(mount | grep " on $MOUNTPOINT " | sed 's/\(.*\) on .*/\1/')
+  export DEVICE
 fi
 
 cd $SAVEDIR
@@ -210,7 +222,10 @@ if [ $ret -eq 0 ]; then
     --title "$TEXTDOMAIN" \
     --window-icon /usr/share/icons/hicolor/128x128/apps/persistence-wizard.png \
     --info \
-    --text "`eval_gettext '$NAME.save ($SIZE MB) correctly created in $SAVEDIR with $FORMAT file system.'`"
+    --text "`eval_gettext '$NAME ($SIZE MB) correctly created in $SAVEDIR with $FORMAT file system.'`"
+  if [ -n "$DEVICE" ]; then
+    echo "$DEVICE:$ROOT_DIR/persistence/$NAME" > /mnt/salt/sync-persistence
+  fi
   exit 0
 else
   rm -f $RWMP
@@ -218,6 +233,6 @@ else
     --title "`eval_gettext 'Error'`" \
     --window-icon /usr/share/icons/hicolor/128x128/apps/persistence-wizard.png \
     --error \
-    --text "`eval_gettext 'Something went wrong! $NAME.save ($SIZE MB) cannot be created in $SAVEDIR.'`"
+    --text "`eval_gettext 'Something went wrong! $NAME ($SIZE MB) cannot be created in $SAVEDIR.'`"
   exit 1
 fi

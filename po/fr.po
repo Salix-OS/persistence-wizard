@@ -148,7 +148,7 @@ msgstr ""
 #: src/persistence-wizard:195
 #, fuzzy, sh-format
 msgid ""
-"$NAME.save ($SIZE MB) correctly created in $SAVEDIR with $FORMAT file system."
+"$NAME ($SIZE MB) correctly created in $SAVEDIR with $FORMAT file system."
 msgstr ""
 "Le fichier slxsave.xfs ($SIZE Mo) a correctement été créé dans $SAVEDIR avec "
 "un système de fichier $FORMAT."
@@ -156,9 +156,9 @@ msgstr ""
 #: src/persistence-wizard:205
 #, sh-format
 msgid ""
-"Something went wrong! $NAME.save ($SIZE MB) cannot be created in $SAVEDIR."
+"Something went wrong! $NAME ($SIZE MB) cannot be created in $SAVEDIR."
 msgstr ""
-"Il y eu une erreur! Le fichier $NAME.save ($SIZE Mo) n'a pas pu être créé "
+"Il y eu une erreur! Le fichier $NAME ($SIZE Mo) n'a pas pu être créé "
 "dans $SAVEDIR."
 
 #: src/persistence-wizard-cli:30
@@ -168,8 +168,8 @@ msgstr "NOM TAILLE_EN_MEGAOCTET TYPE_DE_FORMAT"
 
 #: src/persistence-wizard-cli:32
 #, sh-format
-msgid "This will create a persistent file named NAME.save"
-msgstr "Ceci créera un fichier de persistance nommé NOM.save"
+msgid "This will create a persistent file named NAME"
+msgstr "Ceci créera un fichier de persistance nommé NOM"
 
 #: src/persistence-wizard-cli:33
 #, sh-format
@@ -230,8 +230,8 @@ msgstr ""
 
 #: src/persistence-wizard-cli:92
 #, sh-format
-msgid "The persistent file $NAME.save is ready."
-msgstr "Le fichier de persistance $NAME.save est prêt. "
+msgid "The persistent file $NAME is ready."
+msgstr "Le fichier de persistance $NAME est prêt. "
 
 #: src/persistence-wizard-cli:94
 #, sh-format
@@ -240,8 +240,8 @@ msgstr "ERREUR"
 
 #: src/persistence-wizard-cli:94
 #, sh-format
-msgid " was not able to create the persistent file $NAME.save"
-msgstr "n'a pas pu créer le fichier de persistence $NAME.save"
+msgid " was not able to create the persistent file $NAME"
+msgstr "n'a pas pu créer le fichier de persistence $NAME"
 
 #: src/persistence-wizard-cli:98
 #, sh-format
@@ -250,8 +250,8 @@ msgstr "ERREUR: Il n'y a pas assez de place disponible sur votre périphérique"
 
 #: src/persistence-wizard-cli:99
 #, sh-format
-msgid "for creating the persistent file $NAME.save"
-msgstr "pour pouvoir créer le fichier de persistence $NAME.save"
+msgid "for creating the persistent file $NAME"
+msgstr "pour pouvoir créer le fichier de persistence $NAME"
 
 #: src/persistence-wizard.desktop.in.h:1
 #: src/persistence-wizard-kde.desktop.in.h:1

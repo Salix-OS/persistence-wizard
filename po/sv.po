@@ -139,13 +139,13 @@ msgstr ""
 #: src/persistence-wizard:195
 #, fuzzy, sh-format
 msgid ""
-"$NAME.save ($SIZE MB) correctly created in $SAVEDIR with $FORMAT file system."
+"$NAME ($SIZE MB) correctly created in $SAVEDIR with $FORMAT file system."
 msgstr "slxsave.xfs ($SIZE) skapades i $MOUNTPOINT"
 
 #: src/persistence-wizard:205
 #, fuzzy, sh-format
 msgid ""
-"Something went wrong! $NAME.save ($SIZE MB) cannot be created in $SAVEDIR."
+"Something went wrong! $NAME ($SIZE MB) cannot be created in $SAVEDIR."
 msgstr "slxsave.xfs ($SIZE MB) kunde inte skapas i $MOUNTPOINT"
 
 #: src/persistence-wizard-cli:30
@@ -155,7 +155,7 @@ msgstr ""
 
 #: src/persistence-wizard-cli:32
 #, fuzzy, sh-format
-msgid "This will create a persistent file named NAME.save"
+msgid "This will create a persistent file named NAME"
 msgstr "Välj monteringspunkten för att spara den permanenta filen."
 
 #: src/persistence-wizard-cli:33
@@ -212,7 +212,7 @@ msgstr ""
 
 #: src/persistence-wizard-cli:92
 #, fuzzy, sh-format
-msgid "The persistent file $NAME.save is ready."
+msgid "The persistent file $NAME is ready."
 msgstr "Välj monteringspunkten för att spara den permanenta filen."
 
 #: src/persistence-wizard-cli:94
@@ -222,7 +222,7 @@ msgstr ""
 
 #: src/persistence-wizard-cli:94
 #, fuzzy, sh-format
-msgid " was not able to create the persistent file $NAME.save"
+msgid " was not able to create the persistent file $NAME"
 msgstr "Välj monteringspunkten för att spara den permanenta filen."
 
 #: src/persistence-wizard-cli:98
@@ -232,7 +232,7 @@ msgstr ""
 
 #: src/persistence-wizard-cli:99
 #, fuzzy, sh-format
-msgid "for creating the persistent file $NAME.save"
+msgid "for creating the persistent file $NAME"
 msgstr "Välj monteringspunkten för att spara den permanenta filen."
 
 #: src/persistence-wizard.desktop.in.h:1
