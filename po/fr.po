@@ -1,4 +1,4 @@
-# SOME DESCRIPTIVE TITLE.
+/bin/bash: q : commande introuvable
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-24 14:31+0200\n"
+"POT-Creation-Date: 2011-10-23 13:42+0200\n"
 "PO-Revision-Date: 2011-01-09 13:15+0000\n"
 "Last-Translator: akuna <akuna~at~salixos~dot~org>\n"
 "Language-Team: French <>\n"
@@ -17,35 +17,35 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1)\n"
 
-#: src/persistence-wizard:25
+#: src/persistence-wizard:34
 #, sh-format
 msgid "ERROR: $TEXTDOMAIN must be executed within a running X session.\\n"
-msgstr ""
+msgstr "ERREUR : $TEXTDOMAIN doit être exécuté dans une session X.\\n"
 
-#: src/persistence-wizard:30 src/persistence-wizard-cli:25
+#: src/persistence-wizard:39 src/persistence-wizard-cli:25
 #, sh-format
 msgid "ERROR: You need to be root to run"
 msgstr "ERREUR : Vous devez être root afin d'exécuter"
 
-#: src/persistence-wizard:35
+#: src/persistence-wizard:44
 #, sh-format
 msgid "ERROR: zenity must be installed and in your PATH to run"
 msgstr ""
 "ERREUR : zenity doit être installé et dans votre PATH afin "
 "d'exécuterprogramme"
 
-#: src/persistence-wizard:40
+#: src/persistence-wizard:49
 #, sh-format
 msgid "ERROR: xfsprogs must be installed to run"
 msgstr "ERREUR : xfsprogs doit êtres installé afin d'exécuter"
 
-#: src/persistence-wizard:82 src/persistence-wizard.desktop.in.h:2
+#: src/persistence-wizard:103 src/persistence-wizard.desktop.in.h:2
 #: src/persistence-wizard-kde.desktop.in.h:2
 #, sh-format
 msgid "Persistence Wizard"
 msgstr "Assistant de Persistance"
 
-#: src/persistence-wizard:84
+#: src/persistence-wizard:105
 #, sh-format
 msgid ""
 "If you wish, you can save any of your work or modification performed while "
@@ -62,47 +62,62 @@ msgstr ""
 "suffira de redémarrer le LiveCD pour que tous vos changements ultérieurs "
 "soient sauvegardés."
 
-#: src/persistence-wizard:87
+#: src/persistence-wizard:110
 #, sh-format
 msgid "Mount point selection"
 msgstr "Sélection du point de montage"
 
-#: src/persistence-wizard:90
+#: src/persistence-wizard:113
 #, sh-format
 msgid "Choose the mountpoint where the persistent file must be created:"
 msgstr ""
 "Sélectionner le point de montage où devra être créé le fichier de "
 "persistence :"
 
-#: src/persistence-wizard:91
+#: src/persistence-wizard:114
 #, sh-format
 msgid "Mount point"
 msgstr "Point de montage"
 
-#: src/persistence-wizard:92
+#: src/persistence-wizard:115
 #, sh-format
-msgid "Size (in MB)"
-msgstr "Taille (en Mo)"
+msgid "Device"
+msgstr "Périphérique"
 
-#: src/persistence-wizard:98 src/persistence-wizard:125
-#: src/persistence-wizard:138 src/persistence-wizard:166
-#: src/persistence-wizard:202
+#: src/persistence-wizard:116
+#, sh-format
+msgid "Label"
+msgstr "Étiquette"
+
+#: src/persistence-wizard:117
+#, sh-format
+msgid "Filesystem"
+msgstr "Système de fichier"
+
+#: src/persistence-wizard:118
+#, sh-format
+msgid "Free size (in MB)"
+msgstr "Espace libre (en Mo)"
+
+#: src/persistence-wizard:126 src/persistence-wizard:153
+#: src/persistence-wizard:166 src/persistence-wizard:194
+#: src/persistence-wizard:239
 #, sh-format
 msgid "Error"
 msgstr "Erreur"
 
-#: src/persistence-wizard:101
+#: src/persistence-wizard:129
 #, sh-format
 msgid "No partition was selected. The program will stop now!"
 msgstr ""
 "Aucune partition n'a été sélectionnée. Le programme va maintenant s'arréter!"
 
-#: src/persistence-wizard:116
+#: src/persistence-wizard:144
 #, sh-format
 msgid "Size selection"
 msgstr "Sélection de la taille"
 
-#: src/persistence-wizard:119
+#: src/persistence-wizard:147
 #, sh-format
 msgid ""
 "Set the size in megabytes (maximum $MAXSIZE) for persistent file on "
@@ -111,12 +126,12 @@ msgstr ""
 "Définir en mégaoctets (maximum $MAXSIZE) la taille du fichier depersistance "
 "sur $MOUNTPOINT :"
 
-#: src/persistence-wizard:128
+#: src/persistence-wizard:156
 #, sh-format
 msgid "No size was set. The program will stop now!"
 msgstr "Aucune taille n'a été définie. Le programme va maintenant s'arréter!"
 
-#: src/persistence-wizard:141
+#: src/persistence-wizard:169
 #, sh-format
 msgid ""
 "The chosen size exceeds the available place ($SIZE > $MAXSIZE). The program "
@@ -125,12 +140,12 @@ msgstr ""
 "La taille définie est supérieure à la place disponible ($SIZE > $MAXSIZE). "
 "Le programme va maintenant s'arréter!"
 
-#: src/persistence-wizard:149
+#: src/persistence-wizard:177
 #, sh-format
 msgid "File system selection"
 msgstr "Sélection du système de fichier"
 
-#: src/persistence-wizard:152
+#: src/persistence-wizard:180
 #, sh-format
 msgid ""
 "Select the file system that will be used to format your persistent file:"
@@ -138,28 +153,27 @@ msgstr ""
 "Sélectionner le système de fichier qui sera utilisé pour formater le fichier "
 "de persistence"
 
-#: src/persistence-wizard:169
+#: src/persistence-wizard:197
 #, sh-format
 msgid "No file system was selected. The program will stop now!"
 msgstr ""
 "Aucun système de fichier n'a été sélectionné. Le programme va maintenant "
 "s'arréter!"
 
-#: src/persistence-wizard:195
-#, fuzzy, sh-format
+#: src/persistence-wizard:231
+#, sh-format
 msgid ""
 "$NAME ($SIZE MB) correctly created in $SAVEDIR with $FORMAT file system."
 msgstr ""
-"Le fichier slxsave.xfs ($SIZE Mo) a correctement été créé dans $SAVEDIR avec "
+"Le fichier $NAME ($SIZE Mo) a correctement été créé dans $SAVEDIR avec "
 "un système de fichier $FORMAT."
 
-#: src/persistence-wizard:205
+#: src/persistence-wizard:242
 #, sh-format
-msgid ""
-"Something went wrong! $NAME ($SIZE MB) cannot be created in $SAVEDIR."
+msgid "Something went wrong! $NAME ($SIZE MB) cannot be created in $SAVEDIR."
 msgstr ""
-"Il y eu une erreur! Le fichier $NAME ($SIZE Mo) n'a pas pu être créé "
-"dans $SAVEDIR."
+"Il y eu une erreur! Le fichier $NAME ($SIZE Mo) n'a pas pu être créé dans "
+"$SAVEDIR."
 
 #: src/persistence-wizard-cli:30
 #, sh-format

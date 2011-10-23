@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-24 14:31+0200\n"
+"POT-Creation-Date: 2011-10-23 13:42+0200\n"
 "PO-Revision-Date: 2011-01-09 13:15+0000\n"
 "Last-Translator: gapan <vlahavas@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,33 +17,33 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: src/persistence-wizard:25
+#: src/persistence-wizard:34
 #, sh-format
 msgid "ERROR: $TEXTDOMAIN must be executed within a running X session.\\n"
 msgstr ""
 
-#: src/persistence-wizard:30 src/persistence-wizard-cli:25
+#: src/persistence-wizard:39 src/persistence-wizard-cli:25
 #, fuzzy, sh-format
 msgid "ERROR: You need to be root to run"
 msgstr "FEL: Du måste vara root för att kunna köra detta"
 
-#: src/persistence-wizard:35
+#: src/persistence-wizard:44
 #, fuzzy, sh-format
 msgid "ERROR: zenity must be installed and in your PATH to run"
 msgstr "FEL: zenity måste vara installerat och i din SÖKVÄG för att köra detta"
 
-#: src/persistence-wizard:40
+#: src/persistence-wizard:49
 #, fuzzy, sh-format
 msgid "ERROR: xfsprogs must be installed to run"
 msgstr "FEL: xfsprogs måste vara installerat för att köra detta"
 
-#: src/persistence-wizard:82 src/persistence-wizard.desktop.in.h:2
+#: src/persistence-wizard:103 src/persistence-wizard.desktop.in.h:2
 #: src/persistence-wizard-kde.desktop.in.h:2
 #, sh-format
 msgid "Persistence Wizard"
 msgstr "Permanent Guide"
 
-#: src/persistence-wizard:84
+#: src/persistence-wizard:105
 #, fuzzy, sh-format
 msgid ""
 "If you wish, you can save any of your work or modification performed while "
@@ -62,44 +62,59 @@ msgstr ""
 "När filen är skapad starta om LiveCD'n för att ändringarna skall bli "
 "bestående framöver."
 
-#: src/persistence-wizard:87
+#: src/persistence-wizard:110
 #, sh-format
 msgid "Mount point selection"
 msgstr "Val av monteringspunkt"
 
-#: src/persistence-wizard:90
+#: src/persistence-wizard:113
 #, fuzzy, sh-format
 msgid "Choose the mountpoint where the persistent file must be created:"
 msgstr "Välj monteringspunkten för att spara den permanenta filen."
 
-#: src/persistence-wizard:91
+#: src/persistence-wizard:114
 #, sh-format
 msgid "Mount point"
 msgstr "Monteringspunkt"
 
-#: src/persistence-wizard:92
+#: src/persistence-wizard:115
 #, sh-format
-msgid "Size (in MB)"
-msgstr "Storlek (MB)"
-
-#: src/persistence-wizard:98 src/persistence-wizard:125
-#: src/persistence-wizard:138 src/persistence-wizard:166
-#: src/persistence-wizard:202
-#, sh-format
-msgid "Error"
-msgstr "Fel"
-
-#: src/persistence-wizard:101
-#, sh-format
-msgid "No partition was selected. The program will stop now!"
+msgid "Device"
 msgstr ""
 
 #: src/persistence-wizard:116
 #, sh-format
+msgid "Label"
+msgstr ""
+
+#: src/persistence-wizard:117
+#, fuzzy, sh-format
+msgid "Filesystem"
+msgstr "Storleks val"
+
+#: src/persistence-wizard:118
+#, fuzzy, sh-format
+msgid "Free size (in MB)"
+msgstr "Storlek (MB)"
+
+#: src/persistence-wizard:126 src/persistence-wizard:153
+#: src/persistence-wizard:166 src/persistence-wizard:194
+#: src/persistence-wizard:239
+#, sh-format
+msgid "Error"
+msgstr "Fel"
+
+#: src/persistence-wizard:129
+#, sh-format
+msgid "No partition was selected. The program will stop now!"
+msgstr ""
+
+#: src/persistence-wizard:144
+#, sh-format
 msgid "Size selection"
 msgstr "Storleks val"
 
-#: src/persistence-wizard:119
+#: src/persistence-wizard:147
 #, fuzzy, sh-format
 msgid ""
 "Set the size in megabytes (maximum $MAXSIZE) for persistent file on "
@@ -108,44 +123,43 @@ msgstr ""
 "Välj storleken i megabytes (maximalt $MAXSIZE) för den permanenta filen på "
 "$MOUNTPOINT:"
 
-#: src/persistence-wizard:128
+#: src/persistence-wizard:156
 #, sh-format
 msgid "No size was set. The program will stop now!"
 msgstr ""
 
-#: src/persistence-wizard:141
+#: src/persistence-wizard:169
 #, sh-format
 msgid ""
 "The chosen size exceeds the available place ($SIZE > $MAXSIZE). The program "
 "will stop now!"
 msgstr ""
 
-#: src/persistence-wizard:149
+#: src/persistence-wizard:177
 #, fuzzy, sh-format
 msgid "File system selection"
 msgstr "Storleks val"
 
-#: src/persistence-wizard:152
+#: src/persistence-wizard:180
 #, sh-format
 msgid ""
 "Select the file system that will be used to format your persistent file:"
 msgstr ""
 
-#: src/persistence-wizard:169
+#: src/persistence-wizard:197
 #, sh-format
 msgid "No file system was selected. The program will stop now!"
 msgstr ""
 
-#: src/persistence-wizard:195
+#: src/persistence-wizard:231
 #, fuzzy, sh-format
 msgid ""
 "$NAME ($SIZE MB) correctly created in $SAVEDIR with $FORMAT file system."
 msgstr "slxsave.xfs ($SIZE) skapades i $MOUNTPOINT"
 
-#: src/persistence-wizard:205
+#: src/persistence-wizard:242
 #, fuzzy, sh-format
-msgid ""
-"Something went wrong! $NAME ($SIZE MB) cannot be created in $SAVEDIR."
+msgid "Something went wrong! $NAME ($SIZE MB) cannot be created in $SAVEDIR."
 msgstr "slxsave.xfs ($SIZE MB) kunde inte skapas i $MOUNTPOINT"
 
 #: src/persistence-wizard-cli:30

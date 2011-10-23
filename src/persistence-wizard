@@ -57,13 +57,15 @@ IFS="
 "
 for l in $(/sbin/blkid -o list); do
   if [ "${l:0:1}" = "/" ]; then
-    device=$(echo "$l"|awk '{print $1;}')
-    fs=$(echo "$l"|awk '{print $2;}')
+    device=$(sh -c "echo $1" -- $l)
+    fs=$(sh -c "echo $2" -- $l)
+    label=$(sh -c "echo $3" -- $l)
+    mp=$(sh -c "echo $4" -- $l)
     echo "$fs"|grep -q "^ext." && fs="ext"
     echo "$fs"|grep -q "vfat" && fs="vfat"
     echo "$fs"|grep -q "ntfs" && fs="ntfs"
     if [ "$fs" = "ext" -o "$fs" = "reiserfs" -o "$fs" = "xfs" -o "$fs" = "vfat" -o "$fs" = "ntfs" ]; then
-      mp=$(grep "^$device" /etc/mtab|cut -d' ' -f2)
+      [ "$mp" = "(not mounted)" ] && mp=
       if [ -z "$mp" ]; then
         mp="$tempd/$(echo "$device"|sed 's:/:_:g')-$fs"
         mkdir -p "$mp"
@@ -90,7 +92,7 @@ for l in $(/sbin/blkid -o list); do
       fi
       if [ -n "$mp" ]; then
         size=$(df -BM -l "$mp"|tail -n1|awk '{print $4}'|tr -d M|rev|sed 's/.\{3\}/\0 /g'|rev)
-        echo "$mp:$size" >> $RWMP
+        echo -e "$mp\n$device\n$label\n$fs\n$size" >> $RWMP
       fi
     fi
   fi
@@ -110,7 +112,11 @@ MOUNTPOINT=$(zenity \
   --list \
   --text "`eval_gettext 'Choose the mountpoint where the persistent file must be created:'`" \
   --column "`eval_gettext 'Mount point'`" \
-  --column "`eval_gettext 'Size (in MB)'`" \
+  --column "`eval_gettext 'Device'`" \
+  --column "`eval_gettext 'Label'`" \
+  --column "`eval_gettext 'Filesystem'`" \
+  --column "`eval_gettext 'Free size (in MB)'`" \
+  --hide-column 1 \
   $(cat $RWMP))
 unset IFS
 
@@ -223,7 +229,7 @@ if [ $ret -eq 0 ]; then
     --window-icon /usr/share/icons/hicolor/128x128/apps/persistence-wizard.png \
     --info \
     --text "`eval_gettext '$NAME ($SIZE MB) correctly created in $SAVEDIR with $FORMAT file system.'`"
-  if [ -n "$DEVICE" ]; then
+  if [ -d /mnt/salt ]; then
     echo "$DEVICE:$ROOT_DIR/persistence/$NAME" > /mnt/salt/sync-persistence
   fi
   exit 0

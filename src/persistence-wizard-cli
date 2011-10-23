@@ -99,5 +99,3 @@ else
   echo "`eval_gettext 'for creating the persistent file $NAME'`"
   exit 1
 fi
-
-
