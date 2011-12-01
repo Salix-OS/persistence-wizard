@@ -1,41 +1,46 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
+# Translators:
+#   <djemos@slackel.gr>, 2011.
+# gapan <vlahavas@gmail.com>, 2011.
+#   <vlahavas@gmail.com>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-23 13:42+0200\n"
-"PO-Revision-Date: 2011-01-09 13:15+0000\n"
-"Last-Translator: gapan <vlahavas@gmail.com>\n"
+"POT-Creation-Date: 2011-10-23 13:46+0200\n"
+"PO-Revision-Date: 2011-11-06 12:38+0000\n"
+"Last-Translator: djemos <djemos@slackel.gr>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: el\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: src/persistence-wizard:34
 #, sh-format
 msgid "ERROR: $TEXTDOMAIN must be executed within a running X session.\\n"
 msgstr ""
+"ΣΦΑΛΜΑ: $TEXTDOMAIN πρέπει να εκτελεστεί μέσα σε μια τρέχουσα σύνοδο X. \\n"
 
 #: src/persistence-wizard:39 src/persistence-wizard-cli:25
-#, fuzzy, sh-format
+#, sh-format
 msgid "ERROR: You need to be root to run"
-msgstr "ΣΦΑΛΜΑ: Πρέπει να έχετε δικαιώματα χρήστη root"
+msgstr "ΣΦΑΛΜΑ: Πρέπει να είστε root για να τρέξει"
 
 #: src/persistence-wizard:44
-#, fuzzy, sh-format
+#, sh-format
 msgid "ERROR: zenity must be installed and in your PATH to run"
-msgstr "ΣΦΑΛΜΑ: Το zenity δεν να είναι εγκατεστημένο"
+msgstr ""
+"ΣΦΑΛΜΑ: Το Zenity πρέπει να εγκατασταθεί και στο PATH σας για να τρέξει"
 
 #: src/persistence-wizard:49
-#, fuzzy, sh-format
+#, sh-format
 msgid "ERROR: xfsprogs must be installed to run"
-msgstr "ΣΦΑΛΜΑ: Το xfsprogs δεν είναι εγκατεστημένο"
+msgstr "ΣΦΑΛΜΑ: Το xfsprogs πρέπει να εγκατασταθεί για να τρέξει"
 
 #: src/persistence-wizard:103 src/persistence-wizard.desktop.in.h:2
 #: src/persistence-wizard-kde.desktop.in.h:2
@@ -44,7 +49,7 @@ msgid "Persistence Wizard"
 msgstr "Οδηγός μόνιμων αλλαγών"
 
 #: src/persistence-wizard:105
-#, fuzzy, sh-format
+#, sh-format
 msgid ""
 "If you wish, you can save any of your work or modification performed while "
 "in a LiveCD session.\\n\\nTo do this however, you must first create a "
@@ -52,12 +57,12 @@ msgid ""
 "will be formatted as a linux file system.\\n\\nOnce this file is created, "
 "simply reboot the LiveCD for your changes to become persistent from then on."
 msgstr ""
-"Αν το επιθυμείτε, μπορείτε να αποθηκεύσετε τις αλλαγές που πραγματοποιείτε "
-"σε μια συνεδρια live.\\n\\nΓια να το κάνετε αυτό, πρέπει αρχικά να "
-"δημιουργήσετε ένα ειδικό \"μόνιμο αρχείο\" το οποίο θα έχει ένα "
-"προκαθορισμένο, σταθερό μέγεθος και θα διαμορφωθεί ως σύστημα αρχείων linux."
-"\\nΌταν αυτό δημιουργηθεί, απλά επανεκκινήστε το LiveCD και οι αλλαγές που "
-"θα πραγματοποιήσετε από την επόμενη συνεδρία θα γίνουν μόνιμες."
+"Αν θέλετε, μπορείτε να αποθηκεύσετε οποιαδήποτε εργασία ή τροποποίηση σας "
+"εκτελούνται, ενώ είστε σε μια σύνοδο LiveCD. \\n\\n Για να γίνει αυτό όμως, "
+"πρέπει πρώτα να δημιουργήσετε ένα ειδικό \"αρχείο μόνιμων αλλαγών\", το "
+"οποίο θα έχει ένα προκαθορισμένο σταθερό μέγεθος και θα να διαμορφωθεί ως "
+"ένα Linux σύστημα αρχείων. \\n\\n Μόλις αυτό το αρχείο δημιουργηθεί, απλά "
+"επανεκκινήστε το LiveCD για να γίνουν αλλαγές σας μόνιμες από δω και πέρα."
 
 #: src/persistence-wizard:110
 #, sh-format
@@ -65,9 +70,11 @@ msgid "Mount point selection"
 msgstr "Επιλογή σημείου προσάρτησης"
 
 #: src/persistence-wizard:113
-#, fuzzy, sh-format
+#, sh-format
 msgid "Choose the mountpoint where the persistent file must be created:"
-msgstr "Επιλέξτε το σημείο προσάρτησης για την αποθήκευση του διαρκούς αρχείου"
+msgstr ""
+"Επιλέξτε το σημείο προσάρτησης όπου το αρχείο μόνιμων αλλαγών πρέπει να "
+"δημιουργηθεί:"
 
 #: src/persistence-wizard:114
 #, sh-format
@@ -77,22 +84,22 @@ msgstr "Σημείο προσάρτησης"
 #: src/persistence-wizard:115
 #, sh-format
 msgid "Device"
-msgstr ""
+msgstr "Συσκευή"
 
 #: src/persistence-wizard:116
 #, sh-format
 msgid "Label"
-msgstr ""
+msgstr "Ετικέτα"
 
 #: src/persistence-wizard:117
-#, fuzzy, sh-format
+#, sh-format
 msgid "Filesystem"
-msgstr "Επιλογή μεγέθους"
+msgstr "Σύστημα αρχείων"
 
 #: src/persistence-wizard:118
-#, fuzzy, sh-format
+#, sh-format
 msgid "Free size (in MB)"
-msgstr "Μέγεθος (σε MB)"
+msgstr "Ελεύθερο μέγεθος (σε MB)"
 
 #: src/persistence-wizard:126 src/persistence-wizard:153
 #: src/persistence-wizard:166 src/persistence-wizard:194
@@ -104,7 +111,7 @@ msgstr "Σφάλμα"
 #: src/persistence-wizard:129
 #, sh-format
 msgid "No partition was selected. The program will stop now!"
-msgstr ""
+msgstr "Δεν επιλέχθηκε διαμέρισμα. Το πρόγραμμα θα σταματήσει τώρα!"
 
 #: src/persistence-wizard:144
 #, sh-format
@@ -112,18 +119,18 @@ msgid "Size selection"
 msgstr "Επιλογή μεγέθους"
 
 #: src/persistence-wizard:147
-#, fuzzy, sh-format
+#, sh-format
 msgid ""
 "Set the size in megabytes (maximum $MAXSIZE) for persistent file on "
 "$MOUNTPOINT:"
 msgstr ""
-"Επιλογή του μεγέθους σε MB (μέγιστο $MAXSIZE) για το διαρκές αρχείο στο "
-"$MOUNTPOINT:"
+"Ρυθμίστε το μέγεθος σε megabyte (μέγιστο $MAXSIZE) για το αρχείο μόνιμων "
+"αλλαγών $MOUNTPOINT:"
 
 #: src/persistence-wizard:156
 #, sh-format
 msgid "No size was set. The program will stop now!"
-msgstr ""
+msgstr "Δεν  ορίστηκε το μέγεθος. Το πρόγραμμα θα σταματήσει τώρα!"
 
 #: src/persistence-wizard:169
 #, sh-format
@@ -131,88 +138,104 @@ msgid ""
 "The chosen size exceeds the available place ($SIZE > $MAXSIZE). The program "
 "will stop now!"
 msgstr ""
+"Το επιλεγμένο μέγεθος υπερβαίνει το διαθέσιμο χώρο ($SIZE > $MAXSIZE). Η "
+"εφαρμογή θα τερματιστεί τώρα!"
 
 #: src/persistence-wizard:177
-#, fuzzy, sh-format
+#, sh-format
 msgid "File system selection"
-msgstr "Επιλογή μεγέθους"
+msgstr "Επιλογή συστήματος αρχείων"
 
 #: src/persistence-wizard:180
 #, sh-format
 msgid ""
 "Select the file system that will be used to format your persistent file:"
 msgstr ""
+"Επιλέξτε το σύστημα αρχείων που θα χρησιμοποιηθεί για τη μορφοποίηση του "
+"αρχείου μόνιμων αλλαγών σας:"
 
 #: src/persistence-wizard:197
 #, sh-format
 msgid "No file system was selected. The program will stop now!"
 msgstr ""
+"Κανένα σύστημα αρχείων δεν επιλέχθηκε. Το πρόγραμμα θα σταματήσει τώρα!"
 
 #: src/persistence-wizard:231
-#, fuzzy, sh-format
+#, sh-format
 msgid ""
 "$NAME ($SIZE MB) correctly created in $SAVEDIR with $FORMAT file system."
-msgstr "Το slxsave.xfs ($SIZE MB) δημιουργήθηκε με επιτυχία στο $MOUNTPOINT"
+msgstr ""
+"$NAME ($SIZE MB) σωστά δημιουργήθηκε στο $SAVEDIR με $FORMAT συστήματος "
+"μορφή αρχείου."
 
 #: src/persistence-wizard:242
-#, fuzzy, sh-format
+#, sh-format
 msgid "Something went wrong! $NAME ($SIZE MB) cannot be created in $SAVEDIR."
-msgstr "Το slxsave.xfs ($SIZE MB) δεν μπορεί να δημιουργηθεί στο $MOUNTPOINT"
+msgstr ""
+"Κάτι πήγε στραβά! $NAME ($SIZE MB) δεν μπορεί να δημιουργηθεί σε $ savedir."
 
 #: src/persistence-wizard-cli:30
 #, sh-format
 msgid "NAME SIZE_IN_MEGABYTES FS_TYPE"
-msgstr ""
+msgstr "NAME SIZE_IN_MEGABYTES FS_TYPE"
 
 #: src/persistence-wizard-cli:32
-#, fuzzy, sh-format
+#, sh-format
 msgid "This will create a persistent file named NAME"
-msgstr "Επιλέξτε το σημείο προσάρτησης για την αποθήκευση του διαρκούς αρχείου"
+msgstr "Αυτό θα δημιουργήσει ένα αρχείο μόνιμων αλλαγών με το όνομα NAME"
 
 #: src/persistence-wizard-cli:33
 #, sh-format
 msgid "with a size (in MB) defined by SIZE_IN_MEGABYTES"
-msgstr ""
+msgstr "με μέγεθος (σε MB) που ορίζονται από SIZE_IN_MEGABYTES"
 
 #: src/persistence-wizard-cli:34
 #, sh-format
 msgid "and with a file system defined by FS_TYPE."
-msgstr ""
+msgstr "και με ένα σύστημα αρχείων που καθορίζεται από FS_TYPE."
 
 #: src/persistence-wizard-cli:36
 #, sh-format
 msgid "For example:"
-msgstr ""
+msgstr "Για παράδειγμα:"
 
 #: src/persistence-wizard-cli:38
 #, sh-format
 msgid "Supported file system format are:"
-msgstr ""
+msgstr "Υποστηριζόμενα φορμά αρχείων του συστήματος είναι:"
 
 #: src/persistence-wizard-cli:41
 #, sh-format
 msgid "You must then copy the generated persistent file to a directory"
 msgstr ""
+"Θα πρέπει στη συνέχεια να αντιγράψετε το αρχείο μόνιμων αλλαγών σε έναν "
+"κατάλογο"
 
 #: src/persistence-wizard-cli:42
 #, sh-format
 msgid "named /salixlive/persistence either on SaLT Live USB key or else on"
 msgstr ""
+"ονομάζεται /salixlive/persistence είτε για το SaLT Live USB κλειδί ή αλλού "
+"σε"
 
 #: src/persistence-wizard-cli:43
 #, sh-format
 msgid "a hard disk drive if the persistence will be used with a SaLT LiveCD."
 msgstr ""
+"μια μονάδα σκληρού δίσκου, εάν η μόνιμη αλλάγή θα πρέπει να χρησιμοποιείται "
+"με ένα SaLT LiveCD."
 
 #: src/persistence-wizard-cli:46
 #, sh-format
 msgid "Released under GPL v3 or (at your option, any later version)"
 msgstr ""
+"Κυκλοφόρησε κάτω από την άδεια GPL v3 ή (κατ 'επιλογήν σας, οποιαδήποτε "
+"νεότερη έκδοση)"
 
 #: src/persistence-wizard-cli:58
 #, sh-format
 msgid "ERROR: The file system you specified is not supported by"
-msgstr ""
+msgstr "ΣΦΑΛΜΑ: Το σύστημα αρχείων που ορίσατε δεν υποστηρίζεται από το"
 
 #: src/persistence-wizard-cli:67
 #, sh-format
@@ -220,51 +243,41 @@ msgid ""
 "ERROR: The size you specified is not correct, it should be a positive "
 "integer."
 msgstr ""
+"ΣΦΑΛΜΑ: Το μέγεθος που καθορίσατε δεν είναι σωστό, θα πρέπει να είναι ένας "
+"θετικός ακέραιος."
 
 #: src/persistence-wizard-cli:92
-#, fuzzy, sh-format
+#, sh-format
 msgid "The persistent file $NAME is ready."
-msgstr "Επιλέξτε το σημείο προσάρτησης για την αποθήκευση του διαρκούς αρχείου"
+msgstr "Το αρχείο μόνιμων αλλαγών $NAME είναι έτοιμο."
 
 #: src/persistence-wizard-cli:94
 #, sh-format
 msgid "ERROR:"
-msgstr ""
+msgstr "ΣΦΑΛΜΑ:"
 
 #: src/persistence-wizard-cli:94
-#, fuzzy, sh-format
+#, sh-format
 msgid " was not able to create the persistent file $NAME"
-msgstr "Επιλέξτε το σημείο προσάρτησης για την αποθήκευση του διαρκούς αρχείου"
+msgstr "δεν ήταν σε θέση να δημιουργήσει το αρχείο μόνιμων αλλαγών  $NAME"
 
 #: src/persistence-wizard-cli:98
 #, sh-format
 msgid "ERROR: There is not enough free space left on your device"
-msgstr ""
+msgstr "ΣΦΑΛΜΑ: Δεν υπάρχει αρκετός ελεύθερος χώρος στη συσκευή σας"
 
 #: src/persistence-wizard-cli:99
-#, fuzzy, sh-format
+#, sh-format
 msgid "for creating the persistent file $NAME"
-msgstr "Επιλέξτε το σημείο προσάρτησης για την αποθήκευση του διαρκούς αρχείου"
+msgstr "για τη δημιουργία του αρχείου επίμονη $NAME"
 
 #: src/persistence-wizard.desktop.in.h:1
 #: src/persistence-wizard-kde.desktop.in.h:1
 msgid ""
-"Create the persistence file needed to activate the Persistence functionality "
-"in a Live environment."
+"Create the persistence file needed to activate the Persistence functionality"
+" in a Live environment."
 msgstr ""
+"Δημιουργήστε το αρχείο μόνιμων αλλαγών που απαιτείται για να ενεργοποιήσετε "
+"τη λειτουργία μόνιμων αλλαγών σε ένα ζωντανό περιβάλλον."
 
-#~ msgid ""
-#~ "Create a slxsave.xfs file in order to persist changes in the live env."
-#~ msgstr ""
-#~ "Δημιουργήστε ένα αρχείο slxsave.xfs ώστε να γίνονται μόνιμες οι αλλαγές "
-#~ "που πραγματοποιείτε στο live περιβάλλον"
 
-#, fuzzy
-#~ msgid "ERROR: You need to be root to run this"
-#~ msgstr "ΣΦΑΛΜΑ: Πρέπει να έχετε δικαιώματα χρήστη root"
-
-#~ msgid "Persistent changes"
-#~ msgstr "Μόνιμες αλλαγές"
-
-#~ msgid "The chosen size is too big ($SIZE > $MAXSIZE)"
-#~ msgstr "Το μέγεθος είναι πολύ μεγάλο ($SIZE > $MAXSIZE)"

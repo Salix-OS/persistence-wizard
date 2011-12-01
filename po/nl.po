@@ -1,42 +1,46 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
+# Translators:
+#   <gambit73@gmail.com>, 2011.
+# gapan <vlahavas@gmail.com>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-23 13:42+0200\n"
-"PO-Revision-Date: 2011-01-09 13:15+0000\n"
-"Last-Translator: gapan <vlahavas@gmail.com>\n"
-"Language-Team: Dutch <>\n"
-"Language: nl\n"
+"POT-Creation-Date: 2011-10-23 13:46+0200\n"
+"PO-Revision-Date: 2011-11-10 10:08+0000\n"
+"Last-Translator: gambit73 <gambit73@gmail.com>\n"
+"Language-Team: Dutch (http://www.transifex.net/projects/p/salix/team/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: src/persistence-wizard:34
 #, sh-format
 msgid "ERROR: $TEXTDOMAIN must be executed within a running X session.\\n"
 msgstr ""
+"FOUT:. $TEXTDOMAIN moet worden uitgevoerd binnen een draaiende X-sessie \\n"
 
 #: src/persistence-wizard:39 src/persistence-wizard-cli:25
-#, fuzzy, sh-format
+#, sh-format
 msgid "ERROR: You need to be root to run"
 msgstr "FOUT: U moet root zijn om dit uit te voeren"
 
 #: src/persistence-wizard:44
-#, fuzzy, sh-format
+#, sh-format
 msgid "ERROR: zenity must be installed and in your PATH to run"
 msgstr ""
-"FOUT: zenity moet worden geinstalleerd en in uw PATH om dit uit te voeren"
+"FOUT: zenity moet geïnstalleerd zijn en in uw PATH staan om dit uit te "
+"voeren"
 
 #: src/persistence-wizard:49
-#, fuzzy, sh-format
+#, sh-format
 msgid "ERROR: xfsprogs must be installed to run"
-msgstr "FOUT: xfsprogs moet worden geinstalleerd om dit uit te voeren"
+msgstr "FOUT: xfsprogs moet geïnstalleerd zijn om dit uit te voeren"
 
 #: src/persistence-wizard:103 src/persistence-wizard.desktop.in.h:2
 #: src/persistence-wizard-kde.desktop.in.h:2
@@ -45,7 +49,7 @@ msgid "Persistence Wizard"
 msgstr "Persistentie Wizard"
 
 #: src/persistence-wizard:105
-#, fuzzy, sh-format
+#, sh-format
 msgid ""
 "If you wish, you can save any of your work or modification performed while "
 "in a LiveCD session.\\n\\nTo do this however, you must first create a "
@@ -53,12 +57,11 @@ msgid ""
 "will be formatted as a linux file system.\\n\\nOnce this file is created, "
 "simply reboot the LiveCD for your changes to become persistent from then on."
 msgstr ""
-"Indien gewenst, kan al uw werk of aanpassingen uitgevoerd in de LiveCD "
-"sessie worden opgeslagen.\\n\\nOm dit te doen, moet u een speciale "
-"\"persistent bestand\" aanmaken welke een vooraf gekozen grootte is en zal "
-"worden geformatteerd als een linux bestandssysteem.\\n\\nZodra dit bestand "
-"is gecreërd, herstart de LiveCD om uw aanpassingen vanaf de herstart "
-"persistent te maken."
+"Indien gewenst, kunt u uw werk of wijzigingen tijdens de LiveCD-sessie "
+"opslaan.\\n\\nOm dit te doen, moet u eerst een speciale \"persistente file\""
+" aanmaken met een vooraf bepaalde vaste grootte en als een Linux-"
+"bestandssysteem geformatteerd is.\\n\\nWanneer dit bestand is aangemaakt, "
+"reboot de LiveCD en uw wijzigingen blijven behouden vanaf dat moment."
 
 #: src/persistence-wizard:110
 #, sh-format
@@ -66,9 +69,10 @@ msgid "Mount point selection"
 msgstr "Mountpoint selectie"
 
 #: src/persistence-wizard:113
-#, fuzzy, sh-format
+#, sh-format
 msgid "Choose the mountpoint where the persistent file must be created:"
-msgstr "Kies het mountpoint om het persistente bestand op te slaan:"
+msgstr ""
+"Kies het mountpunt waar het persistente bestand moet worden aangemaakt:"
 
 #: src/persistence-wizard:114
 #, sh-format
@@ -78,22 +82,22 @@ msgstr "Mount point"
 #: src/persistence-wizard:115
 #, sh-format
 msgid "Device"
-msgstr ""
+msgstr "Apparaat"
 
 #: src/persistence-wizard:116
 #, sh-format
 msgid "Label"
-msgstr ""
+msgstr "Label"
 
 #: src/persistence-wizard:117
-#, fuzzy, sh-format
+#, sh-format
 msgid "Filesystem"
-msgstr "Grootte selectie"
+msgstr "Bestandssysteem"
 
 #: src/persistence-wizard:118
-#, fuzzy, sh-format
+#, sh-format
 msgid "Free size (in MB)"
-msgstr "Grootte (in MB)"
+msgstr "Beschikbare vrije ruimte (in MB)"
 
 #: src/persistence-wizard:126 src/persistence-wizard:153
 #: src/persistence-wizard:166 src/persistence-wizard:194
@@ -105,7 +109,7 @@ msgstr "Fout"
 #: src/persistence-wizard:129
 #, sh-format
 msgid "No partition was selected. The program will stop now!"
-msgstr ""
+msgstr "Geen partitie is geselecteerd. Het programma zal nu stoppen!"
 
 #: src/persistence-wizard:144
 #, sh-format
@@ -113,18 +117,18 @@ msgid "Size selection"
 msgstr "Grootte selectie"
 
 #: src/persistence-wizard:147
-#, fuzzy, sh-format
+#, sh-format
 msgid ""
 "Set the size in megabytes (maximum $MAXSIZE) for persistent file on "
 "$MOUNTPOINT:"
 msgstr ""
-"Kies de grootte in megabytes (maximum $MAXSIZE) voor een persistent bestand "
-"op $MOUNTPOINT:"
+"Stel de grootte in in megabytes (maximaal $MAXSIZE) voor het persistente "
+"bestand op $MOUNTPOINT:"
 
 #: src/persistence-wizard:156
 #, sh-format
 msgid "No size was set. The program will stop now!"
-msgstr ""
+msgstr "Geen grootte is ingesteld. Het programma zal nu stoppen!"
 
 #: src/persistence-wizard:169
 #, sh-format
@@ -132,88 +136,97 @@ msgid ""
 "The chosen size exceeds the available place ($SIZE > $MAXSIZE). The program "
 "will stop now!"
 msgstr ""
+"De gekozen grootte overschrijdt de beschikbare hoeveelheid ($SIZE > "
+"$MAXSIZE). Het programma zal nu stoppen!"
 
 #: src/persistence-wizard:177
-#, fuzzy, sh-format
+#, sh-format
 msgid "File system selection"
-msgstr "Grootte selectie"
+msgstr "Bestandssysteem selectie"
 
 #: src/persistence-wizard:180
 #, sh-format
 msgid ""
 "Select the file system that will be used to format your persistent file:"
 msgstr ""
+"Selecteer het bestand systeem dat gebruikt zal worden voor het opmaken van "
+"uw hardnekkige bestand:"
 
 #: src/persistence-wizard:197
 #, sh-format
 msgid "No file system was selected. The program will stop now!"
-msgstr ""
+msgstr "Geen bestandssysteem is geselecteerd. Het programma zal nu stoppen!"
 
 #: src/persistence-wizard:231
-#, fuzzy, sh-format
+#, sh-format
 msgid ""
 "$NAME ($SIZE MB) correctly created in $SAVEDIR with $FORMAT file system."
-msgstr "slxsave.xfs ($SIZE MB) succesvol gecreërd in $MOUNTPOINT"
+msgstr ""
+"$NAME ($SIZE MB) correct aangemaakt in $SAVEDIR met $FORMAT bestandssysteem."
 
 #: src/persistence-wizard:242
-#, fuzzy, sh-format
+#, sh-format
 msgid "Something went wrong! $NAME ($SIZE MB) cannot be created in $SAVEDIR."
-msgstr "slxsave.xfs ($SIZE MB) kan niet worden gecreërd in $MOUNTPOINT"
+msgstr ""
+"Er ging iets mis! $NAME ($SIZE MB) kan niet worden aangemaakt in $SAVEDIR."
 
 #: src/persistence-wizard-cli:30
 #, sh-format
 msgid "NAME SIZE_IN_MEGABYTES FS_TYPE"
-msgstr ""
+msgstr "NAME SIZE_IN_MEGABYTES FS_TYPE"
 
 #: src/persistence-wizard-cli:32
-#, fuzzy, sh-format
+#, sh-format
 msgid "This will create a persistent file named NAME"
-msgstr "Kies het mountpoint om het persistente bestand op te slaan:"
+msgstr "Dit maakt een persistent bestand met de naam NAME"
 
 #: src/persistence-wizard-cli:33
 #, sh-format
 msgid "with a size (in MB) defined by SIZE_IN_MEGABYTES"
-msgstr ""
+msgstr "met een grootte (in MB), gedefinieerd door SIZE_IN_MEGABYTES"
 
 #: src/persistence-wizard-cli:34
 #, sh-format
 msgid "and with a file system defined by FS_TYPE."
-msgstr ""
+msgstr "en met een bestand dat wordt gedefinieerd door FS_TYPE."
 
 #: src/persistence-wizard-cli:36
 #, sh-format
 msgid "For example:"
-msgstr ""
+msgstr "Bijvoorbeeld:"
 
 #: src/persistence-wizard-cli:38
 #, sh-format
 msgid "Supported file system format are:"
-msgstr ""
+msgstr "Ondersteunde bestandssysteemindelingen zijn:"
 
 #: src/persistence-wizard-cli:41
 #, sh-format
 msgid "You must then copy the generated persistent file to a directory"
 msgstr ""
+"U moet het gegenereerde persistente bestand vervolgens naar een map kopiëren"
 
 #: src/persistence-wizard-cli:42
 #, sh-format
 msgid "named /salixlive/persistence either on SaLT Live USB key or else on"
-msgstr ""
+msgstr "genaamd /salixlive/persistence ofwel op een SaLT Live USB-stick of op"
 
 #: src/persistence-wizard-cli:43
 #, sh-format
 msgid "a hard disk drive if the persistence will be used with a SaLT LiveCD."
 msgstr ""
+"een harde schijf als de persistentie zal worden gebruikt met een SaLT "
+"LiveCD."
 
 #: src/persistence-wizard-cli:46
 #, sh-format
 msgid "Released under GPL v3 or (at your option, any later version)"
-msgstr ""
+msgstr "Vrijgegeven onder de GPLv3 of (optioneel, een nieuwere versie)"
 
 #: src/persistence-wizard-cli:58
 #, sh-format
 msgid "ERROR: The file system you specified is not supported by"
-msgstr ""
+msgstr "FOUT: Het opgegeven bestandssysteem wordt niet ondersteund door"
 
 #: src/persistence-wizard-cli:67
 #, sh-format
@@ -221,51 +234,41 @@ msgid ""
 "ERROR: The size you specified is not correct, it should be a positive "
 "integer."
 msgstr ""
+"FOUT: De grootte die u heeft opgegeven is niet correct, het moet een "
+"positief geheel getal zijn."
 
 #: src/persistence-wizard-cli:92
-#, fuzzy, sh-format
+#, sh-format
 msgid "The persistent file $NAME is ready."
-msgstr "Kies het mountpoint om het persistente bestand op te slaan:"
+msgstr "Het persistente bestand $NAME is gereed."
 
 #: src/persistence-wizard-cli:94
 #, sh-format
 msgid "ERROR:"
-msgstr ""
+msgstr "FOUT:"
 
 #: src/persistence-wizard-cli:94
-#, fuzzy, sh-format
+#, sh-format
 msgid " was not able to create the persistent file $NAME"
-msgstr "Kies het mountpoint om het persistente bestand op te slaan:"
+msgstr "was niet in staat om het persistente bestand $NAME te maken"
 
 #: src/persistence-wizard-cli:98
 #, sh-format
 msgid "ERROR: There is not enough free space left on your device"
-msgstr ""
+msgstr "FOUT: Er is niet genoeg ruimte vrij op uw device"
 
 #: src/persistence-wizard-cli:99
-#, fuzzy, sh-format
+#, sh-format
 msgid "for creating the persistent file $NAME"
-msgstr "Kies het mountpoint om het persistente bestand op te slaan:"
+msgstr "voor het creëren van het persistente bestand $NAME"
 
 #: src/persistence-wizard.desktop.in.h:1
 #: src/persistence-wizard-kde.desktop.in.h:1
 msgid ""
-"Create the persistence file needed to activate the Persistence functionality "
-"in a Live environment."
+"Create the persistence file needed to activate the Persistence functionality"
+" in a Live environment."
 msgstr ""
+"Maak het benodigde persistente ​​bestand voor het activeren van de "
+"Persistentie functionaliteit in een live omgeving."
 
-#~ msgid ""
-#~ "Create a slxsave.xfs file in order to persist changes in the live env."
-#~ msgstr ""
-#~ "Creër een slxsave.xfs bestand om de aanpassingen persistent te maken in "
-#~ "de live omgeving."
 
-#, fuzzy
-#~ msgid "ERROR: You need to be root to run this"
-#~ msgstr "FOUT: U moet root zijn om dit uit te voeren"
-
-#~ msgid "Persistent changes"
-#~ msgstr "Persistente wijzigingen"
-
-#~ msgid "The chosen size is too big ($SIZE > $MAXSIZE)"
-#~ msgstr "De gekozen grootte is te groot ($SIZE > $MAXSIZE)"

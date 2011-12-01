@@ -1,52 +1,55 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
+# Translators:
+# gapan <vlahavas@gmail.com>, 2011.
+# Laszlo Dvornik <rezuri@zoho.com>, 2011.
+# Péter Polonkai <polesz@nedudu.hu>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-23 13:42+0200\n"
-"PO-Revision-Date: 2011-01-09 13:15+0000\n"
-"Last-Translator: gapan <vlahavas@gmail.com>\n"
+"POT-Creation-Date: 2011-10-23 13:46+0200\n"
+"PO-Revision-Date: 2011-11-21 14:06+0000\n"
+"Last-Translator: Polesz <polesz@nedudu.hu>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: hu\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: src/persistence-wizard:34
 #, sh-format
 msgid "ERROR: $TEXTDOMAIN must be executed within a running X session.\\n"
-msgstr ""
+msgstr "HIBA: $TEXTDOMAIN csak futó X munkafolyamatból futtatható.\\n"
 
 #: src/persistence-wizard:39 src/persistence-wizard-cli:25
-#, fuzzy, sh-format
+#, sh-format
 msgid "ERROR: You need to be root to run"
-msgstr "Hiba: Rendszergazdaként kell futtatni"
+msgstr "HIBA: A futtatáshoz rendszergazdai jogosultság szükséges"
 
 #: src/persistence-wizard:44
-#, fuzzy, sh-format
+#, sh-format
 msgid "ERROR: zenity must be installed and in your PATH to run"
 msgstr ""
-"Hiba: a zenity programnak telepítve kell lenni és elérhetőnek a PATH "
-"környezetben a futtatáshoz"
+"HIBA: A futtatáshoz a zenity programnak telepítve és a PATH-ban elérhetőnek "
+"kell lennie"
 
 #: src/persistence-wizard:49
-#, fuzzy, sh-format
+#, sh-format
 msgid "ERROR: xfsprogs must be installed to run"
-msgstr "Hiba: xfsprogs csomagot telepíteni kell a futtatáshoz"
+msgstr "HIBA: A futtatáshoz az xfsprogs programnak telepítve kell lennie"
 
 #: src/persistence-wizard:103 src/persistence-wizard.desktop.in.h:2
 #: src/persistence-wizard-kde.desktop.in.h:2
 #, sh-format
 msgid "Persistence Wizard"
-msgstr "Változásmentés Varázsló"
+msgstr "Tartós beállítások varázsló"
 
 #: src/persistence-wizard:105
-#, fuzzy, sh-format
+#, sh-format
 msgid ""
 "If you wish, you can save any of your work or modification performed while "
 "in a LiveCD session.\\n\\nTo do this however, you must first create a "
@@ -54,21 +57,23 @@ msgid ""
 "will be formatted as a linux file system.\\n\\nOnce this file is created, "
 "simply reboot the LiveCD for your changes to become persistent from then on."
 msgstr ""
-"Ha szeretné akkor mentheti a munkáit a LiveCD használata közben is.\\n"
-"\\nEhhez elsőként szüksége van egy speciális \"változásmentés\" fájl "
-"létrehozására ami fix méretű és linuxos fájlrendszerre van formázva.\\n\\nHa "
-"létrehozta ezt a fájlt akkor a LiveCD újraindítása után is egyszerűen tudja "
-"használni és a módosításai érvényesülnek a következő indításkor."
+"Ha szeretné, mentheti a LiveCD munkamenet során létrejött munkáit vagy "
+"módosításait.\\n\\nEhhez először létre kell hoznia egy speciális \"tartós "
+"beállítások\" fájlt, amely előre meghatározott méretű és Linux "
+"fájlrendszerre formázott lesz.\\n\\nAmint elkészül ez a fájl, egyszerűen "
+"újraindíthatja a LiveCD-t és onnantól fogva a módosításai tartósak lesznek."
 
 #: src/persistence-wizard:110
 #, sh-format
 msgid "Mount point selection"
-msgstr "Csatolási pont választás"
+msgstr "Csatolási pont kiválasztása"
 
 #: src/persistence-wizard:113
-#, fuzzy, sh-format
+#, sh-format
 msgid "Choose the mountpoint where the persistent file must be created:"
-msgstr "Kérem válasszon csatolási pontot a változásmentés fájl részére"
+msgstr ""
+"Válassza a csatolási pontot, ahol a \"tartós beállítások\" fájl létre lesz "
+"hozva:"
 
 #: src/persistence-wizard:114
 #, sh-format
@@ -78,22 +83,22 @@ msgstr "Csatolási pont"
 #: src/persistence-wizard:115
 #, sh-format
 msgid "Device"
-msgstr ""
+msgstr "Eszköz"
 
 #: src/persistence-wizard:116
 #, sh-format
 msgid "Label"
-msgstr ""
+msgstr "Címke"
 
 #: src/persistence-wizard:117
-#, fuzzy, sh-format
+#, sh-format
 msgid "Filesystem"
-msgstr "Méret választás"
+msgstr "Fájlrendszer"
 
 #: src/persistence-wizard:118
-#, fuzzy, sh-format
+#, sh-format
 msgid "Free size (in MB)"
-msgstr "Méret (MB-ban)"
+msgstr "Szabad terület (MB-ban)"
 
 #: src/persistence-wizard:126 src/persistence-wizard:153
 #: src/persistence-wizard:166 src/persistence-wizard:194
@@ -105,26 +110,26 @@ msgstr "Hiba"
 #: src/persistence-wizard:129
 #, sh-format
 msgid "No partition was selected. The program will stop now!"
-msgstr ""
+msgstr "Nem lett kiválasztva partíció. A program le fog állni."
 
 #: src/persistence-wizard:144
 #, sh-format
 msgid "Size selection"
-msgstr "Méret választás"
+msgstr "Méret kiválasztása"
 
 #: src/persistence-wizard:147
-#, fuzzy, sh-format
+#, sh-format
 msgid ""
 "Set the size in megabytes (maximum $MAXSIZE) for persistent file on "
 "$MOUNTPOINT:"
 msgstr ""
-"Válasszon fálj méretet megabájtban  (maximum $MAXSIZE) a változásmentés fájl "
-"részére itt $MOUNTPOINT:"
+"A(z) $MOUNTPOINT csatolási ponton található \"tartós beállítások\" fájl "
+"méretének beállítása megabájtban (maximálisan $MAXSIZE):"
 
 #: src/persistence-wizard:156
 #, sh-format
 msgid "No size was set. The program will stop now!"
-msgstr ""
+msgstr "Nem lett beállítva méret. A program le fog állni."
 
 #: src/persistence-wizard:169
 #, sh-format
@@ -132,140 +137,138 @@ msgid ""
 "The chosen size exceeds the available place ($SIZE > $MAXSIZE). The program "
 "will stop now!"
 msgstr ""
+"A választott méret meghaladja az elérhető helyet ($SIZE > $MAXSIZE). A "
+"program le fog állni."
 
 #: src/persistence-wizard:177
-#, fuzzy, sh-format
+#, sh-format
 msgid "File system selection"
-msgstr "Méret választás"
+msgstr "Fájlrendszer kiválasztása"
 
 #: src/persistence-wizard:180
 #, sh-format
 msgid ""
 "Select the file system that will be used to format your persistent file:"
 msgstr ""
+"Válassza ki a \"tartós beállítások\" fájl formázásánál használandó "
+"fájlrendszert:"
 
 #: src/persistence-wizard:197
 #, sh-format
 msgid "No file system was selected. The program will stop now!"
-msgstr ""
+msgstr "Nem lett kiválasztva fájlrendszer. A program le fog állni."
 
 #: src/persistence-wizard:231
-#, fuzzy, sh-format
+#, sh-format
 msgid ""
 "$NAME ($SIZE MB) correctly created in $SAVEDIR with $FORMAT file system."
-msgstr "slxsave.xfs ($SIZE MB) sikeresen létrehozva itt: $MOUNTPOINT"
+msgstr ""
+"A(z) $NAME ($SIZE MB) sikeresen létre lett hozva a(z) $SAVEDIR könyvtárban "
+"$FORMAT fájlrendszerrel."
 
 #: src/persistence-wizard:242
-#, fuzzy, sh-format
+#, sh-format
 msgid "Something went wrong! $NAME ($SIZE MB) cannot be created in $SAVEDIR."
-msgstr "slxsave.xfs ($SIZE MB) nem sikerült létrehozni itt: $MOUNTPOINT"
+msgstr ""
+"Hiba történt. A(z) $NAME ($SIZE MB) nem hozható létre a(z) $SAVEDIR "
+"könyvtárban."
 
 #: src/persistence-wizard-cli:30
 #, sh-format
 msgid "NAME SIZE_IN_MEGABYTES FS_TYPE"
-msgstr ""
+msgstr "NÉV MÉRET_MB FS_TÍPUS"
 
 #: src/persistence-wizard-cli:32
-#, fuzzy, sh-format
+#, sh-format
 msgid "This will create a persistent file named NAME"
-msgstr "Kérem válasszon csatolási pontot a változásmentés fájl részére"
+msgstr "Létrehoz egy NAME nevű \"tartós beállítások\" fájlt"
 
 #: src/persistence-wizard-cli:33
 #, sh-format
 msgid "with a size (in MB) defined by SIZE_IN_MEGABYTES"
-msgstr ""
+msgstr "MÉRET_MB által meghatározott mérettel (MB-ban)"
 
 #: src/persistence-wizard-cli:34
 #, sh-format
 msgid "and with a file system defined by FS_TYPE."
-msgstr ""
+msgstr "és FS_TÍPUS által meghatározott fájlrendszerrel."
 
 #: src/persistence-wizard-cli:36
 #, sh-format
 msgid "For example:"
-msgstr ""
+msgstr "Például:"
 
 #: src/persistence-wizard-cli:38
 #, sh-format
 msgid "Supported file system format are:"
-msgstr ""
+msgstr "Támogatott fájlrendszer formátumok:"
 
 #: src/persistence-wizard-cli:41
 #, sh-format
 msgid "You must then copy the generated persistent file to a directory"
-msgstr ""
+msgstr "Másolja az előállított \"tartós beállítások\" fájlt a"
 
 #: src/persistence-wizard-cli:42
 #, sh-format
 msgid "named /salixlive/persistence either on SaLT Live USB key or else on"
-msgstr ""
+msgstr "/salixlive/persistence nevű könyvtárba a SaLT Live USB kulcson vagy"
 
 #: src/persistence-wizard-cli:43
 #, sh-format
 msgid "a hard disk drive if the persistence will be used with a SaLT LiveCD."
 msgstr ""
+"egy merevlemezen, ha a \"tartós beállítások\" SaLT LiveCD-vel lesznek "
+"használva."
 
 #: src/persistence-wizard-cli:46
 #, sh-format
 msgid "Released under GPL v3 or (at your option, any later version)"
-msgstr ""
+msgstr "GPL v3 (vagy tetszőleges későbbi változat) alatt jelent meg"
 
 #: src/persistence-wizard-cli:58
 #, sh-format
 msgid "ERROR: The file system you specified is not supported by"
-msgstr ""
+msgstr "HIBA: A megadott fájlrendszer nem támogatott"
 
 #: src/persistence-wizard-cli:67
 #, sh-format
 msgid ""
 "ERROR: The size you specified is not correct, it should be a positive "
 "integer."
-msgstr ""
+msgstr "HIBA: A megadott méret helytelen, pozitív egész számnak kell lennie."
 
 #: src/persistence-wizard-cli:92
-#, fuzzy, sh-format
+#, sh-format
 msgid "The persistent file $NAME is ready."
-msgstr "Kérem válasszon csatolási pontot a változásmentés fájl részére"
+msgstr "A(z) $NAME \"tartós beállítások\" fájl elkészült."
 
 #: src/persistence-wizard-cli:94
 #, sh-format
 msgid "ERROR:"
-msgstr ""
+msgstr "HIBA:"
 
 #: src/persistence-wizard-cli:94
-#, fuzzy, sh-format
+#, sh-format
 msgid " was not able to create the persistent file $NAME"
-msgstr "Kérem válasszon csatolási pontot a változásmentés fájl részére"
+msgstr " nem lehetett létrehozni a(z) $NAME \"tartós beállítások\" fájlt"
 
 #: src/persistence-wizard-cli:98
 #, sh-format
 msgid "ERROR: There is not enough free space left on your device"
-msgstr ""
+msgstr "HIBA: Nincs elég szabad hely az eszközön"
 
 #: src/persistence-wizard-cli:99
-#, fuzzy, sh-format
+#, sh-format
 msgid "for creating the persistent file $NAME"
-msgstr "Kérem válasszon csatolási pontot a változásmentés fájl részére"
+msgstr "a(z) $NAME \"tartós beállítások\" fájl létrehozásához"
 
 #: src/persistence-wizard.desktop.in.h:1
 #: src/persistence-wizard-kde.desktop.in.h:1
 msgid ""
-"Create the persistence file needed to activate the Persistence functionality "
-"in a Live environment."
+"Create the persistence file needed to activate the Persistence functionality"
+" in a Live environment."
 msgstr ""
+"Létrehozza a Live környezet tartós beállítások funkciójának aktiválásához "
+"szükséges tartós beállítások fájlt."
 
-#~ msgid ""
-#~ "Create a slxsave.xfs file in order to persist changes in the live env."
-#~ msgstr ""
-#~ "Egy slxsave.xfs fájl létrehozása hogy a változások tartósan megmaradjanak "
-#~ "a LiveCD környezetben."
 
-#, fuzzy
-#~ msgid "ERROR: You need to be root to run this"
-#~ msgstr "Hiba: Rendszergazdaként kell futtatni"
-
-#~ msgid "Persistent changes"
-#~ msgstr "Változásmentés fájl változásai"
-
-#~ msgid "The chosen size is too big ($SIZE > $MAXSIZE)"
-#~ msgstr "A választott méret túl nagy ($SIZE > $MAXSIZE)"
