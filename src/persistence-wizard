@@ -22,10 +22,23 @@ CLIPRGM=/usr/sbin/persistence-wizard-cli
 RWMP=/tmp/persistentwiz-rwmountpoints
 if [ -f /mnt/salt/lib/libSaLT ]; then
   . /mnt/salt/lib/libSaLT
-else
-  ROOT_DIR=salixlive
+  NAME="$ROOT_DIR.save"
+  liveCDMountPoint=/mnt/salt$(cut -d: -f1 /mnt/salt/tmp/distro_infos)
+  identfile=$(get_value_cmdline identfile)
+  [ -n "$identfile" ] && export IDENT_FILE=$identfile
+  unset identfile
+  if [ -e "$liveCDMountPoint/$IDENT_FILE" ]; then
+    . "$liveCDMountPoint/$IDENT_FILE"
+    if [ -n "$BASEDIR" ]; then
+      echo $BASEDIR|grep -q '.*/$' || BASEDIR=$BASEDIR/
+      ROOT_DIR=$BASEDIR$ROOT_DIR
+    fi
+  fi
 fi
-NAME="$ROOT_DIR.save"
+if [ -z "$ROOT_DIR" ]; then
+  ROOT_DIR=salixlive
+  NAME="$ROOT_DIR.save"
+fi
 savefilename=$(get_value_cmdline savefile)
 [ -n "$savefilename" ] && NAME="$savefilename"
 unset savefilename
