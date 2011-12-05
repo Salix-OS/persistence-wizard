@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # gapan <vlahavas@gmail.com>, 2011.
 # Yarema aka Knedlyk <yupadmin@gmail.com>, 2011.
@@ -9,44 +9,45 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-23 13:46+0200\n"
+"POT-Creation-Date: 2011-12-05 14:01+0100\n"
 "PO-Revision-Date: 2011-10-24 13:40+0000\n"
 "Last-Translator: knedlyk <yupadmin@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: uk\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
 
-#: src/persistence-wizard:34
+#: src/persistence-wizard:43
 #, sh-format
 msgid "ERROR: $TEXTDOMAIN must be executed within a running X session.\\n"
 msgstr "ПОМИЛКА: $TEXTDOMAIN повинен бути виконаний з запущеної X-сесії \\n"
 
-#: src/persistence-wizard:39 src/persistence-wizard-cli:25
+#: src/persistence-wizard:48 src/persistence-wizard-cli:25
 #, sh-format
 msgid "ERROR: You need to be root to run"
 msgstr "ПОМИЛКА: Для запуску Ви повинні бути суперкористувачем"
 
-#: src/persistence-wizard:44
+#: src/persistence-wizard:53
 #, sh-format
 msgid "ERROR: zenity must be installed and in your PATH to run"
 msgstr ""
 "ПОМИЛКА: Zenity повинен бути встановлений і бути в Вашому PATH для запуску"
 
-#: src/persistence-wizard:49
+#: src/persistence-wizard:58
 #, sh-format
 msgid "ERROR: xfsprogs must be installed to run"
 msgstr "ПОМИЛКА: для запуску повинен бути встановлений xfsprogs"
 
-#: src/persistence-wizard:103 src/persistence-wizard.desktop.in.h:2
+#: src/persistence-wizard:112 src/persistence-wizard.desktop.in.h:2
 #: src/persistence-wizard-kde.desktop.in.h:2
 #, sh-format
 msgid "Persistence Wizard"
 msgstr "Майстер збереження змін"
 
-#: src/persistence-wizard:105
+#: src/persistence-wizard:114
 #, sh-format
 msgid ""
 "If you wish, you can save any of your work or modification performed while "
@@ -58,63 +59,63 @@ msgstr ""
 "Якщо Ви бажаєте, то Ви можете зберегти будь-яку Вашу роботу або зміни "
 "виконані під час сесії LiveCD.\\n\\nЩоб це зробити, Вам потрібно спочатку "
 "створити спеціальний \"файл змін\", який буде мати заздалегідь вказаний "
-"певний фіксований розмір і буде відформатований як файлова система "
-"Linux.\\n\\nПісля створення цього файлу просто перезавантажте LiveCD і Ваші "
-"зміни будуть зберігатися в цьому файлі."
+"певний фіксований розмір і буде відформатований як файлова система Linux.\\n"
+"\\nПісля створення цього файлу просто перезавантажте LiveCD і Ваші зміни "
+"будуть зберігатися в цьому файлі."
 
-#: src/persistence-wizard:110
+#: src/persistence-wizard:119
 #, sh-format
 msgid "Mount point selection"
 msgstr "Вибір точки монтування"
 
-#: src/persistence-wizard:113
+#: src/persistence-wizard:122
 #, sh-format
 msgid "Choose the mountpoint where the persistent file must be created:"
 msgstr "Виберіть точку монтування, де повинен бути створений файл змін:"
 
-#: src/persistence-wizard:114
+#: src/persistence-wizard:123
 #, sh-format
 msgid "Mount point"
 msgstr "Точка монтування"
 
-#: src/persistence-wizard:115
+#: src/persistence-wizard:124
 #, sh-format
 msgid "Device"
 msgstr "Пристрій"
 
-#: src/persistence-wizard:116
+#: src/persistence-wizard:125
 #, sh-format
 msgid "Label"
 msgstr "Мітка"
 
-#: src/persistence-wizard:117
+#: src/persistence-wizard:126
 #, sh-format
 msgid "Filesystem"
 msgstr "Файлова система"
 
-#: src/persistence-wizard:118
+#: src/persistence-wizard:127
 #, sh-format
 msgid "Free size (in MB)"
 msgstr "Вільний простір (в МБ)"
 
-#: src/persistence-wizard:126 src/persistence-wizard:153
-#: src/persistence-wizard:166 src/persistence-wizard:194
-#: src/persistence-wizard:239
+#: src/persistence-wizard:135 src/persistence-wizard:162
+#: src/persistence-wizard:175 src/persistence-wizard:203
+#: src/persistence-wizard:248
 #, sh-format
 msgid "Error"
 msgstr "Помилка"
 
-#: src/persistence-wizard:129
+#: src/persistence-wizard:138
 #, sh-format
 msgid "No partition was selected. The program will stop now!"
 msgstr "Не вибрано жодного розділу. Програма буде зараз зупинена!"
 
-#: src/persistence-wizard:144
+#: src/persistence-wizard:153
 #, sh-format
 msgid "Size selection"
 msgstr "Вибір розміру"
 
-#: src/persistence-wizard:147
+#: src/persistence-wizard:156
 #, sh-format
 msgid ""
 "Set the size in megabytes (maximum $MAXSIZE) for persistent file on "
@@ -123,12 +124,12 @@ msgstr ""
 "Виберіть розмір в мегабайтах (максимально $MAXSIZE) для файлу змін в "
 "$MOUNTPOINT"
 
-#: src/persistence-wizard:156
+#: src/persistence-wizard:165
 #, sh-format
 msgid "No size was set. The program will stop now!"
 msgstr "Жодного розміру не задано. Програма буде зараз зупинена!"
 
-#: src/persistence-wizard:169
+#: src/persistence-wizard:178
 #, sh-format
 msgid ""
 "The chosen size exceeds the available place ($SIZE > $MAXSIZE). The program "
@@ -137,12 +138,12 @@ msgstr ""
 "Обраний розмір перевищує вільне місце ($SIZE > $MAXSIZE). Програма буде "
 "зараз зупинена!"
 
-#: src/persistence-wizard:177
+#: src/persistence-wizard:186
 #, sh-format
 msgid "File system selection"
 msgstr "Вибір файлової системи"
 
-#: src/persistence-wizard:180
+#: src/persistence-wizard:189
 #, sh-format
 msgid ""
 "Select the file system that will be used to format your persistent file:"
@@ -150,22 +151,25 @@ msgstr ""
 "Виберіть файлову систему, що буде використовуватися для форматування файлу "
 "змін"
 
-#: src/persistence-wizard:197
+#: src/persistence-wizard:206
 #, sh-format
 msgid "No file system was selected. The program will stop now!"
 msgstr "Не вибрано файлової системи. Програма зараз буде зупинена!"
 
-#: src/persistence-wizard:231
+#: src/persistence-wizard:240
 #, sh-format
 msgid ""
-"$NAME ($SIZE MB) correctly created in $SAVEDIR with $FORMAT file system."
+"$SAVE_FILE_NAME ($SIZE MB) correctly created in $SAVEDIR with $FORMAT file "
+"system."
 msgstr ""
-"$NAME ($SIZE МБ) успішно створено у $SAVEDIR з файловою системою $FORMAT."
+"$SAVE_FILE_NAME ($SIZE МБ) успішно створено у $SAVEDIR з файловою системою $FORMAT."
 
-#: src/persistence-wizard:242
+#: src/persistence-wizard:251
 #, sh-format
-msgid "Something went wrong! $NAME ($SIZE MB) cannot be created in $SAVEDIR."
-msgstr "Щось пішло не так! $NAME ($SIZE МБ) неможлово створити у $SAVEDIR."
+msgid ""
+"Something went wrong! $SAVE_FILE_NAME ($SIZE MB) cannot be created in "
+"$SAVEDIR."
+msgstr "Щось пішло не так! $SAVE_FILE_NAME ($SIZE МБ) неможлово створити у $SAVEDIR."
 
 #: src/persistence-wizard-cli:30
 #, sh-format
@@ -260,8 +264,6 @@ msgstr "для створення файлу збережень $NAME"
 #: src/persistence-wizard.desktop.in.h:1
 #: src/persistence-wizard-kde.desktop.in.h:1
 msgid ""
-"Create the persistence file needed to activate the Persistence functionality"
-" in a Live environment."
+"Create the persistence file needed to activate the Persistence functionality "
+"in a Live environment."
 msgstr "Файл змін $NAME.save готовий."
-
-

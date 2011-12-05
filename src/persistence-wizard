@@ -24,9 +24,8 @@ if [ -f /mnt/salt/lib/libSaLT ]; then
   . /mnt/salt/lib/libSaLT
   NAME="$ROOT_DIR.save"
   liveCDMountPoint=/mnt/salt$(cut -d: -f1 /mnt/salt/tmp/distro_infos)
-  identfile=$(get_value_cmdline identfile)
-  [ -n "$identfile" ] && export IDENT_FILE=$identfile
-  unset identfile
+  get_ident_file
+  get_save_file_name
   if [ -e "$liveCDMountPoint/$IDENT_FILE" ]; then
     . "$liveCDMountPoint/$IDENT_FILE"
     if [ -n "$BASEDIR" ]; then
@@ -37,11 +36,8 @@ if [ -f /mnt/salt/lib/libSaLT ]; then
 fi
 if [ -z "$ROOT_DIR" ]; then
   ROOT_DIR=salixlive
-  NAME="$ROOT_DIR.save"
+  SAVE_FILE_NAME="$ROOT_DIR.save"
 fi
-savefilename=$(get_value_cmdline savefile)
-[ -n "$savefilename" ] && NAME="$savefilename"
-unset savefilename
 
 if [ ! $DISPLAY ]; then
   echo -e "`eval_gettext 'ERROR: $TEXTDOMAIN must be executed within a running X session.\n'`"
@@ -227,7 +223,7 @@ fi
 cd $SAVEDIR
 
 (yes | zenity --progress --pulsate --auto-close --auto-kill) &
-$CLIPRGM $NAME $SIZE $FORMAT
+$CLIPRGM $SAVE_FILE_NAME $SIZE $FORMAT
 ret=$?
 killall yes
 
@@ -241,9 +237,9 @@ if [ $ret -eq 0 ]; then
     --title "$TEXTDOMAIN" \
     --window-icon /usr/share/icons/hicolor/128x128/apps/persistence-wizard.png \
     --info \
-    --text "`eval_gettext '$NAME ($SIZE MB) correctly created in $SAVEDIR with $FORMAT file system.'`"
+    --text "`eval_gettext '$SAVE_FILE_NAME ($SIZE MB) correctly created in $SAVEDIR with $FORMAT file system.'`"
   if [ -d /mnt/salt ]; then
-    echo "$DEVICE:$ROOT_DIR/persistence/$NAME" > /mnt/salt/sync-persistence
+    echo "$DEVICE:$ROOT_DIR/persistence/$SAVE_FILE_NAME" > /mnt/salt/sync-persistence
   fi
   exit 0
 else
@@ -252,6 +248,6 @@ else
     --title "`eval_gettext 'Error'`" \
     --window-icon /usr/share/icons/hicolor/128x128/apps/persistence-wizard.png \
     --error \
-    --text "`eval_gettext 'Something went wrong! $NAME ($SIZE MB) cannot be created in $SAVEDIR.'`"
+    --text "`eval_gettext 'Something went wrong! $SAVE_FILE_NAME ($SIZE MB) cannot be created in $SAVEDIR.'`"
   exit 1
 fi
