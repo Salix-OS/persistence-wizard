@@ -20,17 +20,18 @@ export TEXTDOMAINDIR="/usr/share/locale"
 
 CLIPRGM=/usr/sbin/persistence-wizard-cli
 RWMP=/tmp/persistentwiz-rwmountpoints
+ROOT_DIR=
 if [ -f /mnt/salt/lib/libSaLT ]; then
   . /mnt/salt/lib/libSaLT
-  NAME="$ROOT_DIR.save"
+  SAVE_FILE_NAME="$ROOT_DIR.save"
   liveCDMountPoint=/mnt/salt$(cut -d: -f1 /mnt/salt/tmp/distro_infos)
   get_ident_file
   get_save_file_name
   if [ -e "$liveCDMountPoint/$IDENT_FILE" ]; then
     . "$liveCDMountPoint/$IDENT_FILE"
-    if [ -n "$BASEDIR" ]; then
-      echo $BASEDIR|grep -q '.*/$' || BASEDIR=$BASEDIR/
-      ROOT_DIR=$BASEDIR$ROOT_DIR
+    if [ -n "$basedir" ]; then
+      echo $basedir|grep -q '.*/$' || basedir=$basedir/
+      ROOT_DIR=$basedir$ROOT_DIR
     fi
   fi
 fi
@@ -64,17 +65,22 @@ cat /dev/null > $RWMP
 tempd=$(mktemp -d)
 IFS="
 "
-for l in $(/sbin/blkid -o list); do
-  if [ "${l:0:1}" = "/" ]; then
-    device=$(sh -c "echo $1" -- $l)
-    fs=$(sh -c "echo $2" -- $l)
-    label=$(sh -c "echo $3" -- $l)
-    mp=$(sh -c "echo $4" -- $l)
-    echo "$fs"|grep -q "^ext." && fs="ext"
+for l in $(/sbin/blkid -o full); do
+  if echo "$l" | grep -q '^/'; then
+    device=$(echo "$l"|cut -d: -f1)
+    LABEL=
+    TYPE=
+    eval $(echo "$l"|cut -d: -f2-)
+    fs=$TYPE
+    label="$LABEL "
+    unset LABEL TYPE UUID SEC_TYPE
+    mp=
+    grep -q "^$device " /proc/mounts && mp=$(grep "^$device " /proc/mounts|awk '{print $2}')
     echo "$fs"|grep -q "vfat" && fs="vfat"
     echo "$fs"|grep -q "ntfs" && fs="ntfs"
+    echo "$fs"|grep -q "ext[0-9]" && fs="ext"
     if [ "$fs" = "ext" -o "$fs" = "reiserfs" -o "$fs" = "xfs" -o "$fs" = "vfat" -o "$fs" = "ntfs" ]; then
-      [ "$mp" = "(not mounted)" ] && mp=
+      [ "$mp" = "(not" ] && mp=
       if [ -z "$mp" ]; then
         mp="$tempd/$(echo "$device"|sed 's:/:_:g')-$fs"
         mkdir -p "$mp"
@@ -100,8 +106,10 @@ for l in $(/sbin/blkid -o list); do
         fi
       fi
       if [ -n "$mp" ]; then
+        disk=$(echo $device|tr -d '[0-9]'|sed 's:/.*/\([^/]\):\1:')
+        [ -e /sys/block/$disk/removable -a $(cat /sys/block/$disk/removable) -eq 1 ] && removable=`eval_gettext 'Yes'` || removable=`eval_gettext 'No'`
         size=$(df -BM -l "$mp"|tail -n1|awk '{print $4}'|tr -d M|rev|sed 's/.\{3\}/\0 /g'|rev)
-        echo -e "$mp\n$device\n$label\n$fs\n$size" >> $RWMP
+        echo -e "$mp:$device:$label:$fs:$removable:$size" >> $RWMP
       fi
     fi
   fi
@@ -113,47 +121,51 @@ zenity --info \
  --window-icon /usr/share/icons/hicolor/128x128/apps/persistence-wizard.png \
  --text "`eval_gettext 'If you wish, you can save any of your work or modification performed while in a LiveCD session.\n\nTo do this however, you must first create a special "persistent file" which will have a pre-determined fixed-size and will be formatted as a linux file system.\n\nOnce this file is created, simply reboot the LiveCD for your changes to become persistent from then on.'`"
 
+ACTUALSIZE=$(du -sh /mnt/salt/mnt/rw/|awk '{print $1}'|rev|sed 's/.\{3\}/\0 /g'|rev)
 IFS=":
 "
 MOUNTPOINT=$(zenity \
   --title "`eval_gettext 'Mount point selection'`" \
   --window-icon /usr/share/icons/hicolor/128x128/apps/persistence-wizard.png \
   --list \
-  --text "`eval_gettext 'Choose the mountpoint where the persistent file must be created:'`" \
+  --text "`eval_gettext 'The actual used memory size is $ACTUALSIZE.\nChoose the mountpoint where the persistent file must be created:'`" \
   --column "`eval_gettext 'Mount point'`" \
   --column "`eval_gettext 'Device'`" \
   --column "`eval_gettext 'Label'`" \
   --column "`eval_gettext 'Filesystem'`" \
+  --column "`eval_gettext 'Removable'`" \
   --column "`eval_gettext 'Free size (in MB)'`" \
   --hide-column 1 \
-  $(cat $RWMP))
+  --width 500 --height 400 \
+  $(tac $RWMP|sed 's/:/\n/g'))
 unset IFS
 
 if [ -z "$MOUNTPOINT" ]; then
   rm -f $RWMP
-  zenity \
-    --title "`eval_gettext 'Error'`" \
-    --window-icon /usr/share/icons/hicolor/128x128/apps/persistence-wizard.png \
-    --error \
-    --text "`eval_gettext 'No partition was selected. The program will stop now!'`"
   find $tempd -type d -mindepth 1 -exec umount '{}' \;
   rm -rf $tempd
   exit 1
 fi
 
-MAXSIZE=$(grep ^"$MOUNTPOINT:" $RWMP|cut -d: -f2|tr -d ' ')
-DEFSIZE=$((MAXSIZE - 250)) # so there is still 250 MB remaining on the partition
+MAXSIZE=$(grep "^$MOUNTPOINT:" $RWMP|cut -d: -f6|tr -d ' ')
+# so there is still 250 MB remaining on the partition if possible
+if [ $(($MAXSIZE - 250)) -gt 0 ]; then
+  DEFSIZE=$(($MAXSIZE - 250))
+else
+  DEFSIZE=$MAXSIZE
+fi
 if [ $DEFSIZE -gt 500 ]; then # 500 MB max for default size
   DEFSIZE=500
 fi
 
-export MOUNTPOINT MAXSIZE
+MAXSIZESEP=$(echo $MAXSIZE|rev|sed 's/.\{3\}/\0 /g'|rev)'M'
+export MOUNTPOINT
 
 SIZE=$(zenity \
   --title "`eval_gettext 'Size selection'`" \
   --window-icon /usr/share/icons/hicolor/128x128/apps/persistence-wizard.png \
   --entry \
-  --text "`eval_gettext 'Set the size in megabytes (maximum $MAXSIZE) for persistent file on $MOUNTPOINT:'`" \
+  --text "`eval_gettext 'The actual used memory size is $ACTUALSIZE.\nSet the size in megabytes (maximum ${MAXSIZESEP}) for persistent file on $MOUNTPOINT:'`" \
   --entry-text $DEFSIZE)
 
 if [ -z "$SIZE" ]; then
@@ -215,10 +227,6 @@ SAVEDIR="$MOUNTPOINT/$ROOT_DIR/persistence"
 if [ ! -d "$SAVEDIR" ]; then
 	mkdir -p "$SAVEDIR"
 fi
-if [ -d /mnt/salt ]; then
-  DEVICE=$(mount | grep " on $MOUNTPOINT " | sed 's/\(.*\) on .*/\1/')
-  export DEVICE
-fi
 
 cd $SAVEDIR
 
@@ -231,6 +239,7 @@ cd -
 sync
 find $tempd -type d -mindepth 1 -maxdepth 1 -exec umount '{}' \;
 rm -rf $tempd
+DEVICE=$(grep "^$MOUNTPOINT:" $RWMP|cut -d: -f2)
 rm -f $RWMP
 if [ $ret -eq 0 ]; then
   zenity \
