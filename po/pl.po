@@ -22,7 +22,7 @@ msgstr ""
 #: src/persistence-wizard:44
 #, sh-format
 msgid "ERROR: $TEXTDOMAIN must be executed within a running X session.\\n"
-msgstr "BŁĄD: $TEXTDOMAIN należy wykonać podczas sesji X Window.\\n\n"
+msgstr "BŁĄD: $TEXTDOMAIN należy wykonać podczas sesji X Window.\\n"
 
 #: src/persistence-wizard:49 src/persistence-wizard-cli:25
 #, sh-format
