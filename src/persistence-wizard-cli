@@ -20,27 +20,28 @@ version=1.1
 NAME="$1"
 SIZE="$2"
 FS="$3"
+SCRIPT_NAME="$(basename $0)"
 
 if [ `id -u` != "0" ]; then
-	echo "`eval_gettext 'ERROR: You need to be root to run'` $(basename $0)"
+	echo "`eval_gettext 'ERROR:'` `eval_gettext 'You need to be root to run $SCRIPT_NAME'`"
 	exit 1
 fi
 
 if [ -z "$3" ]; then
-	echo "Usage: $(basename $0) `eval_gettext 'NAME SIZE_IN_MEGABYTES FS_TYPE'`"
+	echo "Usage: $SCRIPT_NAME `eval_gettext 'NAME SIZE_IN_MEGABYTES FS_TYPE'`"
 	echo ""
-	echo "`eval_gettext 'This will create a persistent file named NAME'`"
-	echo "`eval_gettext 'with a size (in MB) defined by SIZE_IN_MEGABYTES'`" 	
-	echo "`eval_gettext 'and with a file system defined by FS_TYPE.'`" 
+	echo "`eval_gettext 'This will create a persistent file named NAME \
+with a size (in MB) defined by SIZE_IN_MEGABYTES \
+and with a file system defined by FS_TYPE.'`" 
 	echo "" 	
-	echo "`eval_gettext 'For example:'` $(basename $0) salixlive 500 ext2" 
+	echo "`eval_gettext 'For example:'` $SCRIPT_NAME salixlive 500 ext2" 
 	echo "" 	
 	echo "`eval_gettext 'Supported file system format are:'`" 
 	echo "xfs, ext2, ext3, ext4, reiserfs, vfat, ntfs." 	
 	echo "" 
-	echo "`eval_gettext 'You must then copy the generated persistent file to a directory'`"
-	echo "`eval_gettext 'named /salixlive/persistence either on SaLT Live USB key or else on'`"
-	echo "`eval_gettext 'a hard disk drive if the persistence will be used with a SaLT LiveCD.'`"
+	echo "`eval_gettext 'You must then copy the generated persistent file to a directory \
+named /salixlive/persistence either on SaLT Live USB key or else on \
+a hard disk drive if the persistence will be used with a SaLT LiveCD.'`"
 	echo ""
 	echo "Copyright Cyrille Pontvieux - jrd@salixos.org"
 	echo "`eval_gettext 'Released under GPL v3 or (at your option, any later version)'`"
@@ -48,6 +49,7 @@ if [ -z "$3" ]; then
 	exit 1
 fi
 
+unset FS_SUPPORT
 for i in xfs ext2 ext3 ext4 reiserfs vfat ntfs; do
 	if [ "$FS" = "$i" ]; then
 		FS_SUPPORT='OK'
@@ -55,7 +57,7 @@ for i in xfs ext2 ext3 ext4 reiserfs vfat ntfs; do
 done
 
 if [ -z "$FS_SUPPORT" ]; then
-	echo "`eval_gettext 'ERROR: The file system you specified is not supported by'` $(basename $0)"
+	echo "`eval_gettext 'ERROR:'` `eval_gettext 'The file system you specified is not supported by $SCRIPT_NAME'`"
 	exit 1
 fi
 
@@ -64,7 +66,7 @@ if [ $SIZE -gt 0 ]; then
 	INTEGER='OK'
 fi
 if [ -z "$INTEGER" ]; then
-	echo "`eval_gettext 'ERROR: The size you specified is not correct, it should be a positive integer.'`"
+	echo "`eval_gettext 'ERROR:'` `eval_gettext 'The size you specified is not correct, it should be a positive integer.'`"
 	exit 1
 fi
 
@@ -91,11 +93,11 @@ if [ $AFTER -gt 0 ]; then
 		echo ""
 		echo "`eval_gettext 'The persistent file $NAME is ready.'`"
 	else
-		echo "`eval_gettext 'ERROR:'` $(basename $0) `eval_gettext ' was not able to create the persistent file $NAME'`"
+		echo "`eval_gettext 'ERROR:'` `eval_gettext '$SCRIPT_NAME was not able to create the persistent file $NAME'`"
 		exit 1
 	fi
 else
-  echo "`eval_gettext 'ERROR: There is not enough free space left on your device'`"
-  echo "`eval_gettext 'for creating the persistent file $NAME'`"
+  echo "`eval_gettext 'ERROR:'` `eval_gettext 'There is not enough free space left on your device \
+for creating the persistent file $NAME'`"
   exit 1
 fi

@@ -18,6 +18,7 @@ export TEXTDOMAIN="persistence-wizard"
 export TEXTDOMAINDIR="/usr/share/locale"
 . gettext.sh
 
+SCRIPT_NAME="$(basename $0)"
 CLIPRGM=/usr/sbin/persistence-wizard-cli
 RWMP=/tmp/persistentwiz-rwmountpoints
 ROOT_DIR=
@@ -41,22 +42,19 @@ if [ -z "$ROOT_DIR" ]; then
 fi
 
 if [ ! $DISPLAY ]; then
-  echo -e "`eval_gettext 'ERROR: $TEXTDOMAIN must be executed within a running X session.\n'`"
+  echo -e "`eval_gettext 'ERROR:'` `eval_gettext '$TEXTDOMAIN must be executed within a running X session.\n'`"
   exit 1
 fi
-
 if [ "$UID" != "0" ]; then
-  echo "`eval_gettext 'ERROR: You need to be root to run'` $(basename $0)"
+  echo "`eval_gettext 'ERROR:'` `eval_gettext 'You need to be root to run $SCRIPT_NAME'`"
   exit 1
 fi
-
 if [ ! `which zenity` ]; then
-  echo "`eval_gettext 'ERROR: zenity must be installed and in your PATH to run'` $(basename $0)"
+  echo "`eval_gettext 'ERROR:'` `eval_gettext 'zenity must be installed and in your PATH to run $SCRIPT_NAME'`"
   exit 1
 fi
-
 if [ ! `which mkfs.xfs` ]; then
-  echo "`eval_gettext 'ERROR: xfsprogs must be installed to run'` $(basename $0)"
+  echo "`eval_gettext 'ERROR:'` `eval_gettext 'xfsprogs must be installed to run $SCRIPT_NAME'`"
   exit 1
 fi
 
@@ -107,7 +105,7 @@ for l in $(/sbin/blkid -o full); do
       fi
       if [ -n "$mp" ]; then
         disk=$(echo $device|tr -d '[0-9]'|sed 's:/.*/\([^/]\):\1:')
-        [ -e /sys/block/$disk/removable -a $(cat /sys/block/$disk/removable) -eq 1 ] && removable=`eval_gettext 'Yes'` || removable=`eval_gettext 'No'`
+        [ -e /sys/block/$disk/removable ] && [ $(cat /sys/block/$disk/removable) -eq 1 ] && removable=`eval_gettext 'Yes'` || removable=`eval_gettext 'No'`
         size=$(df -BM -l "$mp"|tail -n1|awk '{print $4}'|tr -d M|rev|sed 's/.\{3\}/\0 /g'|rev)
         echo -e "$mp:$device:$label:$fs:$removable:$size" >> $RWMP
       fi
@@ -158,14 +156,12 @@ if [ $DEFSIZE -gt 500 ]; then # 500 MB max for default size
   DEFSIZE=500
 fi
 
-MAXSIZESEP=$(echo $MAXSIZE|rev|sed 's/.\{3\}/\0 /g'|rev)'M'
-export MOUNTPOINT
-
+MAXSIZESEP=$(echo $MAXSIZE|rev|sed 's/.\{3\}/\0 /g'|rev)
 SIZE=$(zenity \
   --title "`eval_gettext 'Size selection'`" \
   --window-icon /usr/share/icons/hicolor/128x128/apps/persistence-wizard.png \
   --entry \
-  --text "`eval_gettext 'The actual used memory size is $ACTUALSIZE.\nSet the size in megabytes (maximum ${MAXSIZESEP}) for persistent file on $MOUNTPOINT:'`" \
+  --text "`eval_gettext 'The actual used memory size is $ACTUALSIZE.\nSet the size in megabytes (maximum ${MAXSIZESEP}MB) for persistent file on $MOUNTPOINT:'`" \
   --entry-text $DEFSIZE)
 
 if [ -z "$SIZE" ]; then
@@ -174,20 +170,17 @@ if [ -z "$SIZE" ]; then
     --title "`eval_gettext 'Error'`" \
     --window-icon /usr/share/icons/hicolor/128x128/apps/persistence-wizard.png \
     --error \
-    --text "`eval_gettext 'No size was set. The program will stop now!'`"  
+    --text "`eval_gettext 'No size was set.'` `eval_gettext 'The program will stop now!'`"  
   find $tempd -type d -mindepth 1 -exec umount '{}' \;
   rm -rf $tempd
   exit 1
-
-export SIZE
-  
 elif [ $SIZE -gt $MAXSIZE ]; then
   rm -f $RWMP
   zenity \
     --title "`eval_gettext 'Error'`" \
     --window-icon /usr/share/icons/hicolor/128x128/apps/persistence-wizard.png \
     --error \
-    --text "`eval_gettext 'The chosen size exceeds the available place ($SIZE > $MAXSIZE). The program will stop now!'`"
+    --text "`eval_gettext 'The chosen size exceeds the available space ($SIZE > $MAXSIZE).'` `eval_gettext 'The program will stop now!'`"
   find $tempd -type d -mindepth 1 -exec umount '{}' \;
   rm -rf $tempd
   exit 1
@@ -215,13 +208,11 @@ if [ -z "$FORMAT" ]; then
     --title "`eval_gettext 'Error'`" \
     --window-icon /usr/share/icons/hicolor/128x128/apps/persistence-wizard.png \
     --error \
-    --text "`eval_gettext 'No file system was selected. The program will stop now!'`"
+    --text "`eval_gettext 'No file system was selected.'` `eval_gettext 'The program will stop now!'`"
   find $tempd -type d -mindepth 1 -exec umount '{}' \;
   rm -rf $tempd
   exit 1
 fi
-
-export FORMAT
 
 SAVEDIR="$MOUNTPOINT/$ROOT_DIR/persistence"
 if [ ! -d "$SAVEDIR" ]; then
@@ -229,14 +220,13 @@ if [ ! -d "$SAVEDIR" ]; then
 fi
 
 cd $SAVEDIR
-
 (yes | zenity --progress --pulsate --auto-close --auto-kill) &
 $CLIPRGM $SAVE_FILE_NAME $SIZE $FORMAT
 ret=$?
 killall yes
-
-cd -
 sync
+cd -
+
 find $tempd -type d -mindepth 1 -maxdepth 1 -exec umount '{}' \;
 rm -rf $tempd
 DEVICE=$(grep "^$MOUNTPOINT:" $RWMP|cut -d: -f2)

@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-12-19 11:13+0100\n"
-"PO-Revision-Date: 2011-10-23 11:54+0000\n"
-"Last-Translator: JRD <jrd@enialis.net>\n"
+"POT-Creation-Date: 2011-12-29 23:05+0100\n"
+"PO-Revision-Date: 2011-12-21 10:12+0000\n"
+"Last-Translator: Cyrille Pontvieux <jrd@enialis.net>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
@@ -18,43 +18,52 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: src/persistence-wizard:44
+#: src/persistence-wizard:45 src/persistence-wizard:49
+#: src/persistence-wizard:53 src/persistence-wizard:57
+#: src/persistence-wizard-cli:26 src/persistence-wizard-cli:60
+#: src/persistence-wizard-cli:69 src/persistence-wizard-cli:96
+#: src/persistence-wizard-cli:100
 #, sh-format
-msgid "ERROR: $TEXTDOMAIN must be executed within a running X session.\\n"
+msgid "ERROR:"
 msgstr ""
 
-#: src/persistence-wizard:49 src/persistence-wizard-cli:25
+#: src/persistence-wizard:45
 #, sh-format
-msgid "ERROR: You need to be root to run"
+msgid "$TEXTDOMAIN must be executed within a running X session.\\n"
 msgstr ""
 
-#: src/persistence-wizard:54
+#: src/persistence-wizard:49 src/persistence-wizard-cli:26
 #, sh-format
-msgid "ERROR: zenity must be installed and in your PATH to run"
+msgid "You need to be root to run $SCRIPT_NAME"
 msgstr ""
 
-#: src/persistence-wizard:59
+#: src/persistence-wizard:53
 #, sh-format
-msgid "ERROR: xfsprogs must be installed to run"
+msgid "zenity must be installed and in your PATH to run $SCRIPT_NAME"
 msgstr ""
 
-#: src/persistence-wizard:110
+#: src/persistence-wizard:57
+#, sh-format
+msgid "xfsprogs must be installed to run $SCRIPT_NAME"
+msgstr ""
+
+#: src/persistence-wizard:108
 #, sh-format
 msgid "Yes"
 msgstr ""
 
-#: src/persistence-wizard:110
+#: src/persistence-wizard:108
 #, sh-format
 msgid "No"
 msgstr ""
 
-#: src/persistence-wizard:120 src/persistence-wizard.desktop.in.h:2
+#: src/persistence-wizard:118 src/persistence-wizard.desktop.in.h:2
 #: src/persistence-wizard-kde.desktop.in.h:2
 #, sh-format
 msgid "Persistence Wizard"
 msgstr "Vedholdende guide"
 
-#: src/persistence-wizard:122
+#: src/persistence-wizard:120
 #, sh-format
 msgid ""
 "If you wish, you can save any of your work or modification performed while "
@@ -64,193 +73,172 @@ msgid ""
 "simply reboot the LiveCD for your changes to become persistent from then on."
 msgstr ""
 
-#: src/persistence-wizard:128
+#: src/persistence-wizard:126
 #, sh-format
 msgid "Mount point selection"
 msgstr "Valg af monteringspunkt"
 
-#: src/persistence-wizard:131
+#: src/persistence-wizard:129
 #, sh-format
 msgid ""
 "The actual used memory size is $ACTUALSIZE.\\nChoose the mountpoint where "
 "the persistent file must be created:"
 msgstr ""
 
-#: src/persistence-wizard:132
+#: src/persistence-wizard:130
 #, sh-format
 msgid "Mount point"
 msgstr "Monteringspunkt"
 
-#: src/persistence-wizard:133
+#: src/persistence-wizard:131
 #, sh-format
 msgid "Device"
 msgstr ""
 
-#: src/persistence-wizard:134
+#: src/persistence-wizard:132
 #, sh-format
 msgid "Label"
 msgstr ""
 
-#: src/persistence-wizard:135
+#: src/persistence-wizard:133
 #, sh-format
 msgid "Filesystem"
 msgstr ""
 
-#: src/persistence-wizard:136
+#: src/persistence-wizard:134
 #, sh-format
 msgid "Removable"
 msgstr ""
 
-#: src/persistence-wizard:137
+#: src/persistence-wizard:135
 #, sh-format
 msgid "Free size (in MB)"
 msgstr ""
 
-#: src/persistence-wizard:165
+#: src/persistence-wizard:161
 #, sh-format
 msgid "Size selection"
 msgstr "Valg af størrelse"
 
-#: src/persistence-wizard:168
+#: src/persistence-wizard:164
 #, sh-format
 msgid ""
 "The actual used memory size is $ACTUALSIZE.\\nSet the size in megabytes "
-"(maximum ${MAXSIZESEP}) for persistent file on $MOUNTPOINT:"
+"(maximum ${MAXSIZESEP}MB) for persistent file on $MOUNTPOINT:"
 msgstr ""
 
-#: src/persistence-wizard:174 src/persistence-wizard:187
-#: src/persistence-wizard:215 src/persistence-wizard:257
+#: src/persistence-wizard:170 src/persistence-wizard:180
+#: src/persistence-wizard:208 src/persistence-wizard:247
 #, sh-format
 msgid "Error"
 msgstr "Fejl"
 
-#: src/persistence-wizard:177
+#: src/persistence-wizard:173
 #, sh-format
-msgid "No size was set. The program will stop now!"
+msgid "No size was set."
 msgstr ""
 
-#: src/persistence-wizard:190
+#: src/persistence-wizard:173 src/persistence-wizard:183
+#: src/persistence-wizard:211
 #, sh-format
-msgid ""
-"The chosen size exceeds the available place ($SIZE > $MAXSIZE). The program "
-"will stop now!"
+msgid "The program will stop now!"
 msgstr ""
 
-#: src/persistence-wizard:198
+#: src/persistence-wizard:183
+#, sh-format
+msgid "The chosen size exceeds the available space ($SIZE > $MAXSIZE)."
+msgstr ""
+
+#: src/persistence-wizard:191
 #, sh-format
 msgid "File system selection"
 msgstr ""
 
-#: src/persistence-wizard:201
+#: src/persistence-wizard:194
 #, sh-format
 msgid ""
 "Select the file system that will be used to format your persistent file:"
 msgstr ""
 
-#: src/persistence-wizard:218
+#: src/persistence-wizard:211
 #, sh-format
-msgid "No file system was selected. The program will stop now!"
+msgid "No file system was selected."
 msgstr ""
 
-#: src/persistence-wizard:249
+#: src/persistence-wizard:239
 #, sh-format
 msgid ""
 "$SAVE_FILE_NAME ($SIZE MB) correctly created in $SAVEDIR with $FORMAT file "
 "system."
 msgstr ""
 
-#: src/persistence-wizard:260
+#: src/persistence-wizard:250
 #, sh-format
 msgid ""
 "Something went wrong! $SAVE_FILE_NAME ($SIZE MB) cannot be created in "
 "$SAVEDIR."
 msgstr ""
 
-#: src/persistence-wizard-cli:30
+#: src/persistence-wizard-cli:31
 #, sh-format
 msgid "NAME SIZE_IN_MEGABYTES FS_TYPE"
 msgstr ""
 
-#: src/persistence-wizard-cli:32
-#, sh-format
-msgid "This will create a persistent file named NAME"
-msgstr ""
-
 #: src/persistence-wizard-cli:33
 #, sh-format
-msgid "with a size (in MB) defined by SIZE_IN_MEGABYTES"
+msgid ""
+"This will create a persistent file named NAME with a size (in MB) defined by "
+"SIZE_IN_MEGABYTES and with a file system defined by FS_TYPE."
 msgstr ""
 
-#: src/persistence-wizard-cli:34
-#, sh-format
-msgid "and with a file system defined by FS_TYPE."
-msgstr ""
-
-#: src/persistence-wizard-cli:36
+#: src/persistence-wizard-cli:37
 #, sh-format
 msgid "For example:"
 msgstr ""
 
-#: src/persistence-wizard-cli:38
+#: src/persistence-wizard-cli:39
 #, sh-format
 msgid "Supported file system format are:"
 msgstr ""
 
-#: src/persistence-wizard-cli:41
-#, sh-format
-msgid "You must then copy the generated persistent file to a directory"
-msgstr ""
-
 #: src/persistence-wizard-cli:42
 #, sh-format
-msgid "named /salixlive/persistence either on SaLT Live USB key or else on"
+msgid ""
+"You must then copy the generated persistent file to a directory named /"
+"salixlive/persistence either on SaLT Live USB key or else on a hard disk "
+"drive if the persistence will be used with a SaLT LiveCD."
 msgstr ""
 
-#: src/persistence-wizard-cli:43
-#, sh-format
-msgid "a hard disk drive if the persistence will be used with a SaLT LiveCD."
-msgstr ""
-
-#: src/persistence-wizard-cli:46
+#: src/persistence-wizard-cli:47
 #, sh-format
 msgid "Released under GPL v3 or (at your option, any later version)"
 msgstr ""
 
-#: src/persistence-wizard-cli:58
+#: src/persistence-wizard-cli:60
 #, sh-format
-msgid "ERROR: The file system you specified is not supported by"
+msgid "The file system you specified is not supported by $SCRIPT_NAME"
 msgstr ""
 
-#: src/persistence-wizard-cli:67
+#: src/persistence-wizard-cli:69
 #, sh-format
-msgid ""
-"ERROR: The size you specified is not correct, it should be a positive "
-"integer."
+msgid "The size you specified is not correct, it should be a positive integer."
 msgstr ""
 
-#: src/persistence-wizard-cli:92
+#: src/persistence-wizard-cli:94
 #, sh-format
 msgid "The persistent file $NAME is ready."
 msgstr ""
 
-#: src/persistence-wizard-cli:94
+#: src/persistence-wizard-cli:96
 #, sh-format
-msgid "ERROR:"
+msgid "$SCRIPT_NAME was not able to create the persistent file $NAME"
 msgstr ""
 
-#: src/persistence-wizard-cli:94
+#: src/persistence-wizard-cli:100
 #, sh-format
-msgid " was not able to create the persistent file $NAME"
-msgstr ""
-
-#: src/persistence-wizard-cli:98
-#, sh-format
-msgid "ERROR: There is not enough free space left on your device"
-msgstr ""
-
-#: src/persistence-wizard-cli:99
-#, sh-format
-msgid "for creating the persistent file $NAME"
+msgid ""
+"There is not enough free space left on your device for creating the "
+"persistent file $NAME"
 msgstr ""
 
 #: src/persistence-wizard.desktop.in.h:1

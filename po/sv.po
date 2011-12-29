@@ -3,15 +3,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
+# Cyrille Pontvieux <jrd@enialis.net>, 2011.
 # gapan <vlahavas@gmail.com>, 2011.
 # Ingemar Karlsson <ingemar@ingk.se>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-12-19 11:13+0100\n"
-"PO-Revision-Date: 2011-10-23 14:39+0000\n"
-"Last-Translator: ingemar <ingemar@ingk.se>\n"
+"POT-Creation-Date: 2011-12-29 23:05+0100\n"
+"PO-Revision-Date: 2011-12-29 12:38+0000\n"
+"Last-Translator: Cyrille Pontvieux <jrd@enialis.net>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
@@ -19,44 +20,53 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: src/persistence-wizard:44
+#: src/persistence-wizard:45 src/persistence-wizard:49
+#: src/persistence-wizard:53 src/persistence-wizard:57
+#: src/persistence-wizard-cli:26 src/persistence-wizard-cli:60
+#: src/persistence-wizard-cli:69 src/persistence-wizard-cli:96
+#: src/persistence-wizard-cli:100
 #, sh-format
-msgid "ERROR: $TEXTDOMAIN must be executed within a running X session.\\n"
-msgstr "FEL: $TEXTDOMAIN måste verkställas med en körande X-session \\ n"
+msgid "ERROR:"
+msgstr "FEL:"
 
-#: src/persistence-wizard:49 src/persistence-wizard-cli:25
-#, sh-format
-msgid "ERROR: You need to be root to run"
+#: src/persistence-wizard:45
+#, fuzzy, sh-format
+msgid "$TEXTDOMAIN must be executed within a running X session.\\n"
+msgstr "FEL: $TEXTDOMAIN måste verkställas med en körande X-session.\\n\n"
+
+#: src/persistence-wizard:49 src/persistence-wizard-cli:26
+#, fuzzy, sh-format
+msgid "You need to be root to run $SCRIPT_NAME"
 msgstr "FEL: Du måste vara root för att köra"
 
-#: src/persistence-wizard:54
-#, sh-format
-msgid "ERROR: zenity must be installed and in your PATH to run"
+#: src/persistence-wizard:53
+#, fuzzy, sh-format
+msgid "zenity must be installed and in your PATH to run $SCRIPT_NAME"
 msgstr ""
 "FEL: zenity måste installeras och i finnas din SÖKVÄG för att kunna startas"
 
-#: src/persistence-wizard:59
-#, sh-format
-msgid "ERROR: xfsprogs must be installed to run"
+#: src/persistence-wizard:57
+#, fuzzy, sh-format
+msgid "xfsprogs must be installed to run $SCRIPT_NAME"
 msgstr "FEL: xfsprogs måste installeras för att kunna startas"
 
-#: src/persistence-wizard:110
+#: src/persistence-wizard:108
 #, sh-format
 msgid "Yes"
-msgstr ""
+msgstr "Ja"
 
-#: src/persistence-wizard:110
+#: src/persistence-wizard:108
 #, sh-format
 msgid "No"
-msgstr ""
+msgstr "Nej"
 
-#: src/persistence-wizard:120 src/persistence-wizard.desktop.in.h:2
+#: src/persistence-wizard:118 src/persistence-wizard.desktop.in.h:2
 #: src/persistence-wizard-kde.desktop.in.h:2
 #, sh-format
 msgid "Persistence Wizard"
 msgstr "Permanent Guide"
 
-#: src/persistence-wizard:122
+#: src/persistence-wizard:120
 #, sh-format
 msgid ""
 "If you wish, you can save any of your work or modification performed while "
@@ -72,203 +82,182 @@ msgstr ""
 "skapas, starta helt enkelt om LiveCD'n för att ändringarna ska bli bestående "
 "från och med då."
 
-#: src/persistence-wizard:128
+#: src/persistence-wizard:126
 #, sh-format
 msgid "Mount point selection"
 msgstr "Val av monteringspunkt"
 
-#: src/persistence-wizard:131
-#, fuzzy, sh-format
+#: src/persistence-wizard:129
+#, sh-format
 msgid ""
 "The actual used memory size is $ACTUALSIZE.\\nChoose the mountpoint where "
 "the persistent file must be created:"
-msgstr "Välj monteringspunkt där bestående filen måste skapas:"
+msgstr ""
+"Om faktiska minnesstorleken är $ACTUALSIZE\\nVälj den monteringspunkt där "
+"bestående filen måste skapas:"
 
-#: src/persistence-wizard:132
+#: src/persistence-wizard:130
 #, sh-format
 msgid "Mount point"
 msgstr "Monteringspunkt"
 
-#: src/persistence-wizard:133
+#: src/persistence-wizard:131
 #, sh-format
 msgid "Device"
 msgstr "Enhet"
 
-#: src/persistence-wizard:134
+#: src/persistence-wizard:132
 #, sh-format
 msgid "Label"
 msgstr "Etikett"
 
-#: src/persistence-wizard:135
+#: src/persistence-wizard:133
 #, sh-format
 msgid "Filesystem"
 msgstr "Filsystem"
 
-#: src/persistence-wizard:136
+#: src/persistence-wizard:134
 #, sh-format
 msgid "Removable"
-msgstr ""
+msgstr "Borttagningsbar"
 
-#: src/persistence-wizard:137
+#: src/persistence-wizard:135
 #, sh-format
 msgid "Free size (in MB)"
 msgstr "Fri storlek (i MB)"
 
-#: src/persistence-wizard:165
+#: src/persistence-wizard:161
 #, sh-format
 msgid "Size selection"
 msgstr "Storleks val"
 
-#: src/persistence-wizard:168
+#: src/persistence-wizard:164
 #, fuzzy, sh-format
 msgid ""
 "The actual used memory size is $ACTUALSIZE.\\nSet the size in megabytes "
-"(maximum ${MAXSIZESEP}) for persistent file on $MOUNTPOINT:"
+"(maximum ${MAXSIZESEP}MB) for persistent file on $MOUNTPOINT:"
 msgstr ""
-"Ställ in storleken i megabyte (maximalt $MAXSIZE) för bestående fil på "
-"$MOUNTPOINT:"
+"Om den faktiska minnesstorleken är $ACTUALSIZE\\nSätt storleken i megabyte "
+"(maximalt ${MAXSIZESEP}) för bestående fil på $MOUNTPOINT:"
 
-#: src/persistence-wizard:174 src/persistence-wizard:187
-#: src/persistence-wizard:215 src/persistence-wizard:257
+#: src/persistence-wizard:170 src/persistence-wizard:180
+#: src/persistence-wizard:208 src/persistence-wizard:247
 #, sh-format
 msgid "Error"
 msgstr "Fel"
 
-#: src/persistence-wizard:177
+#: src/persistence-wizard:173
 #, sh-format
-msgid "No size was set. The program will stop now!"
+msgid "No size was set."
 msgstr ""
-"FEL: zenity måste vara installerad och i din SÖKVÄG för att kunna startas"
 
-#: src/persistence-wizard:190
-#, sh-format
-msgid ""
-"The chosen size exceeds the available place ($SIZE > $MAXSIZE). The program "
-"will stop now!"
-msgstr "FEL: xfsprogs måste vara installerad för att kunna köra"
+#: src/persistence-wizard:173 src/persistence-wizard:183
+#: src/persistence-wizard:211
+#, fuzzy, sh-format
+msgid "The program will stop now!"
+msgstr "Ingen storlek vald. Programmet kommer att avslutas!"
 
-#: src/persistence-wizard:198
+#: src/persistence-wizard:183
+#, fuzzy, sh-format
+msgid "The chosen size exceeds the available space ($SIZE > $MAXSIZE)."
+msgstr ""
+"Den valda storleken överstiger den tillgängliga platsen($SIZE > $MAXSIZE). "
+"Programmet kommer att avslutas!"
+
+#: src/persistence-wizard:191
 #, sh-format
 msgid "File system selection"
 msgstr "Filsystem val"
 
-#: src/persistence-wizard:201
+#: src/persistence-wizard:194
 #, sh-format
 msgid ""
 "Select the file system that will be used to format your persistent file:"
-msgstr "Välj monteringspunkt där bestående filen måste skapas:"
+msgstr "Välj filsystem som skall användas för att formatera din bestående fil:"
 
-#: src/persistence-wizard:218
-#, sh-format
-msgid "No file system was selected. The program will stop now!"
-msgstr "Ingen partition valdes. Programmet kommer att avslutas nu!"
+#: src/persistence-wizard:211
+#, fuzzy, sh-format
+msgid "No file system was selected."
+msgstr "Filsystem val"
 
-#: src/persistence-wizard:249
+#: src/persistence-wizard:239
 #, sh-format
 msgid ""
 "$SAVE_FILE_NAME ($SIZE MB) correctly created in $SAVEDIR with $FORMAT file "
 "system."
 msgstr ""
-"$SAVE_FILE_NAME ($SIZE MB) skapades korrekt i $SAVEDIR med $FORMAT filsystem."
+"$SAVE_FILE_NAME ($SIZE MB) skapades korrekt i $SAVEDIR med $FORMAT filformat."
 
-#: src/persistence-wizard:260
+#: src/persistence-wizard:250
 #, sh-format
 msgid ""
 "Something went wrong! $SAVE_FILE_NAME ($SIZE MB) cannot be created in "
 "$SAVEDIR."
-msgstr "Något gick fel! $SAVE_FILE_NAME ($SIZE MB) kan inte skapas i $SAVEDIR."
+msgstr ""
+"Någonting gick fel! $SAVE_FILE_NAME ($SIZE MB) kan inte skapas i $SAVEDIR."
 
-#: src/persistence-wizard-cli:30
+#: src/persistence-wizard-cli:31
 #, sh-format
 msgid "NAME SIZE_IN_MEGABYTES FS_TYPE"
-msgstr ""
-"Den valda storleken överskrider den den tillgängliga platsen ($SIZE > "
-"$MAXSIZE). Programmet kommer att avslutas nu!"
-
-#: src/persistence-wizard-cli:32
-#, sh-format
-msgid "This will create a persistent file named NAME"
-msgstr "Detta kommer att skapa en bestående fil med namnet NAMN"
+msgstr "NAME SIZE_IN_MEGABYTES FS_TYPE"
 
 #: src/persistence-wizard-cli:33
 #, sh-format
-msgid "with a size (in MB) defined by SIZE_IN_MEGABYTES"
+msgid ""
+"This will create a persistent file named NAME with a size (in MB) defined by "
+"SIZE_IN_MEGABYTES and with a file system defined by FS_TYPE."
 msgstr ""
-"Välj filsystemet som kommer att användas för att formatera din bestående fil:"
 
-#: src/persistence-wizard-cli:34
-#, sh-format
-msgid "and with a file system defined by FS_TYPE."
-msgstr "Ingen filsystem valdes. Programmet kommer att avslutas nu!"
-
-#: src/persistence-wizard-cli:36
+#: src/persistence-wizard-cli:37
 #, sh-format
 msgid "For example:"
-msgstr ""
-"$NAME.save ($SIZE MB) skapadess korrekt i $SAVEDIR med $FORMAT filsystem."
+msgstr "Till exempel:"
 
-#: src/persistence-wizard-cli:38
+#: src/persistence-wizard-cli:39
 #, sh-format
 msgid "Supported file system format are:"
-msgstr "Något gick fel! $NAME.save ($SIZE MB) kan inte skapas i $SAVEDIR."
-
-#: src/persistence-wizard-cli:41
-#, sh-format
-msgid "You must then copy the generated persistent file to a directory"
-msgstr "NAME SIZE_IN_MEGABYTES FS_TYPE"
+msgstr "Filsystem som stöds är:"
 
 #: src/persistence-wizard-cli:42
 #, sh-format
-msgid "named /salixlive/persistence either on SaLT Live USB key or else on"
-msgstr "Detta kommer att skapa en bestående fil med namnet NAME.save"
+msgid ""
+"You must then copy the generated persistent file to a directory named /"
+"salixlive/persistence either on SaLT Live USB key or else on a hard disk "
+"drive if the persistence will be used with a SaLT LiveCD."
+msgstr ""
 
-#: src/persistence-wizard-cli:43
-#, sh-format
-msgid "a hard disk drive if the persistence will be used with a SaLT LiveCD."
-msgstr "med en storlek (i MB) definierad av SIZE_IN_MEGABYTES"
-
-#: src/persistence-wizard-cli:46
+#: src/persistence-wizard-cli:47
 #, sh-format
 msgid "Released under GPL v3 or (at your option, any later version)"
-msgstr "och med en fil som har definierats av FS_TYPE."
+msgstr "Släppt under GPL v3 eller (om så önskas, någon senare version)"
 
-#: src/persistence-wizard-cli:58
-#, sh-format
-msgid "ERROR: The file system you specified is not supported by"
+#: src/persistence-wizard-cli:60
+#, fuzzy, sh-format
+msgid "The file system you specified is not supported by $SCRIPT_NAME"
 msgstr "FEL: det filsystem du angav stöds inte av"
 
-#: src/persistence-wizard-cli:67
-#, sh-format
-msgid ""
-"ERROR: The size you specified is not correct, it should be a positive "
-"integer."
+#: src/persistence-wizard-cli:69
+#, fuzzy, sh-format
+msgid "The size you specified is not correct, it should be a positive integer."
 msgstr ""
 "FEL: Storleken du angett inte är korrekt, det skall vara ett positivt heltal."
 
-#: src/persistence-wizard-cli:92
+#: src/persistence-wizard-cli:94
 #, sh-format
 msgid "The persistent file $NAME is ready."
-msgstr "Den bestående filen $NAMN är klar."
+msgstr "Den bestående filen $NAME är klar."
 
-#: src/persistence-wizard-cli:94
-#, sh-format
-msgid "ERROR:"
-msgstr "FEL:"
+#: src/persistence-wizard-cli:96
+#, fuzzy, sh-format
+msgid "$SCRIPT_NAME was not able to create the persistent file $NAME"
+msgstr "kunde inte skapa bestående filen $NAME"
 
-#: src/persistence-wizard-cli:94
-#, sh-format
-msgid " was not able to create the persistent file $NAME"
-msgstr "kunde inte skapa bestående filen $NAMN"
-
-#: src/persistence-wizard-cli:98
-#, sh-format
-msgid "ERROR: There is not enough free space left on your device"
+#: src/persistence-wizard-cli:100
+#, fuzzy, sh-format
+msgid ""
+"There is not enough free space left on your device for creating the "
+"persistent file $NAME"
 msgstr "FEL: Det finns inte tillräckligt med ledigt utrymme kvar på enheten"
-
-#: src/persistence-wizard-cli:99
-#, sh-format
-msgid "for creating the persistent file $NAME"
-msgstr "för att skapa den bestående filen $NAMN"
 
 #: src/persistence-wizard.desktop.in.h:1
 #: src/persistence-wizard-kde.desktop.in.h:1
@@ -279,5 +268,31 @@ msgstr ""
 "Skapa bestående filen för att aktivera bestående funktionalitet i en Live "
 "miljö."
 
-#~ msgid "No partition was selected. The program will stop now!"
-#~ msgstr "Ingen partition valdes. Programmet kommer att avslutas nu!"
+#~ msgid "No file system was selected. The program will stop now!"
+#~ msgstr "Inget filsystem valdes. Programmet kommer att avslutas nu!"
+
+#~ msgid "This will create a persistent file named NAME"
+#~ msgstr "Detta kommer att skapa en bestående fil med namnet NAMN"
+
+#~ msgid "with a size (in MB) defined by SIZE_IN_MEGABYTES"
+#~ msgstr "med en storlek (i MB) som definieras av SIZE_IN_MEGABYTES"
+
+#~ msgid "and with a file system defined by FS_TYPE."
+#~ msgstr "och med ett filsystem definieras genom FS_TYPE."
+
+#~ msgid "You must then copy the generated persistent file to a directory"
+#~ msgstr ""
+#~ "Du måste sedan kopiera den genererade bestående filen till en katalog"
+
+#~ msgid "named /salixlive/persistence either on SaLT Live USB key or else on"
+#~ msgstr ""
+#~ "namgiven /salixlive/bestående antingen på SALT Live USB-nyckel eller "
+#~ "annanstans på"
+
+#~ msgid ""
+#~ "a hard disk drive if the persistence will be used with a SaLT LiveCD."
+#~ msgstr ""
+#~ "en hårddisk om det fortfarande kommer att användas med en SaLT LiveCD."
+
+#~ msgid "for creating the persistent file $NAME"
+#~ msgstr "för att skapa den bestående filen $NAME"
