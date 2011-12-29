@@ -161,7 +161,7 @@ msgstr "Le programme va maintenant s'arrêter !"
 #: src/persistence-wizard:183
 #, sh-format
 msgid "The chosen size exceeds the available space ($SIZE > $MAXSIZE)."
-msgstr "La taille définie excède la place disponible ($TAILLE > $MAXSIZE)."
+msgstr "La taille définie excède la place disponible ($SIZE > $MAXSIZE)."
 
 #: src/persistence-wizard:191
 #, sh-format
