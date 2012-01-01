@@ -16,7 +16,7 @@ export TEXTDOMAIN="persistence-wizard"
 export TEXTDOMAINDIR="/usr/share/locale"
 . gettext.sh
 
-version=1.1
+version=1.2
 NAME="$1"
 SIZE="$2"
 FS="$3"
