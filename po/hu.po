@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # gapan <vlahavas@gmail.com>, 2011.
 # Laszlo Dvornik <rezuri@zoho.com>, 2011.
@@ -11,13 +11,13 @@ msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-12-29 23:05+0100\n"
-"PO-Revision-Date: 2011-12-21 10:12+0000\n"
+"PO-Revision-Date: 2011-12-30 13:15+0000\n"
 "Last-Translator: Cyrille Pontvieux <jrd@enialis.net>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: hu\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: src/persistence-wizard:45 src/persistence-wizard:49
@@ -30,26 +30,24 @@ msgid "ERROR:"
 msgstr "HIBA:"
 
 #: src/persistence-wizard:45
-#, fuzzy, sh-format
+#, sh-format
 msgid "$TEXTDOMAIN must be executed within a running X session.\\n"
-msgstr "HIBA: $TEXTDOMAIN csak futó X munkafolyamatból futtatható.\\n"
+msgstr ""
 
 #: src/persistence-wizard:49 src/persistence-wizard-cli:26
-#, fuzzy, sh-format
+#, sh-format
 msgid "You need to be root to run $SCRIPT_NAME"
-msgstr "HIBA: A futtatáshoz rendszergazdai jogosultság szükséges"
+msgstr ""
 
 #: src/persistence-wizard:53
-#, fuzzy, sh-format
+#, sh-format
 msgid "zenity must be installed and in your PATH to run $SCRIPT_NAME"
 msgstr ""
-"HIBA: A futtatáshoz a zenity programnak telepítve és a PATH-ban elérhetőnek "
-"kell lennie"
 
 #: src/persistence-wizard:57
-#, fuzzy, sh-format
+#, sh-format
 msgid "xfsprogs must be installed to run $SCRIPT_NAME"
-msgstr "HIBA: A futtatáshoz az xfsprogs programnak telepítve kell lennie"
+msgstr ""
 
 #: src/persistence-wizard:108
 #, sh-format
@@ -149,16 +147,14 @@ msgstr ""
 
 #: src/persistence-wizard:173 src/persistence-wizard:183
 #: src/persistence-wizard:211
-#, fuzzy, sh-format
+#, sh-format
 msgid "The program will stop now!"
-msgstr "Nem lett beállítva méret. A program le fog állni."
+msgstr ""
 
 #: src/persistence-wizard:183
-#, fuzzy, sh-format
+#, sh-format
 msgid "The chosen size exceeds the available space ($SIZE > $MAXSIZE)."
 msgstr ""
-"A választott méret meghaladja az elérhető helyet ($SIZE > $MAXSIZE). A "
-"program le fog állni."
 
 #: src/persistence-wizard:191
 #, sh-format
@@ -174,9 +170,9 @@ msgstr ""
 "fájlrendszert:"
 
 #: src/persistence-wizard:211
-#, fuzzy, sh-format
+#, sh-format
 msgid "No file system was selected."
-msgstr "Fájlrendszer kiválasztása"
+msgstr ""
 
 #: src/persistence-wizard:239
 #, sh-format
@@ -204,8 +200,8 @@ msgstr "NÉV MÉRET_MB FS_TÍPUS"
 #: src/persistence-wizard-cli:33
 #, sh-format
 msgid ""
-"This will create a persistent file named NAME with a size (in MB) defined by "
-"SIZE_IN_MEGABYTES and with a file system defined by FS_TYPE."
+"This will create a persistent file named NAME with a size (in MB) defined by"
+" SIZE_IN_MEGABYTES and with a file system defined by FS_TYPE."
 msgstr ""
 
 #: src/persistence-wizard-cli:37
@@ -221,8 +217,8 @@ msgstr "Támogatott fájlrendszer formátumok:"
 #: src/persistence-wizard-cli:42
 #, sh-format
 msgid ""
-"You must then copy the generated persistent file to a directory named /"
-"salixlive/persistence either on SaLT Live USB key or else on a hard disk "
+"You must then copy the generated persistent file to a directory named "
+"/salixlive/persistence either on SaLT Live USB key or else on a hard disk "
 "drive if the persistence will be used with a SaLT LiveCD."
 msgstr ""
 
@@ -232,14 +228,15 @@ msgid "Released under GPL v3 or (at your option, any later version)"
 msgstr "GPL v3 (vagy tetszőleges későbbi változat) alatt jelent meg"
 
 #: src/persistence-wizard-cli:60
-#, fuzzy, sh-format
+#, sh-format
 msgid "The file system you specified is not supported by $SCRIPT_NAME"
-msgstr "HIBA: A megadott fájlrendszer nem támogatott"
+msgstr ""
 
 #: src/persistence-wizard-cli:69
-#, fuzzy, sh-format
-msgid "The size you specified is not correct, it should be a positive integer."
-msgstr "HIBA: A megadott méret helytelen, pozitív egész számnak kell lennie."
+#, sh-format
+msgid ""
+"The size you specified is not correct, it should be a positive integer."
+msgstr ""
 
 #: src/persistence-wizard-cli:94
 #, sh-format
@@ -247,49 +244,24 @@ msgid "The persistent file $NAME is ready."
 msgstr "A(z) $NAME \"tartós beállítások\" fájl elkészült."
 
 #: src/persistence-wizard-cli:96
-#, fuzzy, sh-format
+#, sh-format
 msgid "$SCRIPT_NAME was not able to create the persistent file $NAME"
-msgstr " nem lehetett létrehozni a(z) $NAME \"tartós beállítások\" fájlt"
+msgstr ""
 
 #: src/persistence-wizard-cli:100
-#, fuzzy, sh-format
+#, sh-format
 msgid ""
 "There is not enough free space left on your device for creating the "
 "persistent file $NAME"
-msgstr "HIBA: Nincs elég szabad hely az eszközön"
+msgstr ""
 
 #: src/persistence-wizard.desktop.in.h:1
 #: src/persistence-wizard-kde.desktop.in.h:1
 msgid ""
-"Create the persistence file needed to activate the Persistence functionality "
-"in a Live environment."
+"Create the persistence file needed to activate the Persistence functionality"
+" in a Live environment."
 msgstr ""
 "Létrehozza a Live környezet tartós beállítások funkciójának aktiválásához "
 "szükséges tartós beállítások fájlt."
 
-#~ msgid "No file system was selected. The program will stop now!"
-#~ msgstr "Nem lett kiválasztva fájlrendszer. A program le fog állni."
 
-#~ msgid "This will create a persistent file named NAME"
-#~ msgstr "Létrehoz egy NAME nevű \"tartós beállítások\" fájlt"
-
-#~ msgid "with a size (in MB) defined by SIZE_IN_MEGABYTES"
-#~ msgstr "MÉRET_MB által meghatározott mérettel (MB-ban)"
-
-#~ msgid "and with a file system defined by FS_TYPE."
-#~ msgstr "és FS_TÍPUS által meghatározott fájlrendszerrel."
-
-#~ msgid "You must then copy the generated persistent file to a directory"
-#~ msgstr "Másolja az előállított \"tartós beállítások\" fájlt a"
-
-#~ msgid "named /salixlive/persistence either on SaLT Live USB key or else on"
-#~ msgstr "/salixlive/persistence nevű könyvtárba a SaLT Live USB kulcson vagy"
-
-#~ msgid ""
-#~ "a hard disk drive if the persistence will be used with a SaLT LiveCD."
-#~ msgstr ""
-#~ "egy merevlemezen, ha a \"tartós beállítások\" SaLT LiveCD-vel lesznek "
-#~ "használva."
-
-#~ msgid "for creating the persistent file $NAME"
-#~ msgstr "a(z) $NAME \"tartós beállítások\" fájl létrehozásához"

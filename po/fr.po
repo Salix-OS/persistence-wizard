@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 #   <akuna@free.fr>, 2011.
 # gapan <vlahavas@gmail.com>, 2011.
@@ -10,13 +10,13 @@ msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-12-29 23:05+0100\n"
-"PO-Revision-Date: 2011-12-29 10:27+0000\n"
-"Last-Translator: Akuna <akuna@free.fr>\n"
+"PO-Revision-Date: 2011-12-30 13:15+0000\n"
+"Last-Translator: Cyrille Pontvieux <jrd@enialis.net>\n"
 "Language-Team: French (http://www.transifex.net/projects/p/salix/team/fr/)\n"
-"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1)\n"
 
 #: src/persistence-wizard:45 src/persistence-wizard:49
@@ -41,7 +41,9 @@ msgstr "Vous devez être root pour pouvoir exécuter $SCRIPT_NAME"
 #: src/persistence-wizard:53
 #, sh-format
 msgid "zenity must be installed and in your PATH to run $SCRIPT_NAME"
-msgstr "zenity doit être installé et dans votre PATH pour pouvoir exécuter $SCRIPT_NAME"
+msgstr ""
+"zenity doit être installé et dans votre PATH pour pouvoir exécuter "
+"$SCRIPT_NAME"
 
 #: src/persistence-wizard:57
 #, sh-format
@@ -93,8 +95,8 @@ msgid ""
 "the persistent file must be created:"
 msgstr ""
 "La taille actuelle de la mémoire utilisée est $ACTUALSIZE.\\nVeuillez "
-"sélectionner le point de montage où le fichier de persistance doit être "
-"créé :"
+"sélectionner le point de montage où le fichier de persistance doit être créé"
+" :"
 
 #: src/persistence-wizard:130
 #, sh-format
@@ -207,10 +209,12 @@ msgstr "NOM TAILLE_EN_MEGAOCTETS TYPE_DE_FS"
 #: src/persistence-wizard-cli:33
 #, sh-format
 msgid ""
-"This will create a persistent file named NAME with a size (in MB) defined by "
-"SIZE_IN_MEGABYTES and with a file system defined by FS_TYPE."
-msgstr "Ceci créera un fichier de persistance nommé NOM avec une taille (en Mo) "
-"définie par TAILLE_EN_MEGAOCTETS et avec un système de fichiers définis par TYPE_DE_FS."
+"This will create a persistent file named NAME with a size (in MB) defined by"
+" SIZE_IN_MEGABYTES and with a file system defined by FS_TYPE."
+msgstr ""
+"Ceci créera un fichier de persistance nommé NOM avec une taille (en Mo) "
+"définie par TAILLE_EN_MEGAOCTETS et avec un système de fichiers définis par "
+"TYPE_DE_FS."
 
 #: src/persistence-wizard-cli:37
 #, sh-format
@@ -225,13 +229,14 @@ msgstr "Les formats de système de fichiers pris en charge sont :"
 #: src/persistence-wizard-cli:42
 #, sh-format
 msgid ""
-"You must then copy the generated persistent file to a directory named /"
-"salixlive/persistence either on SaLT Live USB key or else on a hard disk "
+"You must then copy the generated persistent file to a directory named "
+"/salixlive/persistence either on SaLT Live USB key or else on a hard disk "
 "drive if the persistence will be used with a SaLT LiveCD."
-msgstr "Vous devez ensuite copier le fichier de persistance généré vers "
-"un répertoire nommé /salixlive/persistence, soit directement sur une clé "
-"USB Live générée à l'aide de SaLT ou bien sur un disque dur dans le cas "
-"où la persistance est utilisée avec un CD Live généré par SaLT."
+msgstr ""
+"Vous devez ensuite copier le fichier de persistance généré vers un "
+"répertoire nommé /salixlive/persistence, soit directement sur une clé USB "
+"Live générée à l'aide de SaLT ou bien sur un disque dur dans le cas où la "
+"persistance est utilisée avec un CD Live généré par SaLT."
 
 #: src/persistence-wizard-cli:47
 #, sh-format
@@ -242,12 +247,17 @@ msgstr ""
 #: src/persistence-wizard-cli:60
 #, sh-format
 msgid "The file system you specified is not supported by $SCRIPT_NAME"
-msgstr "Le système de fichiers que vous avez spécifié n'est pas pris en charge par $SCRIPT_NAME"
+msgstr ""
+"Le système de fichiers que vous avez spécifié n'est pas pris en charge par "
+"$SCRIPT_NAME"
 
 #: src/persistence-wizard-cli:69
 #, sh-format
-msgid "The size you specified is not correct, it should be a positive integer."
-msgstr "La taille que vous avez définie n'est pas correcte, ce doit être un nombre entier positif."
+msgid ""
+"The size you specified is not correct, it should be a positive integer."
+msgstr ""
+"La taille que vous avez définie n'est pas correcte, ce doit être un nombre "
+"entier positif."
 
 #: src/persistence-wizard-cli:94
 #, sh-format
@@ -264,15 +274,17 @@ msgstr "$SCRIPT_NAME n'a pas pu créer le fichier de persistance $NAME"
 msgid ""
 "There is not enough free space left on your device for creating the "
 "persistent file $NAME"
-msgstr "Votre périphérique ne dispose pas de suffisamment d'espace libre "
-"pour créer le fichier de persistance $NAME"
+msgstr ""
+"Votre périphérique ne dispose pas de suffisamment d'espace libre pour créer "
+"le fichier de persistance $NAME"
 
 #: src/persistence-wizard.desktop.in.h:1
 #: src/persistence-wizard-kde.desktop.in.h:1
 msgid ""
-"Create the persistence file needed to activate the Persistence functionality "
-"in a Live environment."
+"Create the persistence file needed to activate the Persistence functionality"
+" in a Live environment."
 msgstr ""
 "Créer le fichier de persistance nécessaire afin de pouvoir activer la "
 "fonctionnalité de persistance dans un environnement Live."
+
 

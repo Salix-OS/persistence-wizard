@@ -26,5 +26,5 @@ EOF
 makepkg -l y -c n ../$PKGNAME-$VER-noarch-$RLZ.txz
 cd ..
 md5sum $PKGNAME-$VER-noarch-$RLZ.txz > $PKGNAME-$VER-noarch-$RLZ.md5
-echo -n 'coreutils,findutils,gawk,gettext,grep,procps,util-linux-ng,xfsprogs,zenity' > $PKGNAME-$VER-noarch-$RLZ.dep
+echo -n 'coreutils,dosfstools,e2fsprogs,findutils,gawk,gettext,grep,ntfsprogs,procps,reiserfsprogs,sed,util-linux,xfsprogs,zenity' > $PKGNAME-$VER-noarch-$RLZ.dep
 rm -rf pkg
