@@ -132,7 +132,7 @@ msgstr "Spazio disponibile (in MB)"
 #: src/persistence-wizard:161
 #, sh-format
 msgid "Size selection"
-msgstr "Selezione  della dimensione"
+msgstr "Selezione della dimensione"
 
 #: src/persistence-wizard:164
 #, sh-format
@@ -209,11 +209,11 @@ msgstr "NOME DIMENSIONE_IN_MEGABYTES TIPO_FS"
 #: src/persistence-wizard-cli:33
 #, sh-format
 msgid ""
-"This will create a persistent file named NAME with a size (in MB) defined by"
+"This will create a persistent file named NOME with a size (in MB) defined by"
 " SIZE_IN_MEGABYTES and with a file system defined by FS_TYPE."
 msgstr ""
 "Verrà creato il file persistente NAME della dimensione (in MB) di "
-"SIZE_IN_MEGABYTES e con file system FS_TYPE."
+"DIMENSIONE_IN_MEGABYTES e con file system TIPO_FS."
 
 #: src/persistence-wizard-cli:37
 #, sh-format
