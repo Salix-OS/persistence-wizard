@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-#   <gambit73@gmail.com>, 2011.
+#   <gambit73@gmail.com>, 2011, 2012.
 # gapan <vlahavas@gmail.com>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-12-29 23:05+0100\n"
-"PO-Revision-Date: 2011-12-30 13:15+0000\n"
-"Last-Translator: Cyrille Pontvieux <jrd@enialis.net>\n"
+"PO-Revision-Date: 2012-01-11 08:29+0000\n"
+"Last-Translator: gambit73 <gambit73@gmail.com>\n"
 "Language-Team: Dutch (http://www.transifex.net/projects/p/salix/team/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,22 +31,24 @@ msgstr "FOUT:"
 #: src/persistence-wizard:45
 #, sh-format
 msgid "$TEXTDOMAIN must be executed within a running X session.\\n"
-msgstr ""
+msgstr "$TEXTDOMAIN moet binnen een draaiende X sessie worden uitgevoerd.\\n"
 
 #: src/persistence-wizard:49 src/persistence-wizard-cli:26
 #, sh-format
 msgid "You need to be root to run $SCRIPT_NAME"
-msgstr ""
+msgstr "U moet root zijn om $SCRIPT_NAME te draaien"
 
 #: src/persistence-wizard:53
 #, sh-format
 msgid "zenity must be installed and in your PATH to run $SCRIPT_NAME"
 msgstr ""
+"zenity moet geinstalleerd zijn en aanwezig zijn in uw PATH om $SCRIPT_NAME "
+"te draaien"
 
 #: src/persistence-wizard:57
 #, sh-format
 msgid "xfsprogs must be installed to run $SCRIPT_NAME"
-msgstr ""
+msgstr "xfsprogs moet geinstalleerd zijn om $SCRIPT_NAME te draaien"
 
 #: src/persistence-wizard:108
 #, sh-format
@@ -134,6 +136,9 @@ msgid ""
 "The actual used memory size is $ACTUALSIZE.\\nSet the size in megabytes "
 "(maximum ${MAXSIZESEP}MB) for persistent file on $MOUNTPOINT:"
 msgstr ""
+"De werkelijk gebruikte hoeveelheid geheugen is $ACTUALSIZE.\\nPas de grootte"
+" aan in megabytes (maximum ${MAXSIZESEP}MB) voor het persistente bestand op "
+"$MOUNTPOINT:"
 
 #: src/persistence-wizard:170 src/persistence-wizard:180
 #: src/persistence-wizard:208 src/persistence-wizard:247
@@ -144,18 +149,19 @@ msgstr "Fout"
 #: src/persistence-wizard:173
 #, sh-format
 msgid "No size was set."
-msgstr ""
+msgstr "Grootte is niet bepaald."
 
 #: src/persistence-wizard:173 src/persistence-wizard:183
 #: src/persistence-wizard:211
 #, sh-format
 msgid "The program will stop now!"
-msgstr ""
+msgstr "Het programma zal nu stoppen!"
 
 #: src/persistence-wizard:183
 #, sh-format
 msgid "The chosen size exceeds the available space ($SIZE > $MAXSIZE)."
 msgstr ""
+"De gekozen grootte overschrijdt de beschikbare ruimte ($SIZE > $MAXSIZE)."
 
 #: src/persistence-wizard:191
 #, sh-format
@@ -173,7 +179,7 @@ msgstr ""
 #: src/persistence-wizard:211
 #, sh-format
 msgid "No file system was selected."
-msgstr ""
+msgstr "Er is geen bestandssysteem gekozen."
 
 #: src/persistence-wizard:239
 #, sh-format
@@ -204,6 +210,8 @@ msgid ""
 "This will create a persistent file named NAME with a size (in MB) defined by"
 " SIZE_IN_MEGABYTES and with a file system defined by FS_TYPE."
 msgstr ""
+"Dit zal een persistent bestand aanmaken genaamd NAME met een grootte (in MB)"
+" van SIZE_IN_MEGABYTES en met een FS_TYPE bestandssysteem."
 
 #: src/persistence-wizard-cli:37
 #, sh-format
@@ -222,6 +230,10 @@ msgid ""
 "/salixlive/persistence either on SaLT Live USB key or else on a hard disk "
 "drive if the persistence will be used with a SaLT LiveCD."
 msgstr ""
+"Als u persistentie met een SaLT LiveCD wilt gebruiken moet u het "
+"gegenereerde persistente bestand kopieeren naar een folder genaamd "
+"/salixlive/persistence of op een SaLT Live USB key of anders op een "
+"harddisk."
 
 #: src/persistence-wizard-cli:47
 #, sh-format
@@ -232,12 +244,16 @@ msgstr "Vrijgegeven onder de GPLv3 of (optioneel, een nieuwere versie)"
 #, sh-format
 msgid "The file system you specified is not supported by $SCRIPT_NAME"
 msgstr ""
+"Het bestandssysteem welke u heeft gedifinieerd wordt niet ondersteund door "
+"$SCRIPT_NAME"
 
 #: src/persistence-wizard-cli:69
 #, sh-format
 msgid ""
 "The size you specified is not correct, it should be a positive integer."
 msgstr ""
+"De gekozen grootte is niet correct, het behoort een positieve integer te "
+"zijn."
 
 #: src/persistence-wizard-cli:94
 #, sh-format
@@ -248,6 +264,7 @@ msgstr "Het persistente bestand $NAME is gereed."
 #, sh-format
 msgid "$SCRIPT_NAME was not able to create the persistent file $NAME"
 msgstr ""
+"$SCRIPT_NAME was niet in staat om het persistente bestand $NAME aan te maken"
 
 #: src/persistence-wizard-cli:100
 #, sh-format
@@ -255,6 +272,8 @@ msgid ""
 "There is not enough free space left on your device for creating the "
 "persistent file $NAME"
 msgstr ""
+"Er is niet voldoende vrije ruimte over op uw systeem om het persistente "
+"bestand $NAME aan te maken"
 
 #: src/persistence-wizard.desktop.in.h:1
 #: src/persistence-wizard-kde.desktop.in.h:1
