@@ -32,7 +32,7 @@ msgstr "ПОМИЛКА:"
 #: src/persistence-wizard:45
 #, sh-format
 msgid "$TEXTDOMAIN must be executed within a running X session.\\n"
-msgstr "$TEXTDOMAIN повинно бути запущено з працюючої X-сесії.\\n\n"
+msgstr "$TEXTDOMAIN повинно бути запущено з працюючої X-сесії.\\n"
 
 #: src/persistence-wizard:49 src/persistence-wizard-cli:26
 #, sh-format

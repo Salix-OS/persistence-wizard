@@ -32,7 +32,7 @@ msgstr "FEL:"
 #: src/persistence-wizard:45
 #, sh-format
 msgid "$TEXTDOMAIN must be executed within a running X session.\\n"
-msgstr "$TEXTDOMAIN måste köras i en körande X session.\\n\n"
+msgstr "$TEXTDOMAIN måste köras i en körande X session.\\n"
 
 #: src/persistence-wizard:49 src/persistence-wizard-cli:26
 #, sh-format
