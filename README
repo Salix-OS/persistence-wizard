@@ -1,0 +1,6 @@
+Persistence Wizard
+
+It consists of two tools (one graphical, one CLI), to help create
+a persistent file in order to use it for SaLT LiveCD.
+This persistent file is used to save the changes made in the live
+environment upon reboot.
